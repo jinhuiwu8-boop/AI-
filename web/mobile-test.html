@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#174f3b">
+    <title>手机功能测试 · 云酒账</title>
+    <link rel="stylesheet" href="/mobile-test.css">
+    <script type="module" src="/mobile-test.mjs"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#phone-panel">跳到手机操作区域</a>
+    <div class="test-shell">
+      <aside class="module-sidebar">
+        <div class="test-brand"><span class="brand-mark">云</span><div>云酒账<small>手机功能测试</small></div></div>
+        <div class="nav-caption">选择一个模块，自行点击操作</div>
+        <nav id="module-nav" class="module-nav" aria-label="手机测试模块">
+          <button type="button" class="module-button active" data-route="home" aria-current="page"><span class="module-number">01</span><span>工作台</span></button>
+          <button type="button" class="module-button" data-route="orders"><span class="module-number">02</span><span>销售订单</span></button>
+          <button type="button" class="module-button" data-route="create"><span class="module-number">03</span><span>图片开单</span></button>
+          <button type="button" class="module-button" data-route="pending"><span class="module-number">04</span><span>待核订单</span></button>
+          <button type="button" class="module-button" data-route="prices"><span class="module-number">05</span><span>客户价格</span></button>
+          <button type="button" class="module-button" data-route="masters"><span class="module-number">06</span><span>客户与商品</span></button>
+          <button type="button" class="module-button" data-route="printing"><span class="module-number">07</span><span>打印任务</span></button>
+        <button type="button" class="module-button" data-route="mine"><span class="module-number">08</span><span>我的</span></button></nav>
+        <div class="sidebar-tip"><strong>由你操作</strong><p>在手机窗口里用鼠标填写、核对、保存，也可以使用窗口底部导航。切换左侧模块不会重新载入手机页面。</p></div>
+      </aside>
+      <main id="phone-panel" class="test-main" tabindex="-1">
+        <header class="test-header"><div><div class="eyebrow">MOBILE WORKSPACE</div><h1>电脑上的手机操作台</h1><p>旧版手机布局，可实际点击和保存；电脑界面独立保留。</p></div><a id="open-phone" class="open-phone" href="/mobile?mobile-test=1#home" target="_blank" rel="noopener" title="独立页面按浏览器窗口宽度响应布局，不强制手机宽度">独立打开页面 <span aria-hidden="true">↗</span></a></header>
+        <div class="test-toolbar"><div class="current-module">当前模块 <strong id="current-module">工作台</strong></div><fieldset class="width-control"><legend>手机视口宽度</legend><label><input type="radio" name="phone-width" value="390"><span>390 px</span></label><label><input type="radio" name="phone-width" value="430" checked><span>430 px</span></label></fieldset><fieldset class="width-control"><legend>显示大小</legend><label><input type="radio" name="phone-display" value="fit" checked><span>适应窗口</span></label><label><input type="radio" name="phone-display" value="actual"><span>100% 大小</span></label></fieldset><span id="viewport-info" class="viewport-info">真实视口 430 × 860</span></div>
+        <p id="connection-status" class="connection-status" role="status" aria-live="polite">手机界面正在载入…</p>
+        <section id="phone-area" class="phone-area" aria-label="可点击的手机窗口">
+          <div id="phone-fit" class="phone-fit-box width-430 scale-100"><div class="phone-housing"><iframe id="phone-frame" class="phone-frame" src="/mobile?mobile-test=1#home" width="430" height="860" title="店内打单手机操作界面" referrerpolicy="same-origin"></iframe></div></div>
+        </section>
+        <footer class="test-scope"><div><span class="scope-label">测试数据</span><p>当前本地测试数据会保存。点击保存会写入当前测试库，刷新页面后仍可查询；未保存的填写内容请先核对再离开。</p></div><div><span class="scope-label waiting">设备范围</span><p>这里可测试已实现的开单、调价、退货、主档和 PDF 流程。企业微信、Jetson、手机原生能力及佳能实纸打印仍待实际接入。</p></div></footer>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2549 @@
+{
+  "schema_version": 1,
+  "plan_version": "mgmt-v0.8.1",
+  "updated_on": "2026-11-03",
+  "plan_status": "W4.1退货默认瓶、散瓶/整箱按钮常显与最少1瓶已实际核对；32项相关测试通过，保存仍待Q00数量策略；前轮完整142Node+11Python记录保留，目标设备未验收",
+  "capacity": {
+    "primary_agents": 1,
+    "specialist_roles": 7,
+    "max_parallel_subagents": 3,
+    "max_active_total": 4
+  },
+  "stage_labels": {
+    "scope": "需求",
+    "contract": "合同",
+    "implementation": "实现",
+    "module": "模块验证",
+    "integration": "联调",
+    "acceptance": "目标环境验收"
+  },
+  "owners": [
+    {
+      "id": "ROOT",
+      "name": "主代理总控",
+      "focus": "规则 合同 整合 版本"
+    },
+    {
+      "id": "A01",
+      "name": "云端接入与调度",
+      "focus": "阿里云 企微 批次 云边任务 恢复"
+    },
+    {
+      "id": "A02",
+      "name": "主档价格与订单",
+      "focus": "客户 商品 价格 金额 确认 销售"
+    },
+    {
+      "id": "A03",
+      "name": "手机业务页面",
+      "focus": "工作台 核对 客户 电子单 订单 菜单"
+    },
+    {
+      "id": "A04",
+      "name": "APK原生与设备安全",
+      "focus": "APK 媒体 通知 相册 身份与换机"
+    },
+    {
+      "id": "A05",
+      "name": "Jetson识别与训练",
+      "focus": "模型 候选 真实训练 候选评测"
+    },
+    {
+      "id": "A06",
+      "name": "单据生成与打印",
+      "focus": "PNG PDF iP110 出纸与重打"
+    },
+    {
+      "id": "A07",
+      "name": "独立验收",
+      "focus": "环境信息 固定样本 故障矩阵 同版验收"
+    }
+  ],
+  "stage_states": {
+    "passed": "已通过",
+    "ready_for_review": "待审阅",
+    "in_progress": "进行中",
+    "not_started": "未进入",
+    "not_applicable": "不适用",
+    "blocked": "阻塞"
+  },
+  "dependencies_meaning": "依赖表示最终联调/验收前置；合同明确后可先做独立设计或脱敏模拟，不能冒充真实集成。",
+  "truth_rules": [
+    "需求确认不折算代码完成率",
+    "旧源码及历史局部测试不是新版本验收",
+    "每个通过阶段均须证据",
+    "后续不计首期执行分母",
+    "没有截止期不编造日期",
+    "只有ROOT整合状态并重新生成图"
+  ],
+  "tasks": [
+    {
+      "id": "PLAN-02",
+      "title": "22页产品规则确认留存",
+      "owner": "ROOT",
+      "assigned_agent": null,
+      "phase": "management",
+      "status": "22页原确认保留 W4退货增补已记",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "not_applicable",
+        "module": "not_applicable",
+        "integration": "not_applicable",
+        "acceptance": "passed"
+      },
+      "dependencies": [],
+      "page_refs": [],
+      "legacy_ids": [
+        "PLAN-01"
+      ],
+      "reuse_candidate": "",
+      "acceptance_criteria": "用户修改原稿及确认记录、摘要和快照对应，22页确认状态一致。",
+      "next_action": "02原稿字节不改；新11记录客户退货最新改动，数量策略待Q00，不将旧原单决定继续套用新流程。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/11_客户关联退货与历史箱价_v0.2-r7.md"
+        ],
+        "contract": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ],
+        "acceptance": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-11-03",
+      "handoff_notes": []
+    },
+    {
+      "id": "PLAN-03",
+      "title": "子代理分工 边界 进度体系",
+      "owner": "ROOT",
+      "assigned_agent": "/root",
+      "phase": "management",
+      "status": "8工作口与Q00已登记 本轮A03/A07已回交",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "not_applicable",
+        "module": "not_applicable",
+        "integration": "not_applicable",
+        "acceptance": "passed"
+      },
+      "dependencies": [
+        "PLAN-02"
+      ],
+      "page_refs": [],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "工作口、单文件owner、任务依赖、边界和可刷新图表一致，可供用户审阅。",
+      "next_action": "本轮A03/A07均已回交，按当前锁轮换；必要用户问题继续由Q00独立会话去重询问。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/项目管理/01_子代理分工与任务交接.md",
+          "docs/项目管理/02_项目边界与执行规范.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md",
+          "docs/项目管理/07_八工作口协作与换岗规则.md",
+          "docs/项目管理/当前工作口锁.json"
+        ],
+        "acceptance": [
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md",
+          "docs/项目管理/06_W0启动与任务派发.md",
+          "docs/项目管理/07_八工作口协作与换岗规则.md",
+          "docs/项目管理/当前工作口锁.json"
+        ]
+      },
+      "source_version": "w3-mobile-v0.3+021d05cb45aa",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": "2026-10-31",
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W2实际回交与证据：docs/开发执行/W2/00_W2开发交付与工作口.md"
+      ]
+    },
+    {
+      "id": "BASE-01",
+      "title": "旧资产取用及最终基线决策",
+      "owner": "ROOT",
+      "assigned_agent": "/root",
+      "phase": "management",
+      "status": "W2本地基线已实现 旧融合待评审",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "not_applicable",
+        "module": "not_applicable",
+        "integration": "not_applicable",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "PLAN-03",
+        "CONTRACT-01"
+      ],
+      "page_refs": [],
+      "legacy_ids": [],
+      "reuse_candidate": "docs/旧项目参考资料/旧项目可复用资产评估_2026-10-30.md",
+      "acceptance_criteria": "逐模块来源/差异/资源和迁移依赖可追溯，最终基线有明确决定；旧项目保持不动。",
+      "next_action": "继续按模块评估旧资产适配，不整目录融合；生产适配及正式初始化另做。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/开发执行/W1/00_本地开发版交付与工作口.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W2实际回交与证据：docs/开发执行/W2/00_W2开发交付与工作口.md"
+      ]
+    },
+    {
+      "id": "CONTRACT-01",
+      "title": "接口 数据 事件与迁移合同",
+      "owner": "ROOT",
+      "assigned_agent": "/root",
+      "phase": "management",
+      "status": "W2共享接口已落地 生产适配待补",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "not_applicable",
+        "module": "not_applicable",
+        "integration": "not_applicable",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "PLAN-02",
+        "PLAN-03"
+      ],
+      "page_refs": [],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "来源/批次/候选/价事件/订单/单据/打印尝试/设备ID、金额单位、幂等及错误合同冻结。",
+      "next_action": "保持合同与实现在同一源码身份，W3接原生/模型/worker前冻结新差量。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/开发执行/W1/00_本地开发版交付与工作口.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W2实际回交与证据：docs/开发执行/W2/00_W2开发交付与工作口.md"
+      ]
+    },
+    {
+      "id": "GIT-01",
+      "title": "远程仓库及每版上传记录",
+      "owner": "ROOT",
+      "assigned_agent": null,
+      "phase": "management",
+      "status": "待版本确认",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_applicable",
+        "module": "not_applicable",
+        "integration": "not_applicable",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "PLAN-03"
+      ],
+      "page_refs": [],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "仓库目标明确，具体版本人工确认与上传提交一致；上传不触发未经授权部署。",
+      "next_action": "目标仓库已核实为jinhuiwu8-boop/AI-；准备具体可审阅版本，用户明确确认后再配置remote并上传，不自动部署。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "RELEASE-01",
+      "title": "整版整合 用户确认与交付",
+      "owner": "ROOT",
+      "assigned_agent": null,
+      "phase": "management",
+      "status": "W3.1手机修改可操作 待完整首期与目标联验",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_applicable",
+        "module": "not_applicable",
+        "integration": "not_applicable",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "QA-02",
+        "GIT-01"
+      ],
+      "page_refs": [],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "同版源码/云/手机/Jetson及证据清单齐备，用户确认具体版本后才上传。",
+      "next_action": "保留3213/mobile-test供用户自行使用；继续首期未接能力，具体版本明确确认后才上传Git。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ],
+        "module": [
+          "docs/开发执行/W3.1_手机开单精简/00_本轮修改交付.md",
+          "docs/开发执行/W3.1_手机开单精简/A07_核查.md",
+          "docs/开发执行/W3.1_手机开单精简/验证/源码清单.json"
+        ]
+      },
+      "source_version": "w3.3-mobile-v0.3.3+2ac27b4004fc",
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W2实际回交与证据：docs/开发执行/W2/00_W2开发交付与工作口.md",
+        "W3.1用户调整：仅文字/语音输入、预览移核对区、明细扁平、进度退出业务端；A03回交、A07局部只读/HTTP核查与ROOT未提交草稿浏览器验证分记，详见docs/开发执行/W3.1_手机开单精简/00_本轮修改交付.md"
+      ]
+    },
+    {
+      "id": "CLOUD-01",
+      "title": "阿里云生产运行与私有持久化",
+      "owner": "A01",
+      "assigned_agent": "/root",
+      "phase": "first",
+      "status": "W1局部实现 本地验证已回交",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "CONTRACT-01",
+        "BASE-01"
+      ],
+      "page_refs": [],
+      "legacy_ids": [],
+      "reuse_candidate": "旧Node数据库/私有文件适配仅隔离候选",
+      "acceptance_criteria": "生产适配含持久后台任务及私有对象，重启读回成功；不靠删除isolated限制冒充完成。",
+      "next_action": "Node24/SQLite本机单进程适配已可运行；当前阿里云部署、生产数据库/持久对象及后台任务正式适配待核。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md"
+        ],
+        "implementation": [
+          "src/shared/store.mjs",
+          "src/server.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md"
+        ]
+      },
+      "source_version": "w1-local-v0.1+f5a69441b221",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。"
+      ]
+    },
+    {
+      "id": "WX-01",
+      "title": "企微回调 同步媒体与防重",
+      "owner": "A01",
+      "assigned_agent": "/root/reuse_audit",
+      "phase": "first",
+      "status": "W1局部实现 本地验证已回交",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "CLOUD-01",
+        "SOURCE-01"
+      ],
+      "page_refs": [
+        "P03",
+        "P12",
+        "P17"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧回调验签/AES/同步游标",
+      "acceptance_criteria": "真实获准消息保存原来源和媒体，签名/游标/回放防重通过，正式收单常启用；覆盖媒体超限、格式不支持及未到达，不能伪造已接收。",
+      "next_action": "已实现规范化消息持久层；官方签名/解密/同步游标/媒体下载及现网回调仍需接入，不能称真实企微已成功。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md"
+        ],
+        "implementation": [
+          "src/intake/index.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md"
+        ]
+      },
+      "source_version": "w1-local-v0.1+f5a69441b221",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。"
+      ]
+    },
+    {
+      "id": "BATCH-01",
+      "title": "客户名开头与60秒组单",
+      "owner": "A01",
+      "assigned_agent": "/root/cloud_edge_w2",
+      "phase": "first",
+      "status": "本地模块回归通过 待目标环境联调",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "passed",
+        "module": "passed",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "WX-01"
+      ],
+      "page_refs": [
+        "P03"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧批次隔离与消息去重",
+      "acceptance_criteria": "有效产品消息重置60秒，重复不续时，纯文字/语音/图片均可入组，迟到可待归属。",
+      "next_action": "60秒持久封单现已衔接设备候选协议；接企微真实签名/媒体和实际Jetson。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/intake/index.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。"
+      ]
+    },
+    {
+      "id": "EDGE-01",
+      "title": "云边任务 租约与回传协议",
+      "owner": "A01",
+      "assigned_agent": "/root/cloud_edge_w2",
+      "phase": "first",
+      "status": "本地租约协议通过 待真设备联调",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "passed",
+        "module": "passed",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "CLOUD-01",
+        "AUTH-01"
+      ],
+      "page_refs": [
+        "P03",
+        "P16"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧任务条件领取、租期与UNCERTAIN保护",
+      "acceptance_criteria": "领取续租/回传和附件绑定设备，重放/迟到/断线可恢复；打印未知不按识别任务自动重排。",
+      "next_action": "INFER/PRINT独立身份、租约和重放本地验证通过；继续接真实worker、受控媒体字节和现网运行适配。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ],
+        "contract": [
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/edge-cloud/index.mjs",
+          "src/printing/index.mjs",
+          "src/server.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。"
+      ]
+    },
+    {
+      "id": "OPS-01",
+      "title": "私有对象闭包 备份与恢复",
+      "owner": "A01",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "待方案",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "CLOUD-01",
+        "ORDER-01",
+        "DOC-01",
+        "AUTH-01"
+      ],
+      "page_refs": [
+        "P17",
+        "P18"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧备份归档与无损整数用例",
+      "acceptance_criteria": "隔离恢复数据库/附件/冻结单据及授权关系，来源完整，不修改生产数据。",
+      "next_action": "按最终表与对象清单重设计备份恢复检查。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-30",
+      "handoff_notes": []
+    },
+    {
+      "id": "DATA-01",
+      "title": "客户 SKU 包装与资料主档",
+      "owner": "A02",
+      "assigned_agent": "/root/business_w2",
+      "phase": "first",
+      "status": "主档本地增改已测 启停导入待补",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "CLOUD-01",
+        "BASE-01"
+      ],
+      "page_refs": [
+        "P06",
+        "P07"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧master-data-store与包装主档",
+      "acceptance_criteria": "稳定ID、同名区分、合法单位/瓶数、启停与历史快照正确，空库不造演示业务。",
+      "next_action": "稳定ID、版本、同名地址、单位包装与冻结已测；补启停、正式空库初始化和受控导入，合成样例仅开发版。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ],
+        "contract": [
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/business/masters.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。"
+      ]
+    },
+    {
+      "id": "PRICE-01",
+      "title": "最近确认价及人工调价事件",
+      "owner": "A02",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "本地模块回归通过 待目标环境联调",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "passed",
+        "module": "passed",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "DATA-01"
+      ],
+      "page_refs": [
+        "P06",
+        "P19"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧价版本/来源校验，需要更新业务规则",
+      "acceptance_criteria": "客户资料改价保存即生效，核对普通改价确认影响以后，无仅本单；步长1元，小恢复回最近调价前有效价并留新事件；明确0价不改常规后价，旧草稿不静默覆盖新价。",
+      "next_action": "普通客户价维护/恢复/零价与更正后价保持；退货另读有效成交箱历史，不把未成交维护价当历史，不写常规后价；继续目标环境联调。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md",
+          "docs/功能逐页梳理_2026-10-30/11_客户关联退货与历史箱价_v0.2-r7.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/business/service.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap"
+        ]
+      },
+      "source_version": "w4-customer-return-preview-v0.4+42455f52e607",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-11-03",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。",
+        "W4仅客户历史价/页面及保存核心隔离验证；正式HTTP新退货409且页面禁用，数量政策Q-RETURN-CUSTOMER-LIMIT-01待Q00；142Node+11Python、A07当前14项与ROOT浏览器草稿验证分记，未计正式保存闭环或设备验收。"
+      ]
+    },
+    {
+      "id": "MONEY-01",
+      "title": "拆箱瓶价与最终应收到角",
+      "owner": "A02",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "W4历史箱价拆瓶金额本地验证通过",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "passed",
+        "module": "passed",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "DATA-01",
+        "PRICE-01"
+      ],
+      "page_refs": [
+        "P19",
+        "P22"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧BigInt行计算；不能复用仅隐藏分位来代替舍入",
+      "acceptance_criteria": "100÷24到角得4.2元/瓶；先瓶价后行货款，24瓶为100.8元，不另封顶；销售最终应收/退货最终金额到角，抵扣/抹零/货款/应收分列。",
+      "next_action": "本地历史箱价拆瓶与合成退货PNG金额已测；新退货数量策略另待Q00，不将金额隔离通过当正式保存放行。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/11_客户关联退货与历史箱价_v0.2-r7.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/business/service.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap"
+        ]
+      },
+      "source_version": "w4-customer-return-preview-v0.4+42455f52e607",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-11-03",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。",
+        "W4仅客户历史价/页面及保存核心隔离验证；正式HTTP新退货409且页面禁用，数量政策Q-RETURN-CUSTOMER-LIMIT-01待Q00；142Node+11Python、A07当前14项与ROOT浏览器草稿验证分记，未计正式保存闭环或设备验收。"
+      ]
+    },
+    {
+      "id": "MATCH-01",
+      "title": "主档别名 候选及常购匹配",
+      "owner": "A02",
+      "assigned_agent": "/root/business_w2",
+      "phase": "first",
+      "status": "别名歧义已测 常购模型待接",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "DATA-01"
+      ],
+      "page_refs": [
+        "P03",
+        "P06"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧客户Top3/商品叫法排名",
+      "acceptance_criteria": "同名候选有依据且仅既有客户/SKU，模糊不自动确认，模型候选与确定性主档匹配衔接。",
+      "next_action": "正式名/别名精确与包含候选保持歧义；继续常购/SKU叫法与真实模型衔接，不伪造置信度。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ],
+        "contract": [
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/business/masters.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。"
+      ]
+    },
+    {
+      "id": "ORDER-01",
+      "title": "冻结确认与同单一次计销",
+      "owner": "A02",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "本地模块回归通过 待目标环境联调",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "passed",
+        "module": "passed",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "PRICE-01",
+        "MONEY-01",
+        "AUTH-01",
+        "DOC-01"
+      ],
+      "page_refs": [
+        "P03",
+        "P19",
+        "P22"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "369冻结/统一完成防重，须改纸路线约束",
+      "acceptance_criteria": "电子正式图片持久保存后确认计销；纸质确认即计销；并发/重放只一销售事件。",
+      "next_action": "W4新销售冻结包装、旧更正保留旧快照；候选一次确认/文档失败回归保持通过；继续真实模型和生产设备身份。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/11_客户关联退货与历史箱价_v0.2-r7.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/business/service.mjs",
+          "src/documents/store.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap"
+        ]
+      },
+      "source_version": "w4-customer-return-preview-v0.4+42455f52e607",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-11-03",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。",
+        "W4仅客户历史价/页面及保存核心隔离验证；正式HTTP新退货409且页面禁用，数量政策Q-RETURN-CUSTOMER-LIMIT-01待Q00；142Node+11Python、A07当前14项与ROOT浏览器草稿验证分记，未计正式保存闭环或设备验收。"
+      ]
+    },
+    {
+      "id": "SALES-01",
+      "title": "订单查询及货款应收统计",
+      "owner": "A02",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "查询日月统计本地模块通过",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "passed",
+        "module": "passed",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "ORDER-01"
+      ],
+      "page_refs": [
+        "P02",
+        "P06"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧销售查询与金额分项",
+      "acceptance_criteria": "订单列表及统计同单一次，货款/抵扣/抹零/应收分列；更正抵消旧结果后只计正确结果，退货独立关联抵减，不正向加销；打印状态独立。",
+      "next_action": "W4退货保存核心隔离测试只记一次RETURN、不正向计销；正式新保存仍待Q00；目标环境日/月查询统计继续验。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md",
+          "docs/功能逐页梳理_2026-10-30/11_客户关联退货与历史箱价_v0.2-r7.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/business/service.mjs",
+          "src/business/masters.mjs",
+          "src/server.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap"
+        ]
+      },
+      "source_version": "w4-customer-return-preview-v0.4+42455f52e607",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-11-03",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。",
+        "W4仅客户历史价/页面及保存核心隔离验证；正式HTTP新退货409且页面禁用，数量政策Q-RETURN-CUSTOMER-LIMIT-01待Q00；142Node+11Python、A07当前14项与ROOT浏览器草稿验证分记，未计正式保存闭环或设备验收。"
+      ]
+    },
+    {
+      "id": "CORRECTION-01",
+      "title": "老板错单更正 冲回及客户关联退货",
+      "owner": "A02",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "W4历史价和页面已测 新退货保存待Q00",
+      "stages": {
+        "scope": "in_progress",
+        "contract": "in_progress",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "ORDER-01",
+        "SALES-01"
+      ],
+      "page_refs": [
+        "P02",
+        "P19"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "仅老板更正/退货；更正留原新版本并冲回旧结果，非零更正影响后价、0价不传播。新退货只选客户商品，沿最近有效非零历史箱价，散瓶除瓶数到角；不改后价、正式PNG成功一次抵减。数量政策待Q00后补相应累计/并发/更正联动边界；旧原单数据/API兼容。",
+      "next_action": "Q00答复累计数量限制后实施策略及并发/旧接口/更正联动，再开放新客户退货保存；当前仅报价预览，旧原单流程兼容。",
+      "blockers": [
+        "Q-RETURN-CUSTOMER-LIMIT-01：是否按客户累计已购减已退限制数量，待Q00用户答复"
+      ],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md",
+          "docs/功能逐页梳理_2026-10-30/11_客户关联退货与历史箱价_v0.2-r7.md"
+        ],
+        "implementation": [
+          "src/business/service.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap"
+        ],
+        "integration": [
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap"
+        ],
+        "contract": [
+          "docs/开发执行/W4_客户退货/01_接口差量.md"
+        ]
+      },
+      "source_version": "w4-customer-return-preview-v0.4+42455f52e607",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-11-03",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W4仅客户历史价/页面及保存核心隔离验证；正式HTTP新退货409且页面禁用，数量政策Q-RETURN-CUSTOMER-LIMIT-01待Q00；142Node+11Python、A07当前14项与ROOT浏览器草稿验证分记，未计正式保存闭环或设备验收。"
+      ]
+    },
+    {
+      "id": "UIHOME-01",
+      "title": "工作台 菜单 客户与查单页面",
+      "owner": "A03",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "W4.1默认退瓶与显式单位已核对",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "CONTRACT-01"
+      ],
+      "page_refs": [
+        "P01",
+        "P02",
+        "P05",
+        "P06",
+        "P07",
+        "P12",
+        "P13",
+        "P17",
+        "P20",
+        "P21"
+      ],
+      "legacy_ids": [
+        "CLEAN-01"
+      ],
+      "reuse_candidate": "旧移动组件及绿色风格",
+      "acceptance_criteria": "工作台/菜单/客户/查单/来源登记/账号与换机页面齐全，调用A04身份原生合同；卡片精简，移除员工角色/日志/开关界面。",
+      "next_action": "退货默认瓶、最少1瓶及箱瓶切换已实际核对；继续等待Q00数量策略后补新保存，原生/识别能力仍待接。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/11_客户关联退货与历史箱价_v0.2-r7.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "web/app.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json",
+          "docs/开发执行/W2_手机测试入口/A07_验收.md",
+          "docs/开发执行/W2_手机测试入口/验证/原HTTP与安全回归.tap",
+          "docs/开发执行/W3_手机旧版布局/A03_回交.md",
+          "docs/开发执行/W3_手机旧版布局/A07_验收.md",
+          "docs/开发执行/W3_手机旧版布局/验证/ROOT_浏览器操作验证.md",
+          "docs/开发执行/W3_手机旧版布局/验证/源码清单.json",
+          "docs/开发执行/W3.1_手机开单精简/00_本轮修改交付.md",
+          "docs/开发执行/W3.1_手机开单精简/A07_核查.md",
+          "docs/开发执行/W3.1_手机开单精简/验证/源码清单.json",
+          "docs/开发执行/W3.2_手机统计去重.md",
+          "docs/开发执行/W3.3_统计仅留订单页.md",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap",
+          "docs/开发执行/W4_客户退货/02_瓶单位修正交付.md",
+          "docs/开发执行/W4_客户退货/A07_瓶单位修正核查.md"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md",
+          "docs/开发执行/W2_手机测试入口/00_手机端操作测试交付.md",
+          "docs/开发执行/W3_手机旧版布局/A03_回交.md",
+          "docs/开发执行/W3_手机旧版布局/A07_验收.md",
+          "docs/开发执行/W3_手机旧版布局/验证/ROOT_浏览器操作验证.md",
+          "docs/开发执行/W3_手机旧版布局/验证/源码清单.json",
+          "docs/开发执行/W3.2_手机统计去重.md",
+          "docs/开发执行/W3.3_统计仅留订单页.md",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap",
+          "docs/开发执行/W4_客户退货/02_瓶单位修正交付.md"
+        ]
+      },
+      "source_version": "w4.1-return-bottle-preview-v0.4.1+39d30a0ad8ac",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-11-03",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。",
+        "用户明确需要自行操作手机模块，已加独立/mobile-test入口；5新增HTTP+11原HTTP回归通过，ROOT实际iframe保存/刷新/草稿保留已验，不算APK或现场验收。",
+        "W3旧版手机核心呈现已回交；独立首轮19/19及模态后9/9分身份留存，预览补丁后只做最终静态/语法与ROOT隔离浏览器操作；未冒称目标设备通过。",
+        "W3.1用户调整：仅文字/语音输入、预览移核对区、明细扁平、进度退出业务端；A03回交、A07局部只读/HTTP核查与ROOT未提交草稿浏览器验证分记，详见docs/开发执行/W3.1_手机开单精简/00_本轮修改交付.md",
+        "W3.2仅手机呈现删除订单重复统计，A03语法通过，ROOT浏览器核对首页与订单；无新业务/数据写入，无全量重测或实机验收。",
+        "用户通过两张图明确纠正位置：工作台移除、仅订单保留统计组；W3.3替代W3.2的位置安排，ROOT语法和实际浏览器核对。",
+        "W4仅客户历史价/页面及保存核心隔离验证；正式HTTP新退货409且页面禁用，数量政策Q-RETURN-CUSTOMER-LIMIT-01待Q00；142Node+11Python、A07当前14项与ROOT浏览器草稿验证分记，未计正式保存闭环或设备验收。",
+        "W4.1默认/新增/换商品优先瓶，显式散瓶整箱按钮；ROOT实际390/430页面操作、A07现有32项独立通过。未重跑前轮完整142Node/11Python，保存仍待Q00。"
+      ]
+    },
+    {
+      "id": "PHONE-01",
+      "title": "原文对照与统一人工核对",
+      "owner": "A03",
+      "assigned_agent": "/root/mobile_ui",
+      "phase": "first",
+      "status": "W2本地增量已测 继续完整联调",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "UIHOME-01",
+        "ORDER-01",
+        "MATCH-01"
+      ],
+      "page_refs": [
+        "P03",
+        "P14",
+        "P19"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧表单、草稿及版本保护",
+      "acceptance_criteria": "P03/P19共用字段，缺客户/价/单位显著，编辑撤销核对，迟到模型不覆盖人工。",
+      "next_action": "候选原文及缺项保留、显式checked和同job版本已接；继续图片语音原文预览及真实模型人工核对。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "web/app.mjs",
+          "src/server.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。"
+      ]
+    },
+    {
+      "id": "EBILL-01",
+      "title": "销售退货图片开单 预览与独立纸按钮",
+      "owner": "A03",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "W4.1散瓶退货预览已测 保存待Q00",
+      "stages": {
+        "scope": "in_progress",
+        "contract": "in_progress",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "PHONE-01",
+        "DOC-01",
+        "ORDER-01"
+      ],
+      "page_refs": [
+        "P01",
+        "P04",
+        "P19",
+        "P22"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧图片开单和电子预览组件",
+      "acceptance_criteria": "销售正式PNG持久成功一次计销；新退货只选客户商品并冻结历史箱价/拆瓶到角及来源证据，不改后价，正式PNG成功一次抵减；数量策略须经Q00明确后开放。老板权限及独立纸按钮不重计保持，旧原单记录兼容。",
+      "next_action": "页面初始/新增/换品优先瓶，显式箱瓶可切，历史价仍只读；待Q00数量策略后完成新保存，当前不能据预览视作已退货。",
+      "blockers": [
+        "Q-RETURN-CUSTOMER-LIMIT-01：新客户退货正式保存关闭，待数量策略"
+      ],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md",
+          "docs/功能逐页梳理_2026-10-30/11_客户关联退货与历史箱价_v0.2-r7.md",
+          "docs/功能逐页梳理_2026-10-30/12_退货最小单位与默认选瓶_v0.2-r8.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "web/app.mjs",
+          "src/server.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json",
+          "docs/开发执行/W2_手机测试入口/A07_验收.md",
+          "docs/开发执行/W2_手机测试入口/验证/原HTTP与安全回归.tap",
+          "docs/开发执行/W3_手机旧版布局/A03_回交.md",
+          "docs/开发执行/W3_手机旧版布局/A07_验收.md",
+          "docs/开发执行/W3_手机旧版布局/验证/ROOT_浏览器操作验证.md",
+          "docs/开发执行/W3_手机旧版布局/验证/源码清单.json",
+          "docs/开发执行/W3.1_手机开单精简/00_本轮修改交付.md",
+          "docs/开发执行/W3.1_手机开单精简/A07_核查.md",
+          "docs/开发执行/W3.1_手机开单精简/验证/源码清单.json",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap",
+          "docs/开发执行/W4_客户退货/02_瓶单位修正交付.md",
+          "docs/开发执行/W4_客户退货/A07_瓶单位修正核查.md"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md",
+          "docs/开发执行/W2_手机测试入口/00_手机端操作测试交付.md",
+          "docs/开发执行/W3_手机旧版布局/A03_回交.md",
+          "docs/开发执行/W3_手机旧版布局/A07_验收.md",
+          "docs/开发执行/W3_手机旧版布局/验证/ROOT_浏览器操作验证.md",
+          "docs/开发执行/W3_手机旧版布局/验证/源码清单.json",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap",
+          "docs/开发执行/W4_客户退货/02_瓶单位修正交付.md"
+        ]
+      },
+      "source_version": "w4.1-return-bottle-preview-v0.4.1+39d30a0ad8ac",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-11-03",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。",
+        "用户明确需要自行操作手机模块，已加独立/mobile-test入口；5新增HTTP+11原HTTP回归通过，ROOT实际iframe保存/刷新/草稿保留已验，不算APK或现场验收。",
+        "W3旧版手机核心呈现已回交；独立首轮19/19及模态后9/9分身份留存，预览补丁后只做最终静态/语法与ROOT隔离浏览器操作；未冒称目标设备通过。",
+        "W3.1用户调整：仅文字/语音输入、预览移核对区、明细扁平、进度退出业务端；A03回交、A07局部只读/HTTP核查与ROOT未提交草稿浏览器验证分记，详见docs/开发执行/W3.1_手机开单精简/00_本轮修改交付.md",
+        "W4仅客户历史价/页面及保存核心隔离验证；正式HTTP新退货409且页面禁用，数量政策Q-RETURN-CUSTOMER-LIMIT-01待Q00；142Node+11Python、A07当前14项与ROOT浏览器草稿验证分记，未计正式保存闭环或设备验收。",
+        "W4.1默认/新增/换商品优先瓶，显式散瓶整箱按钮；ROOT实际390/430页面操作、A07现有32项独立通过。未重跑前轮完整142Node/11Python，保存仍待Q00。"
+      ]
+    },
+    {
+      "id": "PROGRESS-01",
+      "title": "打单项目工程进度看板与任务阶段图",
+      "owner": "ROOT",
+      "assigned_agent": "/root",
+      "phase": "management",
+      "status": "工程看板在用 业务端进度已撤除",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "not_applicable",
+        "module": "not_applicable",
+        "integration": "not_applicable",
+        "acceptance": "passed"
+      },
+      "dependencies": [
+        "UIHOME-01",
+        "PLAN-03"
+      ],
+      "page_refs": [
+        "P05",
+        "P17"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "项目文件看板及每任务图与唯一台账同源，需求/实现/验证/验收分列；不作为手机或电脑经营功能。",
+      "next_action": "W4台账/图表同步客户退货预览已测与保存待Q00，继续只作工程管理文件。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/10_手机开单与项目进度调整_v0.2-r6.md"
+        ],
+        "contract": [
+          "docs/项目管理/02_项目边界与执行规范.md"
+        ],
+        "acceptance": [
+          "docs/项目管理/项目任务台账.json",
+          "docs/项目管理/00_项目进度看板.md",
+          "tools/render_project_progress.py",
+          "docs/开发执行/W3.1_手机开单精简/00_本轮修改交付.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": "2026-10-31",
+      "actual_acceptance": "2026-10-31",
+      "updated_on": "2026-11-03",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。",
+        "用户明确需要自行操作手机模块，已加独立/mobile-test入口；5新增HTTP+11原HTTP回归通过，ROOT实际iframe保存/刷新/草稿保留已验，不算APK或现场验收。",
+        "W3旧版手机核心呈现已回交；独立首轮19/19及模态后9/9分身份留存，预览补丁后只做最终静态/语法与ROOT隔离浏览器操作；未冒称目标设备通过。",
+        "用户纠正：项目进度指本打单工程管理，不是业务端功能；PROGRESS-01由首期业务执行移至管理，保留历史W3网页证据但不再把该网页作为交付目标；首期执行分母36调整为35，管理7调整为8，不代表业务完成一项。"
+      ]
+    },
+    {
+      "id": "MOBILE-01",
+      "title": "Mate60 APK兼容与原生桥底座",
+      "owner": "A04",
+      "assigned_agent": "/root/product_scope",
+      "phase": "first",
+      "status": "W0预检已回交 待实机",
+      "stages": {
+        "scope": "passed",
+        "contract": "ready_for_review",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "HW-01",
+        "CONTRACT-01"
+      ],
+      "page_refs": [
+        "P17",
+        "P20"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧Capacitor壳，需切阿里云与合入候选桥",
+      "acceptance_criteria": "ALN-AL80实际系统上安装/登录/前后台/原生桥成功，来源白名单与会话绑定正确。",
+      "next_action": "Q00已收API26.0.0；保留已知版本，待完整系统/安装事实后落实APK原生桥，不能以浏览器当APK。",
+      "blockers": [
+        "用户报告系统7.0.0.109及API26.0.0；完整系统名称、APK/原生兼容仍待实机核实，不能推断Android API26"
+      ],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/开发执行/W0/A04_手机适配/01_设备与旧原生壳核查.md",
+          "docs/开发执行/W0/A04_手机适配/02_兼容验证与授权恢复方案.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "AUTH-01",
+      "title": "长期单手机 云端授权与撤销",
+      "owner": "A04",
+      "assigned_agent": "/root/product_scope",
+      "phase": "first",
+      "status": "授权合同候选待审阅",
+      "stages": {
+        "scope": "passed",
+        "contract": "ready_for_review",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "MOBILE-01",
+        "CLOUD-01"
+      ],
+      "page_refs": [
+        "P13",
+        "P20"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧鉴权/会话基础；移除多员工界面",
+      "acceptance_criteria": "日常长期会话且仅一授权手机，云端撤销生效，不以不可撤销固定令牌实现。",
+      "next_action": "整合云端唯一active_device与授权代次合同，老板更正/退货由服务端校验，转单人无管理权限。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/开发执行/W0/A04_手机适配/02_兼容验证与授权恢复方案.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "AUTH-02",
+      "title": "系统锁屏改密 扫码换机与手机号恢复",
+      "owner": "A04",
+      "assigned_agent": "/root/product_scope",
+      "phase": "first",
+      "status": "恢复合同候选待审阅",
+      "stages": {
+        "scope": "passed",
+        "contract": "ready_for_review",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "AUTH-01"
+      ],
+      "page_refs": [
+        "P13",
+        "P21"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "只取系统认证结果；正常旧手机扫码转移且二维码不可重放；失机/损坏通过预绑定手机号验证恢复，新有效旧授权及会话失效，旧机恢复联网仍无法操作。",
+      "next_action": "审阅A04扫码转移和手机号恢复一次验证、防重、旧机撤权方案；不发送真实验证码。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/开发执行/W0/A04_手机适配/02_兼容验证与授权恢复方案.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "SOURCE-01",
+      "title": "个人微信号登记及来源授权",
+      "owner": "A04",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "待方案",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "AUTH-01"
+      ],
+      "page_refs": [
+        "P12",
+        "P17"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧授权来源/身份绑定，只取必要机制",
+      "acceptance_criteria": "先登记个人微信号并绑定可核验客服稳定来源ID，无站内员工/客服显示名，无手填冒用。",
+      "next_action": "核平台标识可用性和配对方法，供A01调用。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-30",
+      "handoff_notes": []
+    },
+    {
+      "id": "NOTIFY-01",
+      "title": "真实锁屏提醒及点击待办",
+      "owner": "A04",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "待方案",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "MOBILE-01",
+        "BATCH-01"
+      ],
+      "page_refs": [
+        "P01",
+        "P03",
+        "P17"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧前台轮询仅作前台提示，不能当锁屏实现",
+      "acceptance_criteria": "ALN-AL80锁屏/后台收到真实待核提醒，权限/省电/离线有诊断，通知去重。",
+      "next_action": "选择可用原生通道并约定云端投递状态。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-30",
+      "handoff_notes": []
+    },
+    {
+      "id": "ALBUM-01",
+      "title": "正式电子单原生相册保存",
+      "owner": "A04",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "待方案",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "MOBILE-01",
+        "DOC-01"
+      ],
+      "page_refs": [
+        "P22",
+        "P17"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧NativePhotoChannel分块/防重/MediaStore",
+      "acceptance_criteria": "真实图库文件持久写入可重启读回，拒绝权限/取消/失败不报成功，保存不计销。",
+      "next_action": "取用原生MediaStore候选并对新域名会话适配。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-30",
+      "handoff_notes": []
+    },
+    {
+      "id": "MEDIA-01",
+      "title": "手机拍照选图与录音输入",
+      "owner": "A04",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "待方案",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "MOBILE-01"
+      ],
+      "page_refs": [
+        "P04",
+        "P19"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧照片原生桥候选",
+      "acceptance_criteria": "拍照/选图/录音/播放/取消和拒绝权限可用，原媒体与识别请求绑定；按微信上限口径登记实际链路与入口差异，区分单条/一次选择/组单批次，超限不静默丢弃。",
+      "next_action": "上限口径已确定跟随微信；A01/A04核验实际企微链路与手机入口的图片数量/大小、语音时长/大小及适用粒度，A03展示限制与失败原因。",
+      "blockers": [
+        "微信及企微客服实际链路、手机入口的媒体限制数值与适用范围待A01/A04核验（用户口径已确认）"
+      ],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "MODEL-01",
+      "title": "Jetson内存模型与训练可行性",
+      "owner": "A05",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "Orin Nano资料已补 待资源验证",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "HW-01"
+      ],
+      "page_refs": [
+        "P15",
+        "P17"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧模型profile/ASR/VL工具，仅参考",
+      "acceptance_criteria": "在准确设备上记录模型、环境、峰值内存、速度和可行训练方案；不凭标签宣称可用。",
+      "next_action": "按用户报告Orin Nano/Ubuntu22.04.5核验JetPack、CUDA、实际内存与功耗，再选真实模型和训练方案。",
+      "blockers": [
+        "用户已报Orin Nano和Ubuntu22.04.5；JetPack/CUDA/可用内存与设备实测尚缺"
+      ],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/09_Jetson设备事实补充_v0.2-r5.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "INFER-01",
+      "title": "真实文字图片语音识别回传",
+      "owner": "A05",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "待方案",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "MODEL-01",
+        "EDGE-01",
+        "MATCH-01",
+        "MEDIA-01"
+      ],
+      "page_refs": [
+        "P03",
+        "P04",
+        "P19"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧recognition适配和格式工具，需补生产接线",
+      "acceptance_criteria": "三种真实输入输出候选/字段依据与失败状态，纯文字语音不受必须图片限制，候选不含权威改价。",
+      "next_action": "按候选合同接通实际模型与云任务。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-30",
+      "handoff_notes": []
+    },
+    {
+      "id": "TRAIN-01",
+      "title": "已确认纠错自动样本与训练",
+      "owner": "A05",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "非价格纠错样本已接 真实训练待做",
+      "stages": {
+        "scope": "passed",
+        "contract": "in_progress",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "INFER-01",
+        "ORDER-01"
+      ],
+      "page_refs": [
+        "P15"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧治理记录结构，自动执行器待建",
+      "acceptance_criteria": "确认纠错自动生成去重数据集并闲时真实训练，产物与失败可追溯，不挤占打印/识别。",
+      "next_action": "已确认非价格识别纠错一次记录RECORDED，价格-only不入样本；继续自动数据集/真实训练调度/产物与资源实测，不把记录样本当训练。",
+      "blockers": [
+        "训练频率/样本数/资源上限未填写"
+      ],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ],
+        "implementation": [
+          "src/business/service.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json"
+        ],
+        "contract": [
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "EVAL-01",
+      "title": "候选模型固定评测与版本回退",
+      "owner": "A05",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "待方案",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "TRAIN-01",
+        "QA-01"
+      ],
+      "page_refs": [
+        "P15"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧候选/评测/部署记录结构",
+      "acceptance_criteria": "固定集不参与训练，新旧结果可比，候选版本可回退；评测后须管理人明确启用才切换生产模型，未确认或评测失败不得自动上线。",
+      "next_action": "与A07登记独立数据集和评测条件，落实管理人人工启用及回退合同；纠错自动收集、自动训练继续保留。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "DOC-01",
+      "title": "冻结单据 中文PNG与变量PDF",
+      "owner": "A06",
+      "assigned_agent": "/root",
+      "phase": "first",
+      "status": "PNG与PDF草案已测 实纸布局待校",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "CONTRACT-01",
+        "DATA-01"
+      ],
+      "page_refs": [
+        "P19",
+        "P22",
+        "P17"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "369中文PNG/快照投影、旧PDF",
+      "acceptance_criteria": "同一冻结内容生成正式PNG和130×190变量PDF，私有持久读回/摘要可验，含单子总合计。",
+      "next_action": "已生成持久中文PNG及130x190变量PDF，15行分页和末页总合计/金额完整性已测；坐标数量/抵扣/分页需实纸确认，UNVALIDATED禁止真实打印。",
+      "blockers": [
+        "数量列、抵扣/合计位置及超行分页细项待明确"
+      ],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/documents/store.mjs",
+          "tools/render_bill_image.py",
+          "tools/render_bill_pdf.py"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json",
+          "docs/开发执行/W2/验证/pdf-tests.txt"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。"
+      ]
+    },
+    {
+      "id": "PRINT-01",
+      "title": "佳能iP110驱动及真实套打",
+      "owner": "A06",
+      "assigned_agent": "/root/reuse_audit",
+      "phase": "first",
+      "status": "驱动预检已回交 待设备",
+      "stages": {
+        "scope": "passed",
+        "contract": "ready_for_review",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "HW-01",
+        "DOC-01"
+      ],
+      "page_refs": [
+        "P16",
+        "P17"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧130×190 PDF/CUPS适配不等本次模板通过",
+      "acceptance_criteria": "准确连接/ARM64驱动实测，130×190实纸中文与变量格对齐，固定底图不重印。",
+      "next_action": "经Q00收集iP110连接、Jetson/CUPS/驱动能力后做非业务校准；当前仅静态预检，不称驱动或实纸已通过。",
+      "blockers": [
+        "iP110连接方式、驱动及真实进纸未验证"
+      ],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/开发执行/W0/A06_打印适配/01_iP110与130x190套打预检.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "PRINT-02",
+      "title": "打印持久日志 未知与重启对账",
+      "owner": "A06",
+      "assigned_agent": "/root/cloud_edge_w2",
+      "phase": "first",
+      "status": "W2本地增量已测 继续完整联调",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "PRINT-01",
+        "EDGE-01"
+      ],
+      "page_refs": [
+        "P16"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧打印UNCERTAIN/attempt基础，需补outbox",
+      "acceptance_criteria": "提交前后留任务/队列ID及outbox，回传失败不丢，断电/未知不自动重印，真实错误可展示。",
+      "next_action": "云端打印提交可能、过期未知和edge outbox持久日志已测；实际worker/CUPS对账仍待接线。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/edge/print_journal.py",
+          "src/printing/index.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/edge-tests.txt",
+          "docs/开发执行/W1/A06_实现回交.md",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。"
+      ]
+    },
+    {
+      "id": "REPRINT-01",
+      "title": "打印人验纸及单次1份重打",
+      "owner": "A06",
+      "assigned_agent": "/root/cloud_edge_w2",
+      "phase": "first",
+      "status": "人工看纸补打本地模块通过",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "passed",
+        "module": "passed",
+        "integration": "in_progress",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "PRINT-02",
+        "ORDER-01",
+        "PHONE-01"
+      ],
+      "page_refs": [
+        "P16",
+        "P22"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧补打序号原因/人工确认基础，需验并发",
+      "acceptance_criteria": "人工已出纸/未出纸各留痕，同一重打请求防重，每次1份且不新增销售。",
+      "next_action": "人工出纸/未出纸、同请求防重、每次一份同PDF零新增销售已测；接iP110真实回执后实纸检查。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md",
+          "docs/功能逐页梳理_2026-10-30/08_历史更正价沿用与W1开发_v0.2-r4.md",
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "src/server.mjs",
+          "src/printing/index.mjs",
+          "web/app.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W1/验证/自动验证结果.json",
+          "docs/开发执行/W1/验证/node-tests.txt",
+          "docs/开发执行/W1/A07_独立验收/01_W1独立代码验收报告.md",
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json"
+        ],
+        "integration": [
+          "docs/开发执行/W2/00_W2开发交付与工作口.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": [
+        "W1仅本地已测切片：45Node+6Python通过；真实云边/模型/APK/iP110及浏览器交互视觉均未验收。",
+        "W2本地切片101Node+11Python通过；ROOT局部IAB交互与A07独立自动检查分记；真实现网/Jetson模型/华为APK/iP110验收未通过。"
+      ]
+    },
+    {
+      "id": "HW-01",
+      "title": "准确设备及现有部署信息核对",
+      "owner": "A07",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "设备资料部分已补 实测待做",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_applicable",
+        "implementation": "not_applicable",
+        "module": "not_applicable",
+        "integration": "not_applicable",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "PLAN-02"
+      ],
+      "page_refs": [],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "记录Jetson准确系列/系统、手机系统、打印连接和阿里云当前运行事实，区分用户声明与实测。",
+      "next_action": "用户已补Orin Nano、Ubuntu22.04.5 LTS、ARMv8六核；JetPack/可用资源、手机系统全称、iP110连接和云运行继续只读核验。",
+      "blockers": [
+        "JetPack/L4T及实际可用资源待测；iP110连接/驱动和当前云事实待核；手机7.0.0.109/API26.0.0已有，系统全称与兼容待实测"
+      ],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md",
+          "docs/功能逐页梳理_2026-10-30/09_Jetson设备事实补充_v0.2-r5.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "QA-01",
+      "title": "脱敏固定集与需求故障矩阵",
+      "owner": "A07",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "W4.1相关32项独立检查通过",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "not_applicable",
+        "module": "in_progress",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "CONTRACT-01"
+      ],
+      "page_refs": [],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "正式规则对应正负场景、数据版本和证据要求；固定集独立于训练；覆盖价格/重放/断线/权限、手机号恢复撤权、人工模型启用及媒体超限。",
+      "next_action": "本轮32项+单位页面操作已核，前轮完整回归独立保留；下一步仍为Q00数量策略及旧新退货/更正并发联动，不重复扩大测试。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md",
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md",
+          "docs/功能逐页梳理_2026-10-30/11_客户关联退货与历史箱价_v0.2-r7.md"
+        ],
+        "contract": [
+          "docs/开发执行/W1_实施合同_v0.1.md"
+        ],
+        "module": [
+          "docs/开发执行/W2/验证/自动验证结果.json",
+          "docs/开发执行/W2/验证/node-tests.txt",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md",
+          "docs/开发执行/W2/验证/源码清单.json",
+          "docs/开发执行/W2_手机测试入口/A07_验收.md",
+          "docs/开发执行/W2_手机测试入口/验证/原HTTP与安全回归.tap",
+          "docs/开发执行/W3_手机旧版布局/A03_回交.md",
+          "docs/开发执行/W3_手机旧版布局/A07_验收.md",
+          "docs/开发执行/W3_手机旧版布局/验证/ROOT_浏览器操作验证.md",
+          "docs/开发执行/W3_手机旧版布局/验证/源码清单.json",
+          "docs/开发执行/W3.1_手机开单精简/00_本轮修改交付.md",
+          "docs/开发执行/W3.1_手机开单精简/A07_核查.md",
+          "docs/开发执行/W3.1_手机开单精简/验证/源码清单.json",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap",
+          "docs/开发执行/W4_客户退货/02_瓶单位修正交付.md",
+          "docs/开发执行/W4_客户退货/A07_瓶单位修正核查.md"
+        ],
+        "integration": [
+          "docs/开发执行/W2_手机测试入口/00_手机端操作测试交付.md",
+          "docs/开发执行/W3_手机旧版布局/A03_回交.md",
+          "docs/开发执行/W3_手机旧版布局/A07_验收.md",
+          "docs/开发执行/W3_手机旧版布局/验证/ROOT_浏览器操作验证.md",
+          "docs/开发执行/W3_手机旧版布局/验证/源码清单.json",
+          "docs/开发执行/W4_客户退货/00_本轮修改交付.md",
+          "docs/开发执行/W4_客户退货/A07_验收.md",
+          "docs/开发执行/W4_客户退货/验证/ROOT-final-node.tap",
+          "docs/开发执行/W4_客户退货/02_瓶单位修正交付.md"
+        ]
+      },
+      "source_version": "w4.1-return-bottle-preview-v0.4.1+39d30a0ad8ac",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-11-03",
+      "handoff_notes": [
+        "W0独立静态核查已回交，核查时台账摘要287ee935ed0b；登记后新摘要与其不同属于后续状态变更，不重写历史核查证据。",
+        "用户明确需要自行操作手机模块，已加独立/mobile-test入口；5新增HTTP+11原HTTP回归通过，ROOT实际iframe保存/刷新/草稿保留已验，不算APK或现场验收。",
+        "W3旧版手机核心呈现已回交；独立首轮19/19及模态后9/9分身份留存，预览补丁后只做最终静态/语法与ROOT隔离浏览器操作；未冒称目标设备通过。",
+        "W3.1用户调整：仅文字/语音输入、预览移核对区、明细扁平、进度退出业务端；A03回交、A07局部只读/HTTP核查与ROOT未提交草稿浏览器验证分记，详见docs/开发执行/W3.1_手机开单精简/00_本轮修改交付.md",
+        "W4仅客户历史价/页面及保存核心隔离验证；正式HTTP新退货409且页面禁用，数量政策Q-RETURN-CUSTOMER-LIMIT-01待Q00；142Node+11Python、A07当前14项与ROOT浏览器草稿验证分记，未计正式保存闭环或设备验收。",
+        "W4.1默认/新增/换商品优先瓶，显式散瓶整箱按钮；ROOT实际390/430页面操作、A07现有32项独立通过。未重跑前轮完整142Node/11Python，保存仍待Q00。"
+      ]
+    },
+    {
+      "id": "QA-02",
+      "title": "同版本云边手机实纸独立验收",
+      "owner": "A07",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "待前置",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_applicable",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "WX-01",
+        "BATCH-01",
+        "EDGE-01",
+        "OPS-01",
+        "PRICE-01",
+        "MONEY-01",
+        "MATCH-01",
+        "ORDER-01",
+        "SALES-01",
+        "CORRECTION-01",
+        "EBILL-01",
+        "AUTH-01",
+        "AUTH-02",
+        "SOURCE-01",
+        "NOTIFY-01",
+        "ALBUM-01",
+        "MEDIA-01",
+        "INFER-01",
+        "TRAIN-01",
+        "EVAL-01",
+        "PRINT-01",
+        "PRINT-02",
+        "REPRINT-01",
+        "QA-01",
+        "DIAG-01",
+        "UIOPS-01",
+        "PROGRESS-01"
+      ],
+      "page_refs": [],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "同版端到端、断网断电未知/补打、图库锁屏、真实自动训练与人工模型上线、单设备扫码及失机手机号恢复撤权、媒体边界、备份恢复及一次计销有独立证据。",
+      "next_action": "等待可验版本，缺陷回原owner；不代填通过。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "EXTRA-01",
+      "title": "搭赠数量自动账及品牌门店映射",
+      "owner": "A02",
+      "assigned_agent": null,
+      "phase": "future",
+      "status": "后续待启用",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "DATA-01",
+        "BATCH-01"
+      ],
+      "page_refs": [
+        "P08",
+        "P11"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧实物费用台账",
+      "acceptance_criteria": "只记明确实物数量，品牌/月度政策/业务员门店映射可追溯，不扩成金额或出纳。",
+      "next_action": "保留后续范围，先落实映射和月份细则。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-30",
+      "handoff_notes": []
+    },
+    {
+      "id": "EXTRA-02",
+      "title": "跨客户多选补回及逐条核销",
+      "owner": "A02",
+      "assigned_agent": null,
+      "phase": "future",
+      "status": "后续待启用",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "EXTRA-01"
+      ],
+      "page_refs": [
+        "P09",
+        "P10"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧补回核销结构",
+      "acceptance_criteria": "跨客户多选、每条数量/单位/剩余量防重防超核，保留批次凭证和更正。",
+      "next_action": "后续明确分配/部分补回/凭证规则。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-30",
+      "handoff_notes": []
+    },
+    {
+      "id": "EXTRA-03",
+      "title": "费用详情及多选补回手机页面",
+      "owner": "A03",
+      "assigned_agent": null,
+      "phase": "future",
+      "status": "后续待启用",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "EXTRA-01",
+        "EXTRA-02",
+        "UIHOME-01"
+      ],
+      "page_refs": [
+        "P08",
+        "P09",
+        "P10",
+        "P11"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧费用/补回页面",
+      "acceptance_criteria": "只显示实物数量业务，多选跨客户补回与后端一致；不进入首期菜单。",
+      "next_action": "待后续阶段启用，再按P08-P11设计。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-30",
+      "handoff_notes": []
+    },
+    {
+      "id": "DIAG-01",
+      "title": "云设备健康与安全自检接口",
+      "owner": "A01",
+      "assigned_agent": null,
+      "phase": "first",
+      "status": "待方案",
+      "stages": {
+        "scope": "passed",
+        "contract": "not_started",
+        "implementation": "not_started",
+        "module": "not_started",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "CLOUD-01",
+        "EDGE-01"
+      ],
+      "page_refs": [
+        "P17",
+        "P18"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧页面/只读诊断仅组件参考",
+      "acceptance_criteria": "按云、企微同步、Jetson、打印运输分别返回状态/时间/原因，与A04本地权限结果衔接；不改订单不补打。",
+      "next_action": "冻结逐项诊断结果及安全可重试动作，与A03自检页接线。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": null,
+      "actual_acceptance": null,
+      "updated_on": "2026-10-30",
+      "handoff_notes": []
+    },
+    {
+      "id": "UIOPS-01",
+      "title": "学习 打印任务与自检页面",
+      "owner": "A03",
+      "assigned_agent": "/root/mobile_ui",
+      "phase": "first",
+      "status": "打印任务页面已接 学习自检待做",
+      "stages": {
+        "scope": "passed",
+        "contract": "in_progress",
+        "implementation": "in_progress",
+        "module": "in_progress",
+        "integration": "not_started",
+        "acceptance": "not_started"
+      },
+      "dependencies": [
+        "UIHOME-01",
+        "DIAG-01",
+        "TRAIN-01",
+        "EVAL-01",
+        "PRINT-02",
+        "REPRINT-01"
+      ],
+      "page_refs": [
+        "P15",
+        "P16",
+        "P18"
+      ],
+      "legacy_ids": [],
+      "reuse_candidate": "旧页面/只读诊断仅组件参考",
+      "acceptance_criteria": "P15真实样本/自动训练/候选评测/人工启用状态，未启用不替换生产模型；P16任务/人工出纸/单份重打；P18逐项诊断与安全重查，空/错/陈旧状态可见。",
+      "next_action": "已接打印列表/人工看纸/补打操作；继续学习模型状态和自检接口，不以打印一页代表整任务完成。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/05_人工确认结果与正式产品规则_v0.2-r1.md",
+          "docs/功能逐页梳理_2026-10-30/06_正式产品规则补充_v0.2-r2.md"
+        ],
+        "contract": [
+          "docs/开发执行/W2_实施合同_v0.1.md"
+        ],
+        "implementation": [
+          "web/app.mjs"
+        ],
+        "module": [
+          "docs/开发执行/W2/A03_实现回交.md",
+          "docs/开发执行/W2/A07_独立验收/01_W2独立代码验收报告.md"
+        ]
+      },
+      "source_version": "w2-local-v0.2+6e4e51c5eca2",
+      "actual_start": "2026-10-31",
+      "actual_acceptance": null,
+      "updated_on": "2026-10-31",
+      "handoff_notes": []
+    },
+    {
+      "id": "ISSUE-01",
+      "title": "Q00问题归口与统一问答",
+      "owner": "ROOT",
+      "assigned_agent": "app-thread:01a18f95-6133-7471-b78d-d2742034ea85",
+      "phase": "management",
+      "status": "Q00已提1项客户退货数量问题 待答",
+      "stages": {
+        "scope": "passed",
+        "contract": "passed",
+        "implementation": "not_applicable",
+        "module": "not_applicable",
+        "integration": "not_applicable",
+        "acceptance": "passed"
+      },
+      "dependencies": [
+        "PLAN-03"
+      ],
+      "page_refs": [],
+      "legacy_ids": [],
+      "reuse_candidate": "",
+      "acceptance_criteria": "专职Q00去重归口，问题有ID/责任/影响/建议/状态/答复证据；经统一通道提问和回写，不让多个开发口重复问；不替代工程状态。",
+      "next_action": "等Q00收到Q-RETURN-CUSTOMER-LIMIT-01答复并记录；ROOT读取实施，不在主会话重复询问或默认推荐已获同意。",
+      "blockers": [],
+      "evidence": {
+        "scope": [
+          "docs/功能逐页梳理_2026-10-30/07_调价更正退货与启动确认_v0.2-r3.md"
+        ],
+        "contract": [
+          "docs/项目管理/06_W0启动与任务派发.md",
+          "docs/项目管理/问题协调/00_问题台账.md",
+          "docs/项目管理/问题协调/02_Q00会话路由与维护交接.md"
+        ],
+        "acceptance": [
+          "docs/项目管理/问题协调/00_问题台账.md",
+          "docs/项目管理/问题协调/01_本轮问题汇总.md",
+          "docs/项目管理/问题协调/02_Q00会话路由与维护交接.md",
+          "docs/项目管理/问题协调/03_客户退货累计数量限制_Q-RETURN-CUSTOMER-LIMIT-01.md"
+        ]
+      },
+      "source_version": null,
+      "actual_start": "2026-10-31",
+      "actual_acceptance": "2026-10-31",
+      "updated_on": "2026-11-03",
+      "handoff_notes": [
+        "Q00为支持岗，不新增业务员工角色；工程owner为ROOT，实际问题维护由专职子代理执行。",
+        "当前子代理无法直接使用异步提问通道时由ROOT代发，归口仍Q00。",
+        "2026-10-31用户授权已有8工作口交换管理；Q00应用会话已完成路由交接，ROOT代发仅保留通道不可用时的例外。"
+      ]
+    }
+  ],
+  "confirmed_source": {
+    "path": "docs/功能逐页梳理_2026-10-30/02_22张页面逐项解析.md",
+    "sha256": "6D588F44411F95B82C17568CDD8210209AF24CCE74D08AE3965FAEA90FBC6495"
+  }
+}

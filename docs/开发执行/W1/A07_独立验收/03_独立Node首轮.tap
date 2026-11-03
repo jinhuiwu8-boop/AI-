@@ -1,0 +1,165 @@
+TAP version 13
+# Subtest: A07 domain: unknown customer/SKU/unit cannot borrow another master or price
+ok 1 - A07 domain: unknown customer/SKU/unit cannot borrow another master or price
+  ---
+  duration_ms: 6.2269
+  type: 'test'
+  ...
+# Subtest: A07 domain: illegal integer quantity and money leave no partial order/price/event
+ok 2 - A07 domain: illegal integer quantity and money leave no partial order/price/event
+  ---
+  duration_ms: 3.4777
+  type: 'test'
+  ...
+# Subtest: A07 domain: role, active flag and actor-scoped replay are enforced in cloud service
+ok 3 - A07 domain: role, active flag and actor-scoped replay are enforced in cloud service
+  ---
+  duration_ms: 2.7003
+  type: 'test'
+  ...
+# Subtest: A07 domain: manual edit still rejects stale price version, without reverting latest price
+ok 4 - A07 domain: manual edit still rejects stale price version, without reverting latest price
+  ---
+  duration_ms: 1.163
+  type: 'test'
+  ...
+# Subtest: A07 domain: explicit zero sale and zero correction preserve the ordinary future price
+ok 5 - A07 domain: explicit zero sale and zero correction preserve the ordinary future price
+  ---
+  duration_ms: 2.1616
+  type: 'test'
+  ...
+# Subtest: A07 domain: positive correction changes future price, freezes history and reverses exactly once
+ok 6 - A07 domain: positive correction changes future price, freezes history and reverses exactly once
+  ---
+  duration_ms: 2.1296
+  type: 'test'
+  ...
+# Subtest: A07 domain: original return ownership, units and price are enforced; partial cumulative over-return rejected
+ok 7 - A07 domain: original return ownership, units and price are enforced; partial cumulative over-return rejected
+  ---
+  duration_ms: 2.2198
+  type: 'test'
+  ...
+# Subtest: A07 domain: existing return plus quantity correction has exact net zero; below returned rejected
+ok 8 - A07 domain: existing return plus quantity correction has exact net zero; below returned rejected
+  ---
+  duration_ms: 4.6776
+  type: 'test'
+  ...
+# Subtest: A07 domain: document failure rolls back sale, correction and return including prices and operation IDs
+ok 9 - A07 domain: document failure rolls back sale, correction and return including prices and operation IDs
+  ---
+  duration_ms: 3.406
+  type: 'test'
+  ...
+# Subtest: A07 domain: duplicate SKU manual price lines produce one price event and one recoverable before-price
+ok 10 - A07 domain: duplicate SKU manual price lines produce one price event and one recoverable before-price
+  ---
+  duration_ms: 1.1512
+  type: 'test'
+  ...
+# Subtest: A07 domain: duplicate SKU corrected price lines update only once and recover true old price
+ok 11 - A07 domain: duplicate SKU corrected price lines update only once and recover true old price
+  ---
+  duration_ms: 1.1003
+  type: 'test'
+  ...
+# Subtest: A07 persistence: restart retains operation result, frozen revisions, return quota and future price
+ok 12 - A07 persistence: restart retains operation result, frozen revisions, return quota and future price
+  ---
+  duration_ms: 18.7503
+  type: 'test'
+  ...
+# Subtest: A07 intake: disabled sources and unsafe metadata fail atomically without phantom batches
+ok 13 - A07 intake: disabled sources and unsafe metadata fail atomically without phantom batches
+  ---
+  duration_ms: 5.1719
+  type: 'test'
+  ...
+# Subtest: A07 intake: conversation isolation, same-id changed input and 60-second exact boundary
+ok 14 - A07 intake: conversation isolation, same-id changed input and 60-second exact boundary
+  ---
+  duration_ms: 2.739
+  type: 'test'
+  ...
+# Subtest: A07 intake: a new voice product extends deadline but retry cannot create another job
+ok 15 - A07 intake: a new voice product extends deadline but retry cannot create another job
+  ---
+  duration_ms: 0.9832
+  type: 'test'
+  ...
+# Subtest: A07 intake persistence: restart expires persisted batch without a phone request or duplicate task
+ok 16 - A07 intake persistence: restart expires persisted batch without a phone request or duplicate task
+  ---
+  duration_ms: 21.4443
+  type: 'test'
+  ...
+# Subtest: A07 HTTP: session, CSRF, origin and cross-site defenses reject without changing state
+ok 17 - A07 HTTP: session, CSRF, origin and cross-site defenses reject without changing state
+  ---
+  duration_ms: 121.4378
+  type: 'test'
+  ...
+# Subtest: A07 HTTP: Host check and route allowlist cannot expose source or filesystem paths
+not ok 18 - A07 HTTP: Host check and route allowlist cannot expose source or filesystem paths
+  ---
+  duration_ms: 35.6842
+  type: 'test'
+  location: 'D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\test\\acceptance\\intake-http-negative.test.mjs:122:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    200 !== 403
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 403
+  actual: 200
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///D:/Backup/Documents/ChatGPT/%E6%96%B0%E7%89%88%E5%BA%97%E5%86%85%E6%89%93%E5%8D%95/test/acceptance/intake-http-negative.test.mjs:124:10)
+    process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Local request failure: URI malformed
+# Subtest: A07 HTTP: malformed URL-encoded business identifier is a client error with no mutation
+not ok 19 - A07 HTTP: malformed URL-encoded business identifier is a client error with no mutation
+  ---
+  duration_ms: 28.9474
+  type: 'test'
+  location: 'D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\test\\acceptance\\intake-http-negative.test.mjs:132:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    500 !== 400
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 400
+  actual: 500
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///D:/Backup/Documents/ChatGPT/%E6%96%B0%E7%89%88%E5%BA%97%E5%86%85%E6%89%93%E5%8D%95/test/acceptance/intake-http-negative.test.mjs:136:10)
+    process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: A07 HTTP+PNG: committed document is real PNG, private, digest-matched and historical
+ok 20 - A07 HTTP+PNG: committed document is real PNG, private, digest-matched and historical
+  ---
+  duration_ms: 407.1637
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 18
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 754.8852

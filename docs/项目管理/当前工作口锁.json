@@ -1,0 +1,75 @@
+{
+  "updatedOn": "2026-11-03",
+  "currentBatch": "W4.1 退货默认按瓶及显式单位选择",
+  "maxConcurrentWorkers": 3,
+  "locks": [
+    {
+      "role": "ROOT",
+      "executor": "/root",
+      "files": [
+        "src/business/service.mjs",
+        "src/server.mjs",
+        "tools/render_bill_image.py",
+        "test/business/customer-returns.test.mjs",
+        "test/integration/customer-returns-http.test.mjs",
+        "docs/项目管理/项目任务台账.json",
+        "docs/项目管理/当前工作口锁.json",
+        "AGENTS.md",
+        "docs/开发执行/W4_客户退货/",
+        "package.json",
+        "docs/功能逐页梳理_2026-10-30/11_客户关联退货与历史箱价_v0.2-r7.md",
+        "docs/项目管理/02_项目边界与执行规范.md",
+        "项目常看入口.md",
+        "手机端操作测试说明.md",
+        "README.md"
+      ],
+      "status": "handed_off",
+      "note": "W4.1按瓶交互修正已回交，源码 w4.1-return-bottle-preview-v0.4.1+39d30a0ad8ac；ROOT浏览器及A07相关32项通过，工程看板已同步，新保存仍待Q00。"
+    },
+    {
+      "role": "A03",
+      "executor": "collaboration:/root/return_mobile_audit",
+      "threadId": "01a18f92-850b-7d20-be10-6da246c74470",
+      "files": [
+        "web/app.mjs",
+        "web/mobile-app.mjs",
+        "web/mobile.css",
+        "docs/开发执行/W4_客户退货/A03_回交.md"
+      ],
+      "status": "handed_off",
+      "note": "W4.1三份web文件已冻结回交，默认瓶/显式按钮/最少1瓶，销售原下拉保持。"
+    },
+    {
+      "role": "A07",
+      "executor": "collaboration:/root/return_acceptance",
+      "threadId": "01a18f94-d859-7f92-87ef-1c0af594f42a",
+      "files": [
+        "test/acceptance-customer-return/",
+        "docs/开发执行/W4_客户退货/A07_验收.md"
+      ],
+      "status": "handed_off",
+      "note": "W4.1只读差量审查与现有32项相关测试通过，新TAP/报告留存，不代签ROOT浏览器或正式保存。"
+    },
+    {
+      "role": "Q00",
+      "executor": "app-thread",
+      "threadId": "01a18f95-6133-7471-b78d-d2742034ea85",
+      "files": [
+        "docs/项目管理/问题协调/"
+      ],
+      "status": "handed_off",
+      "note": "Q-RETURN-CUSTOMER-LIMIT-01已问待答；不空等占执行位，收到答复由原会话记录问题目录。"
+    },
+    {
+      "role": "A02",
+      "executor": "collaboration:/root/return_business_audit",
+      "files": [
+        "src/business/return-prices.mjs",
+        "test/business/return-prices.test.mjs",
+        "docs/开发执行/W4_客户退货/A02_回交.md"
+      ],
+      "status": "handed_off",
+      "note": "历史报价模块18项通过并已冻结；W4已整合，数量策略待Q00后续派。"
+    }
+  ]
+}

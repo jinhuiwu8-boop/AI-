@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<rect width="1400" height="1000" fill="#F6F8F7"/>
+<text x="32.0" y="64" font-family="Microsoft YaHei, sans-serif" font-size="36" fill="#183C35">店内打单项目进度</text>
+<text x="32.0" y="102" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#60756F">产品规则   →   共享合同   →   实现和模块验证   →   联调   →   目标环境验收   →   用户版本确认</text>
+<rect x="32" y="137" width="410" height="110" rx="8" fill="#FFFFFF"/>
+<text x="52.0" y="185" font-family="Microsoft YaHei, sans-serif" font-size="36" fill="#183C35">35</text>
+<text x="52.0" y="223" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#60756F">首期执行任务</text>
+<rect x="470" y="137" width="410" height="110" rx="8" fill="#FFFFFF"/>
+<text x="490.0" y="185" font-family="Microsoft YaHei, sans-serif" font-size="36" fill="#183C35">0</text>
+<text x="490.0" y="223" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#60756F">目标环境验收通过</text>
+<rect x="908" y="137" width="410" height="110" rx="8" fill="#FFFFFF"/>
+<text x="928.0" y="185" font-family="Microsoft YaHei, sans-serif" font-size="36" fill="#183C35">3</text>
+<text x="928.0" y="223" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#60756F">后续搭赠任务</text>
+<text x="32.0" y="301" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#183C35">工作口及当前阶段</text>
+<text x="839.0" y="335" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">需求</text>
+<text x="929.0" y="335" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">合同</text>
+<text x="1019.0" y="335" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">实现</text>
+<text x="1093.0" y="335" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">模块验证</text>
+<text x="1199.0" y="335" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">联调</text>
+<text x="1289.0" y="335" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">验收</text>
+<rect x="24" y="350" width="1352" height="56" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="373" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#183C35">ROOT</text>
+<text x="117.0" y="375" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#183C35">主代理总控</text>
+<text x="117.0" y="395" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">8项 · 22页原确认保留 W4退货增补已记 1项；8工作口与Q00已登记 本轮A03/A07已回交 1项</text>
+<text x="841.5" y="383" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">8/8</text>
+<text x="931.5" y="383" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">6/8</text>
+<text x="1009.5" y="383" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">不适用</text>
+<text x="1099.5" y="383" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">不适用</text>
+<text x="1189.5" y="383" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">不适用</text>
+<text x="1291.5" y="383" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">4/8</text>
+<rect x="24" y="412" width="1352" height="56" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="435" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#183C35">A01</text>
+<text x="117.0" y="437" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#183C35">云端接入与调度</text>
+<text x="117.0" y="457" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">6项 · W1局部实现 本地验证已回交 2项；待方案 2项</text>
+<text x="841.5" y="445" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">6/6</text>
+<text x="931.5" y="445" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">4/6</text>
+<text x="1021.5" y="445" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">2/6</text>
+<text x="1111.5" y="445" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">2/6</text>
+<text x="1201.5" y="445" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/6</text>
+<text x="1291.5" y="445" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/6</text>
+<rect x="24" y="474" width="1352" height="56" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="497" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#183C35">A02</text>
+<text x="117.0" y="499" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#183C35">主档价格与订单</text>
+<text x="117.0" y="519" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">7项 · 本地模块回归通过 待目标环境联调 2项；主档本地增改已测 启停导入待补 1项</text>
+<text x="841.5" y="507" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">6/7</text>
+<text x="931.5" y="507" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">6/7</text>
+<text x="1021.5" y="507" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">4/7</text>
+<text x="1111.5" y="507" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">4/7</text>
+<text x="1201.5" y="507" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/7</text>
+<text x="1291.5" y="507" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/7</text>
+<rect x="24" y="536" width="1352" height="56" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="559" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#183C35">A03</text>
+<text x="117.0" y="561" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#183C35">手机业务页面</text>
+<text x="117.0" y="581" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">4项 · W4.1默认退瓶与显式单位已核对 1项；W2本地增量已测 继续完整联调 1项</text>
+<text x="841.5" y="569" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">3/4</text>
+<text x="931.5" y="569" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">2/4</text>
+<text x="1021.5" y="569" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<text x="1111.5" y="569" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<text x="1201.5" y="569" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<text x="1291.5" y="569" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<rect x="24" y="598" width="1352" height="56" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="621" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#183C35">A04</text>
+<text x="117.0" y="623" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#183C35">APK原生与设备安全</text>
+<text x="117.0" y="643" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">7项 · 待方案 4项；W0预检已回交 待实机 1项</text>
+<text x="841.5" y="631" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">7/7</text>
+<text x="931.5" y="631" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/7</text>
+<text x="1021.5" y="631" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/7</text>
+<text x="1111.5" y="631" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/7</text>
+<text x="1201.5" y="631" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/7</text>
+<text x="1291.5" y="631" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/7</text>
+<rect x="24" y="660" width="1352" height="56" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="683" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#183C35">A05</text>
+<text x="117.0" y="685" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#183C35">Jetson识别与训练</text>
+<text x="117.0" y="705" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">4项 · 待方案 2项；Orin Nano资料已补 待资源验证 1项</text>
+<text x="841.5" y="693" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">4/4</text>
+<text x="931.5" y="693" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<text x="1021.5" y="693" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<text x="1111.5" y="693" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<text x="1201.5" y="693" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<text x="1291.5" y="693" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<rect x="24" y="722" width="1352" height="56" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="745" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#183C35">A06</text>
+<text x="117.0" y="747" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#183C35">单据生成与打印</text>
+<text x="117.0" y="767" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">4项 · PNG与PDF草案已测 实纸布局待校 1项；驱动预检已回交 待设备 1项</text>
+<text x="841.5" y="755" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">4/4</text>
+<text x="931.5" y="755" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">3/4</text>
+<text x="1021.5" y="755" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">1/4</text>
+<text x="1111.5" y="755" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">1/4</text>
+<text x="1201.5" y="755" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<text x="1291.5" y="755" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/4</text>
+<rect x="24" y="784" width="1352" height="56" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="807" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#183C35">A07</text>
+<text x="117.0" y="809" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#183C35">独立验收</text>
+<text x="117.0" y="829" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">3项 · 设备资料部分已补 实测待做 1项；W4.1相关32项独立检查通过 1项</text>
+<text x="841.5" y="817" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">3/3</text>
+<text x="931.5" y="817" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#17674D">1/2</text>
+<text x="1009.5" y="817" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">不适用</text>
+<text x="1111.5" y="817" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/2</text>
+<text x="1201.5" y="817" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/2</text>
+<text x="1291.5" y="817" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">0/3</text>
+<text x="32.0" y="884" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">并行上限  主代理1个 + 子代理最多3个；7个工作口按依赖轮换</text>
+<text x="32.0" y="922" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">需求列的通过数不折算开发完成率。旧代码、历史测试和“已部署”声明不算新版本验收。</text>
+<text x="32.0" y="962" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#60756F">数据日期 2026-11-03   台账摘要 fa53b72ab521   无自动后台执行或状态推进</text>
+</svg>

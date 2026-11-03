@@ -1,0 +1,636 @@
+{
+  "audit_id": "W0-A07",
+  "audit_version": "audit-v0.1",
+  "generated_at_local": "2026-10-31T08:49:48+08:00",
+  "scope": "Static documentation review and independent SHA256 recomputation only.",
+  "source_code_executed": false,
+  "business_samples_executed": false,
+  "devices_or_production_accessed": false,
+  "push_or_deployment_performed": false,
+  "roots": {
+    "R": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend",
+    "C": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\t05-mobile-photo-20261013-r1\\candidate",
+    "C369": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\m00-managed-png-product-20261027-r1\\source-snapshot"
+  },
+  "table_identities": {
+    "A01": {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "sha256": "33728F8B12892796709D142B6683257B225EECB8327BE8C2E4C28D7772A280F2",
+      "bytes": 8687
+    },
+    "A04": {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "sha256": "0ECC8C780250B7592A9180EB09E97955332F8D649B80B17F728C83E785C047C6",
+      "bytes": 5766
+    },
+    "A06": {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A06_打印适配\\01_iP110与130x190套打预检.md",
+      "sha256": "53D64BBB60F3A4A1ED531C29D40C2650C054D84C5E5C0A2AB017298CE773E557",
+      "bytes": 6042
+    }
+  },
+  "source_summary": {
+    "listed": 25,
+    "matched": 25,
+    "mismatched": 0,
+    "by_role": {
+      "A01": {
+        "listed": 9,
+        "matched": 9
+      },
+      "A04": {
+        "listed": 9,
+        "matched": 9
+      },
+      "A06": {
+        "listed": 7,
+        "matched": 7
+      }
+    },
+    "unique_resolved_files": 25
+  },
+  "source_rows": [
+    {
+      "role": "A01",
+      "table": "docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "table_line": 62,
+      "table_path": "C369/package.json",
+      "resolved_prefix": "C369",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\m00-managed-png-product-20261027-r1\\source-snapshot\\package.json",
+      "expected_sha256": "E0AA886AC6A140AFD3EE80E6F94C445D71DC0BCDE633F60AAD9980A36D7D2A25",
+      "actual_sha256": "E0AA886AC6A140AFD3EE80E6F94C445D71DC0BCDE633F60AAD9980A36D7D2A25",
+      "matches": true,
+      "bytes": 2238
+    },
+    {
+      "role": "A01",
+      "table": "docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "table_line": 63,
+      "table_path": "C369/deploy/node/runtime.mjs",
+      "resolved_prefix": "C369",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\m00-managed-png-product-20261027-r1\\source-snapshot\\deploy\\node\\runtime.mjs",
+      "expected_sha256": "D3331266395F73247A5E340D9C1BCD986A55972829DE047735809B78B3C5ED52",
+      "actual_sha256": "D3331266395F73247A5E340D9C1BCD986A55972829DE047735809B78B3C5ED52",
+      "matches": true,
+      "bytes": 1379
+    },
+    {
+      "role": "A01",
+      "table": "docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "table_line": 64,
+      "table_path": "C369/deploy/node/database.mjs",
+      "resolved_prefix": "C369",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\m00-managed-png-product-20261027-r1\\source-snapshot\\deploy\\node\\database.mjs",
+      "expected_sha256": "A9F22A2242C7B1D009031AAFD832882DE0DD59AF98D9CD6AA5E8A5B0157AF061",
+      "actual_sha256": "A9F22A2242C7B1D009031AAFD832882DE0DD59AF98D9CD6AA5E8A5B0157AF061",
+      "matches": true,
+      "bytes": 2961
+    },
+    {
+      "role": "A01",
+      "table": "docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "table_line": 65,
+      "table_path": "C369/deploy/node/storage.mjs",
+      "resolved_prefix": "C369",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\m00-managed-png-product-20261027-r1\\source-snapshot\\deploy\\node\\storage.mjs",
+      "expected_sha256": "1E6E6B6B299A9212777AF877ECBFC8BE9B6FCAE551723C7624312E97DBF46661",
+      "actual_sha256": "1E6E6B6B299A9212777AF877ECBFC8BE9B6FCAE551723C7624312E97DBF46661",
+      "matches": true,
+      "bytes": 7291
+    },
+    {
+      "role": "A01",
+      "table": "docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "table_line": 66,
+      "table_path": "R/app/api/wechat/customer-service/callback/route.ts",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\app\\api\\wechat\\customer-service\\callback\\route.ts",
+      "expected_sha256": "5208B722A06CC026D54C810A4E0677E7AB9C22BBF4765467BCE1F7336B3014A9",
+      "actual_sha256": "5208B722A06CC026D54C810A4E0677E7AB9C22BBF4765467BCE1F7336B3014A9",
+      "matches": true,
+      "bytes": 4447
+    },
+    {
+      "role": "A01",
+      "table": "docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "table_line": 67,
+      "table_path": "R/lib/server/wecom-callback-store.ts",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\lib\\server\\wecom-callback-store.ts",
+      "expected_sha256": "DFE5E9154DD545B3A15A0559208E5EB119A89E7C3856899BFDB3561FF417BB18",
+      "actual_sha256": "DFE5E9154DD545B3A15A0559208E5EB119A89E7C3856899BFDB3561FF417BB18",
+      "matches": true,
+      "bytes": 14748
+    },
+    {
+      "role": "A01",
+      "table": "docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "table_line": 68,
+      "table_path": "R/lib/server/forwarding-batch-store.ts",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\lib\\server\\forwarding-batch-store.ts",
+      "expected_sha256": "176A862C113A1E75E54A63634326FA478C2BC435BB2526736A90998AAB48CE7E",
+      "actual_sha256": "176A862C113A1E75E54A63634326FA478C2BC435BB2526736A90998AAB48CE7E",
+      "matches": true,
+      "bytes": 14589
+    },
+    {
+      "role": "A01",
+      "table": "docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "table_line": 69,
+      "table_path": "R/lib/server/edge-job-store.ts",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\lib\\server\\edge-job-store.ts",
+      "expected_sha256": "2928086B7FEE3218BFA02E95659BE251F76F4187681C99993B509D8948174D92",
+      "actual_sha256": "2928086B7FEE3218BFA02E95659BE251F76F4187681C99993B509D8948174D92",
+      "matches": true,
+      "bytes": 23507
+    },
+    {
+      "role": "A01",
+      "table": "docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "table_line": 70,
+      "table_path": "R/lib/forwarding-batches.ts",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\lib\\forwarding-batches.ts",
+      "expected_sha256": "0A2BD022FD7055406CB38B44AA1451B6D67445C49AABDEE0F2D8295B05CD60FF",
+      "actual_sha256": "0A2BD022FD7055406CB38B44AA1451B6D67445C49AABDEE0F2D8295B05CD60FF",
+      "matches": true,
+      "bytes": 3812
+    },
+    {
+      "role": "A04",
+      "table": "docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "table_line": 37,
+      "table_path": "package.json",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\package.json",
+      "expected_sha256": "5E000E120A87B17A6B8937F45FAFBAABA87E3B3EDA987935F51460397C2D4A49",
+      "actual_sha256": "5E000E120A87B17A6B8937F45FAFBAABA87E3B3EDA987935F51460397C2D4A49",
+      "matches": true,
+      "bytes": 2305
+    },
+    {
+      "role": "A04",
+      "table": "docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "table_line": 38,
+      "table_path": "capacitor.config.ts",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\capacitor.config.ts",
+      "expected_sha256": "A8AF05AEB581BF4738BE2274D9A5670293F013E74C70D2CF6AB6F54322134B5D",
+      "actual_sha256": "A8AF05AEB581BF4738BE2274D9A5670293F013E74C70D2CF6AB6F54322134B5D",
+      "matches": true,
+      "bytes": 585
+    },
+    {
+      "role": "A04",
+      "table": "docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "table_line": 39,
+      "table_path": "android/variables.gradle",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\android\\variables.gradle",
+      "expected_sha256": "F8D50D9D4B39976DA0C1CDE7B28ABC157C5E591B0F9B1E89E7E1EF7A3CFAAC55",
+      "actual_sha256": "F8D50D9D4B39976DA0C1CDE7B28ABC157C5E591B0F9B1E89E7E1EF7A3CFAAC55",
+      "matches": true,
+      "bytes": 563
+    },
+    {
+      "role": "A04",
+      "table": "docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "table_line": 40,
+      "table_path": "android/app/build.gradle",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\android\\app\\build.gradle",
+      "expected_sha256": "FF4AAAE7C1246D9FFEA3A4C15FE01884385E0DDB85FD7E4BDDC40441362BC732",
+      "actual_sha256": "FF4AAAE7C1246D9FFEA3A4C15FE01884385E0DDB85FD7E4BDDC40441362BC732",
+      "matches": true,
+      "bytes": 2868
+    },
+    {
+      "role": "A04",
+      "table": "docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "table_line": 41,
+      "table_path": "android/app/src/main/AndroidManifest.xml",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\android\\app\\src\\main\\AndroidManifest.xml",
+      "expected_sha256": "678154F6AECC28BE7A13BAD09A4BB99400A8FD6788CC9FFB978CA1DB71E4598C",
+      "actual_sha256": "678154F6AECC28BE7A13BAD09A4BB99400A8FD6788CC9FFB978CA1DB71E4598C",
+      "matches": true,
+      "bytes": 1583
+    },
+    {
+      "role": "A04",
+      "table": "docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "table_line": 42,
+      "table_path": "android/app/src/main/java/com/yunjiuzhang/cashier/MainActivity.java",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\android\\app\\src\\main\\java\\com\\yunjiuzhang\\cashier\\MainActivity.java",
+      "expected_sha256": "FD95E53942C433A692C366293A65339CDB8AF98E0C4A10E8766AA25E0183805C",
+      "actual_sha256": "FD95E53942C433A692C366293A65339CDB8AF98E0C4A10E8766AA25E0183805C",
+      "matches": true,
+      "bytes": 127
+    },
+    {
+      "role": "A04",
+      "table": "docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "table_line": 43,
+      "table_path": "C/app/src/main/AndroidManifest.xml",
+      "resolved_prefix": "C",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\t05-mobile-photo-20261013-r1\\candidate\\app\\src\\main\\AndroidManifest.xml",
+      "expected_sha256": "C510C0FE1D1DA842D9AAC637D70107A2884A71B97AE2B04B8B2EA14C9D3B4570",
+      "actual_sha256": "C510C0FE1D1DA842D9AAC637D70107A2884A71B97AE2B04B8B2EA14C9D3B4570",
+      "matches": true,
+      "bytes": 1132
+    },
+    {
+      "role": "A04",
+      "table": "docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "table_line": 44,
+      "table_path": "C/app/src/main/java/com/yunjiuzhang/cashier/photocandidate/MainActivity.java",
+      "resolved_prefix": "C",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\t05-mobile-photo-20261013-r1\\candidate\\app\\src\\main\\java\\com\\yunjiuzhang\\cashier\\photocandidate\\MainActivity.java",
+      "expected_sha256": "435ABBC4E4EE32894CEE3EF1A91CD4CBA796DD4A39306934C50E5F76A09EFFDB",
+      "actual_sha256": "435ABBC4E4EE32894CEE3EF1A91CD4CBA796DD4A39306934C50E5F76A09EFFDB",
+      "matches": true,
+      "bytes": 10436
+    },
+    {
+      "role": "A04",
+      "table": "docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "table_line": 45,
+      "table_path": "C/app/src/main/java/com/yunjiuzhang/cashier/photocandidate/NativePhotoChannel.java",
+      "resolved_prefix": "C",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\t05-mobile-photo-20261013-r1\\candidate\\app\\src\\main\\java\\com\\yunjiuzhang\\cashier\\photocandidate\\NativePhotoChannel.java",
+      "expected_sha256": "8E07836A1018F06DED7D0033ADE05DED691A0E969E7003185BBF1F4EA3A75FB8",
+      "actual_sha256": "8E07836A1018F06DED7D0033ADE05DED691A0E969E7003185BBF1F4EA3A75FB8",
+      "matches": true,
+      "bytes": 13880
+    },
+    {
+      "role": "A06",
+      "table": "docs\\开发执行\\W0\\A06_打印适配\\01_iP110与130x190套打预检.md",
+      "table_line": 52,
+      "table_path": "R/edge-agent/edge_agent/jobs.py",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\edge-agent\\edge_agent\\jobs.py",
+      "expected_sha256": "E89CAF222B1B84E15D9B31038EE6EE29C62416A95970709FCB5C43F0B060D0A8",
+      "actual_sha256": "E89CAF222B1B84E15D9B31038EE6EE29C62416A95970709FCB5C43F0B060D0A8",
+      "matches": true,
+      "bytes": 6739
+    },
+    {
+      "role": "A06",
+      "table": "docs\\开发执行\\W0\\A06_打印适配\\01_iP110与130x190套打预检.md",
+      "table_line": 53,
+      "table_path": "R/edge-agent/edge_agent/printing.py",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\edge-agent\\edge_agent\\printing.py",
+      "expected_sha256": "79E483B5BF2F1DFC8C20747AC4E99CF6B2AEEFC28332FF7497370C41623DFE10",
+      "actual_sha256": "79E483B5BF2F1DFC8C20747AC4E99CF6B2AEEFC28332FF7497370C41623DFE10",
+      "matches": true,
+      "bytes": 3485
+    },
+    {
+      "role": "A06",
+      "table": "docs\\开发执行\\W0\\A06_打印适配\\01_iP110与130x190套打预检.md",
+      "table_line": 54,
+      "table_path": "R/lib/server/order-pdf.ts",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\lib\\server\\order-pdf.ts",
+      "expected_sha256": "97BCBF96BEFEB358EE6D9E1A7C9A37867A204AE3D5A19417C7F6593AB1D495BC",
+      "actual_sha256": "97BCBF96BEFEB358EE6D9E1A7C9A37867A204AE3D5A19417C7F6593AB1D495BC",
+      "matches": true,
+      "bytes": 18983
+    },
+    {
+      "role": "A06",
+      "table": "docs\\开发执行\\W0\\A06_打印适配\\01_iP110与130x190套打预检.md",
+      "table_line": 55,
+      "table_path": "R/lib/server/print-job-store.ts",
+      "resolved_prefix": "R",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\lib\\server\\print-job-store.ts",
+      "expected_sha256": "DB139A6269A76B195934021E5689A5C6D930F35C987655F263CE5663FCB388D3",
+      "actual_sha256": "DB139A6269A76B195934021E5689A5C6D930F35C987655F263CE5663FCB388D3",
+      "matches": true,
+      "bytes": 19334
+    },
+    {
+      "role": "A06",
+      "table": "docs\\开发执行\\W0\\A06_打印适配\\01_iP110与130x190套打预检.md",
+      "table_line": 56,
+      "table_path": "C369/lib/server/print-job-store.ts",
+      "resolved_prefix": "C369",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\m00-managed-png-product-20261027-r1\\source-snapshot\\lib\\server\\print-job-store.ts",
+      "expected_sha256": "F72DBA952462F98FE3812B82C8B273E5993088BD40FA3BC432A1CB5811C7F6F4",
+      "actual_sha256": "F72DBA952462F98FE3812B82C8B273E5993088BD40FA3BC432A1CB5811C7F6F4",
+      "matches": true,
+      "bytes": 30108
+    },
+    {
+      "role": "A06",
+      "table": "docs\\开发执行\\W0\\A06_打印适配\\01_iP110与130x190套打预检.md",
+      "table_line": 57,
+      "table_path": "C369/lib/server/order-completion-store.ts",
+      "resolved_prefix": "C369",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\m00-managed-png-product-20261027-r1\\source-snapshot\\lib\\server\\order-completion-store.ts",
+      "expected_sha256": "23FF78898C6D883A913D815F4BD6CF6D1736D8B34AEE46645DC09525420C0573",
+      "actual_sha256": "23FF78898C6D883A913D815F4BD6CF6D1736D8B34AEE46645DC09525420C0573",
+      "matches": true,
+      "bytes": 12744
+    },
+    {
+      "role": "A06",
+      "table": "docs\\开发执行\\W0\\A06_打印适配\\01_iP110与130x190套打预检.md",
+      "table_line": 58,
+      "table_path": "C369/lib/order-document.ts",
+      "resolved_prefix": "C369",
+      "resolved_path": "F:\\项目表\\01_云酒账_酒水智能收单与出纳系统\\02_当前增强版\\frontend\\output\\m00-managed-png-product-20261027-r1\\source-snapshot\\lib\\order-document.ts",
+      "expected_sha256": "F02D3CD9FA8CB20EFA623F654E9E4C7232A7F17207C8830220C271C9F1040459",
+      "actual_sha256": "F02D3CD9FA8CB20EFA623F654E9E4C7232A7F17207C8830220C271C9F1040459",
+      "matches": true,
+      "bytes": 21911
+    }
+  ],
+  "confirmed_page_integrity": {
+    "manifest": {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\功能逐页梳理_2026-10-30\\history\\v0.2_用户确认原稿\\确认清单.json",
+      "sha256": "16468B6D6F48043D20599246788CF8743E13C6D3FBFB97EE370D0B357CA018B0",
+      "bytes": 555
+    },
+    "expected_sha256": "6D588F44411F95B82C17568CDD8210209AF24CCE74D08AE3965FAEA90FBC6495",
+    "source": {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\功能逐页梳理_2026-10-30\\02_22张页面逐项解析.md",
+      "sha256": "6D588F44411F95B82C17568CDD8210209AF24CCE74D08AE3965FAEA90FBC6495",
+      "bytes": 43579
+    },
+    "snapshot": {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\功能逐页梳理_2026-10-30\\history\\v0.2_用户确认原稿\\02_22张页面逐项解析_6D588F44411F.md",
+      "sha256": "6D588F44411F95B82C17568CDD8210209AF24CCE74D08AE3965FAEA90FBC6495",
+      "bytes": 43579
+    },
+    "matches": true,
+    "action": "Read and hash only; source and snapshot were not modified."
+  },
+  "sample_design": {
+    "document": {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A02_业务规则\\02_脱敏业务验收样例.md",
+      "sha256": "1EB4521B1253DE7A173CA822F51EAB219B0F79C5FC02B6F9DBF89BE7E6DEE9E1",
+      "bytes": 7345
+    },
+    "count": 41,
+    "ids": [
+      "V01",
+      "V02",
+      "V03",
+      "V04",
+      "V05",
+      "V06",
+      "V07",
+      "V08",
+      "V09",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17",
+      "V18",
+      "V19",
+      "V20",
+      "V21",
+      "V22",
+      "V23",
+      "V24",
+      "V25",
+      "V26",
+      "V27",
+      "V28",
+      "V29",
+      "V30",
+      "V31",
+      "V32",
+      "V33",
+      "V34",
+      "V35",
+      "V36",
+      "V37",
+      "V38",
+      "V39",
+      "V40",
+      "V41"
+    ],
+    "execution_status": "Not executed; design coverage only.",
+    "rule_mapping": {
+      "step_one_yuan": [
+        "V01",
+        "V02"
+      ],
+      "restore_previous_effective_price": [
+        "V03",
+        "V04",
+        "V05",
+        "V06"
+      ],
+      "explicit_zero_does_not_propagate": [
+        "V10",
+        "V11",
+        "V12",
+        "V13",
+        "V37"
+      ],
+      "owner_only_cloud_authorization": [
+        "V27"
+      ],
+      "correction_and_reversal_idempotency": [
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "V21",
+        "V22"
+      ],
+      "return_original_sale_original_price_partial": [
+        "V28",
+        "V30",
+        "V33",
+        "V34",
+        "V35",
+        "V36",
+        "V37",
+        "V38",
+        "V39",
+        "V40",
+        "V41"
+      ]
+    }
+  },
+  "reviewed_document_identities": [
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A01_云端适配\\01_现有云接入与运行适配调查.md",
+      "sha256": "33728F8B12892796709D142B6683257B225EECB8327BE8C2E4C28D7772A280F2",
+      "bytes": 8687
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A01_云端适配\\02_建议取用清单与合同差量.md",
+      "sha256": "E33C85101BC8A0D745AAEEEB9FBD8B73E0FAAD6AF898D67AE75F92D92804F4CA",
+      "bytes": 7812
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A02_业务规则\\01_价格恢复零价更正与退货合同候选.md",
+      "sha256": "B6E1656647584305B99DB74401A88FD0972FF36A52EA89BD3AF088845F7157BF",
+      "bytes": 9995
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A02_业务规则\\02_脱敏业务验收样例.md",
+      "sha256": "1EB4521B1253DE7A173CA822F51EAB219B0F79C5FC02B6F9DBF89BE7E6DEE9E1",
+      "bytes": 7345
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A04_手机适配\\01_设备与旧原生壳核查.md",
+      "sha256": "0ECC8C780250B7592A9180EB09E97955332F8D649B80B17F728C83E785C047C6",
+      "bytes": 5766
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A04_手机适配\\02_兼容验证与授权恢复方案.md",
+      "sha256": "B9D8642F6DB398E1BD07465BFB280D9E495370EFA87181473BFBB8DE589191CE",
+      "bytes": 8118
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A06_打印适配\\01_iP110与130x190套打预检.md",
+      "sha256": "53D64BBB60F3A4A1ED531C29D40C2650C054D84C5E5C0A2AB017298CE773E557",
+      "bytes": 6042
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\A06_打印适配\\02_持久打印与更正单版本合同差量.md",
+      "sha256": "D2D92EAA2EB74415FE80A973D688F0C261F8BD685A866DA83E0234007CD5A77E",
+      "bytes": 7073
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\开发执行\\W0\\00_ROOT_接口及基线整合候选.md",
+      "sha256": "073FE00AA25817795C746D18C51D9339C8EF973280BCB3F1CC423FC8E07B804F",
+      "bytes": 7559
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\功能逐页梳理_2026-10-30\\01_全流程与统一规则.md",
+      "sha256": "67A534144AC6D5F57BB4944182688042D073BC66B2FA30031369FD78AB7932F7",
+      "bytes": 19053
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\功能逐页梳理_2026-10-30\\03_人工审核与修改清单.md",
+      "sha256": "161ED28424D5F166454CB9EA1AB305EBAC71B01AEFF5839DB9FA79800F2AFA35",
+      "bytes": 14923
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\功能逐页梳理_2026-10-30\\04_字段按钮与校验明细.md",
+      "sha256": "F1E95840C17B76A3C0BCA6266A0EF758AF95E7A0356820614BBBB262041C87B3",
+      "bytes": 12913
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\功能逐页梳理_2026-10-30\\05_人工确认结果与正式产品规则_v0.2-r1.md",
+      "sha256": "DDAA0B541138032886630CF5543800177F385FB52B4182F8619229361E3B7133",
+      "bytes": 12117
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\功能逐页梳理_2026-10-30\\06_正式产品规则补充_v0.2-r2.md",
+      "sha256": "3749B2F3CE4DF7851AEAED220BF8FFDDD3E83A087DB12356383F0ED94CF34959",
+      "bytes": 7124
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\功能逐页梳理_2026-10-30\\07_调价更正退货与启动确认_v0.2-r3.md",
+      "sha256": "CA6FABC217DD9613AC86E40BFBB13B879F556BCF55E880EC2A28A5E6E0C534B6",
+      "bytes": 5442
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\AGENTS.md",
+      "sha256": "379063286C47D0B1A668F433508D2391727647751142B064D754E18F758B2D99",
+      "bytes": 4484
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\项目常看入口.md",
+      "sha256": "F1A6916738F6AD5FAEE3470EB140365C2737D74B810C12FDBF11C2B82BD28DFD",
+      "bytes": 1350
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\项目管理\\00_项目进度看板.md",
+      "sha256": "1A5FEC668A82BDBB88E848A8527476B7CA0E52DA709067DE364F5F7521E41F87",
+      "bytes": 2913
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\项目管理\\01_子代理分工与任务交接.md",
+      "sha256": "386CAF16A2BDFF914B11C0227C3A91DA74A09D395E54DAB099D88BE2655A8474",
+      "bytes": 8471
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\项目管理\\02_项目边界与执行规范.md",
+      "sha256": "A040358EE50E87A7957CA813CA1087AD1BD647A5D3F09E2C125832F3F150BAA9",
+      "bytes": 8385
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\项目管理\\06_W0启动与任务派发.md",
+      "sha256": "AF5AC13506C7EEA038F21CAB91C8E505DF493870608F5717DBA6E805EDB643E1",
+      "bytes": 6290
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\项目管理\\问题协调\\00_问题台账.md",
+      "sha256": "6AF57350B95B4CFB7E4CC5824D16D3D420BE17FE1BAEFE894893AC61B2734210",
+      "bytes": 10592
+    },
+    {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\项目管理\\问题协调\\01_本轮问题汇总.md",
+      "sha256": "06D11C561F27EA4B824A5FF2735573ED1CCBD1EC1E3BA67AB9EAD62A17EBB7C7",
+      "bytes": 5046
+    }
+  ],
+  "local_link_checks": {
+    "count": 62,
+    "missing": []
+  },
+  "management_snapshot": {
+    "register": {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\项目管理\\项目任务台账.json",
+      "sha256": "287EE935ED0B8B6AE9D8CB05FF8EDD34827A3E7E34275DA496EE94686124BDAE",
+      "bytes": 70676
+    },
+    "register_digest_prefix": "287ee935ed0b",
+    "board": {
+      "path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\docs\\项目管理\\00_项目进度看板.md",
+      "sha256": "1A5FEC668A82BDBB88E848A8527476B7CA0E52DA709067DE364F5F7521E41F87",
+      "bytes": 2913
+    },
+    "board_digest_matches": true,
+    "task_count": 46,
+    "phase_counts": {
+      "management": 7,
+      "first": 36,
+      "future": 3
+    },
+    "first_acceptance_passed": 0,
+    "advanced_first_implementation_or_verification": [],
+    "stage_counts": {
+      "implementation": {
+        "not_started": 33,
+        "not_applicable": 3
+      },
+      "module": {
+        "not_started": 35,
+        "not_applicable": 1
+      },
+      "integration": {
+        "not_started": 35,
+        "not_applicable": 1
+      },
+      "acceptance": {
+        "not_started": 36
+      }
+    },
+    "snapshot_only": "ROOT may append audit evidence and regenerate the board after this review."
+  },
+  "limitations": [
+    "Matching hashes identify file bytes only; they do not establish correctness or deployability.",
+    "No build, import, application script, database, model, SMS, native device or printer operation was performed.",
+    "Static sample coverage does not establish business module, integration or target environment acceptance."
+  ]
+}

@@ -1,0 +1,10 @@
+test_dimensions_chinese_variables_and_no_fixed_background (test_pdf_boundaries.IndependentPdfBoundaries.test_dimensions_chinese_variables_and_no_fixed_background) ... ok
+test_over_limit_unit_line_or_total_is_rejected_without_partial_pdf (test_pdf_boundaries.IndependentPdfBoundaries.test_over_limit_unit_line_or_total_is_rejected_without_partial_pdf) ... ok
+test_seven_currency_cells_preserve_every_digit_at_supported_maximum (test_pdf_boundaries.IndependentPdfBoundaries.test_seven_currency_cells_preserve_every_digit_at_supported_maximum) ... ok
+test_sixteen_items_paginate_and_whole_order_total_is_on_last_page_only (test_pdf_boundaries.IndependentPdfBoundaries.test_sixteen_items_paginate_and_whole_order_total_is_on_last_page_only) ... ok
+test_unsupported_type_extreme_name_and_calibration_offset_are_rejected (test_pdf_boundaries.IndependentPdfBoundaries.test_unsupported_type_extreme_name_and_calibration_offset_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.104s
+
+OK

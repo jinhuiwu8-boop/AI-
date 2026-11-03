@@ -1,0 +1,232 @@
+{
+  "audit_id": "W1-A07",
+  "audit_version": "audit-w1.1",
+  "generated_at": "2026-10-31T09:19:39+08:00",
+  "baseline": "w1-local-v0.1",
+  "contract": "contract-w1.1",
+  "runtime": {
+    "node": "v24.19.0",
+    "python": "3.12.14"
+  },
+  "node_run": {
+    "command": "node --test --test-reporter=tap",
+    "exit_code": 0,
+    "counts": {
+      "tests": 45,
+      "pass": 45,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "independently_authored_cases": 21,
+    "other_authored_cases": 24,
+    "total_is_not_sum_of_45_and_21": true
+  },
+  "python_run": {
+    "command": "python -B -X utf8 -m unittest discover -s test/edge -p test_print_journal.py -v",
+    "exit_code": 0,
+    "tests": 6,
+    "passed": 6
+  },
+  "tested_source_identities": [
+    {
+      "path": "src/business/index.mjs",
+      "sha256": "A3C752014481B5F2593F394ADAB51420569EF1C6AF2795CEE02AFB9393568B5D",
+      "bytes": 55
+    },
+    {
+      "path": "src/business/service.mjs",
+      "sha256": "1E6C29FCD0A07B6024B1CACEA2EED75A5DB674AD79A66E4C891CF992ED32D569",
+      "bytes": 16718
+    },
+    {
+      "path": "src/intake/index.mjs",
+      "sha256": "6C2BB385658E7982E9EFED4C4A2B080E419444911815734DCA89E902CC313C16",
+      "bytes": 6534
+    },
+    {
+      "path": "src/shared/store.mjs",
+      "sha256": "4189833DD0E1148C487911AF5CAAECC526D3BCAEF2CB07E921BFD8F5477309BC",
+      "bytes": 2576
+    },
+    {
+      "path": "src/shared/errors.mjs",
+      "sha256": "1B1DD61FA903C7DF6A342D87768E935F9D47F23DDE0C7794A04EBC1CF6C451F0",
+      "bytes": 233
+    },
+    {
+      "path": "src/shared/seed.mjs",
+      "sha256": "1A0EA3BF924B3D4CD74D7757695B207466613D77C493D7CEA2BD0018C9771170",
+      "bytes": 698
+    },
+    {
+      "path": "src/documents/store.mjs",
+      "sha256": "2B566921B7FD7286C20810D1CE44C7332455409F8A484ADCCD9D040A70216C57",
+      "bytes": 2559
+    },
+    {
+      "path": "src/server.mjs",
+      "sha256": "08E27CC3F890751BA9D7DD2370BCD0531302D93184E1F2ED20564FA191E503B6",
+      "bytes": 12095
+    },
+    {
+      "path": "src/edge/print_journal.py",
+      "sha256": "D81AD40562B793FE3B14DB2740E69463708EB6F1274B6F71563840376A91C34E",
+      "bytes": 7245
+    },
+    {
+      "path": "tools/render_bill_image.py",
+      "sha256": "D7790902D815C9E48086BF4F80C4FA0C2646546BD816BBBF5D0DCF179E03ED3D",
+      "bytes": 3732
+    }
+  ],
+  "test_identities": [
+    {
+      "path": "test/acceptance/business-negative.test.mjs",
+      "sha256": "A51628BF1F61A551ADCB78D6A1F32C8304C441A287C5BD9A342ED36B5E7C77A4",
+      "bytes": 14896
+    },
+    {
+      "path": "test/acceptance/intake-http-negative.test.mjs",
+      "sha256": "DADC15819A925AA6CCA65C30EC6975458918E9130A2FBC16F690BA7016489E73",
+      "bytes": 10885
+    },
+    {
+      "path": "test/business/business.test.mjs",
+      "sha256": "51BD08DC11F33DA6500F6B44BE7C797ACFE259173FE2B7CAA4B9836D47B1AC4D",
+      "bytes": 15622
+    },
+    {
+      "path": "test/intake/intake.test.mjs",
+      "sha256": "BEAF915156C5C02CD3B3735DA54635222032C4A17D3E69C07AC081279680B185",
+      "bytes": 7301
+    },
+    {
+      "path": "test/shared/store.test.mjs",
+      "sha256": "B2680649A44904EDDA8424D92DFE17D434A6EF136553D28F2BC47D0ED45A3DD8",
+      "bytes": 1312
+    },
+    {
+      "path": "test/integration/http.test.mjs",
+      "sha256": "DB5DCA65397C25A3BF3DE45630CBC05955FCF8118456E6A727DD799C8692E316",
+      "bytes": 6154
+    },
+    {
+      "path": "test/edge/test_print_journal.py",
+      "sha256": "92A09D1160C8B9755F206FE77ABF47396F151D6B421DE56E6D71C3BA73E002FA",
+      "bytes": 5622
+    }
+  ],
+  "log_identities": [
+    {
+      "path": "docs/开发执行/W1/A07_独立验收/02_独立业务首轮.log",
+      "sha256": "358B6174301FFC53E410D855AF91B430149A90CC9D9F3751ADD06616B3988464",
+      "bytes": 1321
+    },
+    {
+      "path": "docs/开发执行/W1/A07_独立验收/03_独立Node首轮.tap",
+      "sha256": "1470344B08B0B99B54C0FCDA91A4CDB737D8E193351384926A8648B74BDF3F3B",
+      "bytes": 6798
+    },
+    {
+      "path": "docs/开发执行/W1/A07_独立验收/04_PrintJournal独立运行.log",
+      "sha256": "408818A15CB7FB9FE44EC41FB79C494F1C7083A46DC777FBFFFA94CC058F2197",
+      "bytes": 929
+    },
+    {
+      "path": "docs/开发执行/W1/A07_独立验收/05_Host原始请求验证.tap",
+      "sha256": "166D6D13D0AA90CE69619E283EBFEA0703F3D2CCE28A628B65BB23AE40287223",
+      "bytes": 365
+    },
+    {
+      "path": "docs/开发执行/W1/A07_独立验收/06_PNG大数回归.tap",
+      "sha256": "1011B512366A81695F64E0D9257BB0CA10313AB0730C6EA1B1B760CB67D2BF4D",
+      "bytes": 384
+    },
+    {
+      "path": "docs/开发执行/W1/A07_独立验收/07_最终全量Node验证.tap",
+      "sha256": "A4A745A18245DD5E38678D05748FE1B2E943E4C682AB8399390EDDE31EA631C0",
+      "bytes": 11484
+    }
+  ],
+  "fixed_findings": [
+    {
+      "id": "W1-A07-01",
+      "kind": "duplicate price-key updates",
+      "discovery": "static; owner fixed before independent first execution",
+      "final_regression": "passed"
+    },
+    {
+      "id": "W1-A07-02",
+      "kind": "malformed URL encoding returned 500",
+      "discovery": "independent failing test retained in first-round TAP",
+      "final_regression": "400, passed"
+    },
+    {
+      "id": "W1-A07-03",
+      "kind": "financial PNG clipping and column overlap",
+      "discovery": "actual rendered PNG visually inspected",
+      "final_regression": "503, entire business state rollback, passed"
+    },
+    {
+      "id": "W1-A07-04",
+      "kind": "asynchronous default quote can overwrite manual input; identity alone permits same-identity stale responses",
+      "discovery": "static review",
+      "final_status": "source reviewed after owner fix; syntax passed; browser behavior remains untested"
+    }
+  ],
+  "harness_correction": {
+    "kind": "fetch rewrote Host header",
+    "first_result": "200 versus expected403",
+    "resolution": "node:http raw Host request returns403; not implementation defect"
+  },
+  "historical_failure_png": {
+    "path": "docs/开发执行/W1/A07_独立验收/大数版式证据/f6131580-12c4-419a-8fc5-1a5428676e58.png",
+    "sha256": "348F2CA10011CAD12C2D09BE69A5789DA8DD588C4A5A862F8FA4B070316F4B88",
+    "bytes": 56006
+  },
+  "no_production_operations": true,
+  "browser_or_device_ui_tested": false,
+  "printer_commands_executed": false,
+  "limitations": [
+    "Local single-process SQLite and synthetic data only.",
+    "Domain failure tests use document storage substitute; HTTP document tests render and persist real PNG.",
+    "Normalized intake is not actual WeCom callback or downloaded media.",
+    "PrintJournal tests execute no CUPS or physical printer command.",
+    "No actual model inference/training, APK, lockscreen, Huawei gallery, cloud deployment or full end-to-end target environment acceptance.",
+    "No remote Git push or deployment was performed."
+  ],
+  "static_web_review": {
+    "identities": [
+      {
+        "path": "web/app.mjs",
+        "sha256": "C1ABD4F6D513472DEF68F7A0BF1E89428152B65B89FB6C4F5CF1507F65A00D8C",
+        "bytes": 51466
+      },
+      {
+        "path": "web/style.css",
+        "sha256": "5FD35A88F2E2F4D709209FD294B60980CCD3C8F11D82AA25DE702FA429A32F3D",
+        "bytes": 23289
+      },
+      {
+        "path": "web/index.html",
+        "sha256": "CB045F636B41E5EFA079C513AE5C98613D3CB74892193DB9D4F46BE1C18BA980",
+        "bytes": 1863
+      }
+    ],
+    "syntax_command": "node --check web/app.mjs",
+    "syntax_exit_code": 0,
+    "reviewed_fixes": [
+      "quote request generation and manual price edit generation protect old responses",
+      "price editor uses object binding plus request/edit generation",
+      "BigInt estimates reject unsafe-range display",
+      "six stage status nodes do not count requirement confirmation as development percent"
+    ],
+    "browser_interaction_tested": false
+  },
+  "user_reported_api_version": {
+    "value": "26.0.0",
+    "verified_as_android_api_level": false,
+    "system_and_device_compatibility_verified": false
+  }
+}

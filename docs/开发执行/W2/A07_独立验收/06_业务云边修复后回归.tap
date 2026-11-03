@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: A07 W2 SQLite: W1 collections survive additive W2 loading and a second real connection
+ok 1 - A07 W2 SQLite: W1 collections survive additive W2 loading and a second real connection
+  ---
+  duration_ms: 17.2326
+  type: 'test'
+  ...
+# Subtest: A07 W2 candidate: unconfirmed, stale and failed-document commands cannot consume or label; retry consumes once
+ok 2 - A07 W2 candidate: unconfirmed, stale and failed-document commands cannot consume or label; retry consumes once
+  ---
+  duration_ms: 20.6138
+  type: 'test'
+  ...
+# Subtest: A07 W2 candidate: price-only and explicit-zero confirmations produce no OCR correction label
+ok 3 - A07 W2 candidate: price-only and explicit-zero confirmations produce no OCR correction label
+  ---
+  duration_ms: 24.8199
+  type: 'test'
+  ...
+# Subtest: A07 W2 masters: shared aliases stay ambiguous, trimmed duplicates collapse, stale saves and role spoofing leave no grants
+ok 4 - A07 W2 masters: shared aliases stay ambiguous, trimmed duplicates collapse, stale saves and role spoofing leave no grants
+  ---
+  duration_ms: 11.3817
+  type: 'test'
+  ...
+# Subtest: A07 W2 master packaging: old bottle quotes reject and frozen names, address and price do not follow edits
+ok 5 - A07 W2 master packaging: old bottle quotes reject and frozen names, address and price do not follow edits
+  ---
+  duration_ms: 13.5959
+  type: 'test'
+  ...
+# Subtest: A07 W2 statistics: UTC+8 boundary assigns sale and later reversal/return to their actual event days
+ok 6 - A07 W2 statistics: UTC+8 boundary assigns sale and later reversal/return to their actual event days
+  ---
+  duration_ms: 14.4786
+  type: 'test'
+  ...
+# Subtest: A07 W2 device: raw credentials never persist; wrong capability and immediate revocation block all methods
+ok 7 - A07 W2 device: raw credentials never persist; wrong capability and immediate revocation block all methods
+  ---
+  duration_ms: 15.8474
+  type: 'test'
+  ...
+# Subtest: A07 W2 lease: exact expiry and replacement invalidate old capability even with correct raw device token
+ok 8 - A07 W2 lease: exact expiry and replacement invalidate old capability even with correct raw device token
+  ---
+  duration_ms: 17.0441
+  type: 'test'
+  ...
+# Subtest: A07 W2 candidate authority: device cannot submit price/confirmation/master creation or another device lease
+ok 9 - A07 W2 candidate authority: device cannot submit price/confirmation/master creation or another device lease
+  ---
+  duration_ms: 17.8351
+  type: 'test'
+  ...
+# Subtest: A07 W2 completed-result replay: later master edits do not invalidate a frozen success acknowledgement
+ok 10 - A07 W2 completed-result replay: later master edits do not invalidate a frozen success acknowledgement
+  ---
+  duration_ms: 15.2421
+  type: 'test'
+  ...
+# Subtest: A07 W2 source isolation: duplicated message IDs from another source cannot leak into a claimed job
+ok 11 - A07 W2 source isolation: duplicated message IDs from another source cannot leak into a claimed job
+  ---
+  duration_ms: 14.7302
+  type: 'test'
+  ...
+# Subtest: A07 W2 real concurrent SQLite: separate workers can only consume one candidate once
+ok 12 - A07 W2 real concurrent SQLite: separate workers can only consume one candidate once
+  ---
+  duration_ms: 80.1229
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 353.6952

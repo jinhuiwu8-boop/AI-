@@ -1,0 +1,111 @@
+TAP version 13
+# Subtest: A07 W2 SQLite: W1 collections survive additive W2 loading and a second real connection
+ok 1 - A07 W2 SQLite: W1 collections survive additive W2 loading and a second real connection
+  ---
+  duration_ms: 19.1175
+  type: 'test'
+  ...
+# Subtest: A07 W2 candidate: unconfirmed, stale and failed-document commands cannot consume or label; retry consumes once
+ok 2 - A07 W2 candidate: unconfirmed, stale and failed-document commands cannot consume or label; retry consumes once
+  ---
+  duration_ms: 21.3504
+  type: 'test'
+  ...
+# Subtest: A07 W2 candidate: price-only and explicit-zero confirmations produce no OCR correction label
+ok 3 - A07 W2 candidate: price-only and explicit-zero confirmations produce no OCR correction label
+  ---
+  duration_ms: 27.7645
+  type: 'test'
+  ...
+# Subtest: A07 W2 masters: shared aliases stay ambiguous, trimmed duplicates collapse, stale saves and role spoofing leave no grants
+ok 4 - A07 W2 masters: shared aliases stay ambiguous, trimmed duplicates collapse, stale saves and role spoofing leave no grants
+  ---
+  duration_ms: 14.3356
+  type: 'test'
+  ...
+# Subtest: A07 W2 master packaging: old bottle quotes reject and frozen names, address and price do not follow edits
+ok 5 - A07 W2 master packaging: old bottle quotes reject and frozen names, address and price do not follow edits
+  ---
+  duration_ms: 12.912
+  type: 'test'
+  ...
+# Subtest: A07 W2 statistics: UTC+8 boundary assigns sale and later reversal/return to their actual event days
+ok 6 - A07 W2 statistics: UTC+8 boundary assigns sale and later reversal/return to their actual event days
+  ---
+  duration_ms: 14.6677
+  type: 'test'
+  ...
+# Subtest: A07 W2 device: raw credentials never persist; wrong capability and immediate revocation block all methods
+ok 7 - A07 W2 device: raw credentials never persist; wrong capability and immediate revocation block all methods
+  ---
+  duration_ms: 16.6887
+  type: 'test'
+  ...
+# Subtest: A07 W2 lease: exact expiry and replacement invalidate old capability even with correct raw device token
+ok 8 - A07 W2 lease: exact expiry and replacement invalidate old capability even with correct raw device token
+  ---
+  duration_ms: 16.6326
+  type: 'test'
+  ...
+# Subtest: A07 W2 candidate authority: device cannot submit price/confirmation/master creation or another device lease
+ok 9 - A07 W2 candidate authority: device cannot submit price/confirmation/master creation or another device lease
+  ---
+  duration_ms: 16.7058
+  type: 'test'
+  ...
+# Subtest: A07 W2 completed-result replay: later master edits do not invalidate a frozen success acknowledgement
+not ok 10 - A07 W2 completed-result replay: later master edits do not invalidate a frozen success acknowledgement
+  ---
+  duration_ms: 15.9753
+  type: 'test'
+  location: 'D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\test\\acceptance-w2\\core-boundaries.test.mjs:209:1'
+  failureType: 'testCodeFailure'
+  error: '识别单位无效或不属于该商品'
+  code: 'INVALID_UNIT'
+  name: 'DomainError'
+  stack: |-
+    fail (file:///D:/Backup/Documents/ChatGPT/%E6%96%B0%E7%89%88%E5%BA%97%E5%86%85%E6%89%93%E5%8D%95/src/edge-cloud/index.mjs:4:55)
+    file:///D:/Backup/Documents/ChatGPT/%E6%96%B0%E7%89%88%E5%BA%97%E5%86%85%E6%89%93%E5%8D%95/src/edge-cloud/index.mjs:69:7
+    Array.map (<anonymous>)
+    normalizeCandidate (file:///D:/Backup/Documents/ChatGPT/%E6%96%B0%E7%89%88%E5%BA%97%E5%86%85%E6%89%93%E5%8D%95/src/edge-cloud/index.mjs:59:29)
+    file:///D:/Backup/Documents/ChatGPT/%E6%96%B0%E7%89%88%E5%BA%97%E5%86%85%E6%89%93%E5%8D%95/src/edge-cloud/index.mjs:245:27
+    Object.transact (file:///D:/Backup/Documents/ChatGPT/%E6%96%B0%E7%89%88%E5%BA%97%E5%86%85%E6%89%93%E5%8D%95/src/shared/store.mjs:48:24)
+    Object.completeInference (file:///D:/Backup/Documents/ChatGPT/%E6%96%B0%E7%89%88%E5%BA%97%E5%86%85%E6%89%93%E5%8D%95/src/edge-cloud/index.mjs:241:20)
+    TestContext.<anonymous> (file:///D:/Backup/Documents/ChatGPT/%E6%96%B0%E7%89%88%E5%BA%97%E5%86%85%E6%89%93%E5%8D%95/test/acceptance-w2/core-boundaries.test.mjs:213:25)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+  ...
+# Subtest: A07 W2 source isolation: duplicated message IDs from another source cannot leak into a claimed job
+ok 11 - A07 W2 source isolation: duplicated message IDs from another source cannot leak into a claimed job
+  ---
+  duration_ms: 14.7304
+  type: 'test'
+  ...
+# Subtest: A07 W2 real concurrent SQLite: separate workers can only consume one candidate once
+not ok 12 - A07 W2 real concurrent SQLite: separate workers can only consume one candidate once
+  ---
+  duration_ms: 14.9985
+  type: 'test'
+  location: 'D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\test\\acceptance-w2\\core-boundaries.test.mjs:230:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot access 'ready' before initialization"
+  code: 'ERR_TEST_FAILURE'
+  name: 'ReferenceError'
+  stack: |-
+    TestContext.<anonymous> (file:///D:/Backup/Documents/ChatGPT/%E6%96%B0%E7%89%88%E5%BA%97%E5%86%85%E6%89%93%E5%8D%95/test/acceptance-w2/core-boundaries.test.mjs:236:152)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 10
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 321.6561

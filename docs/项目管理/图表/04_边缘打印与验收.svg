@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1060" viewBox="0 0 1400 1060">
+<rect width="1400" height="1060" fill="#F6F8F7"/>
+<text x="30.0" y="55" font-family="Microsoft YaHei, sans-serif" font-size="30" fill="#183C35">Jetson 单据打印及验收任务阶段</text>
+<text x="30.0" y="87" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">需求确认单列；其余阶段凭对应版本及证据推进。空灰格不代表已做。</text>
+<text x="30.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">任务ID</text>
+<text x="220.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">任务与当前状态</text>
+<text x="839.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">需求</text>
+<text x="929.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">合同</text>
+<text x="1019.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">实现</text>
+<text x="1093.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">模块验证</text>
+<text x="1199.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">联调</text>
+<text x="1289.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">验收</text>
+<rect x="24" y="148" width="1352" height="33" rx="4" fill="#DFF1E8"/>
+<text x="36.0" y="171" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#17674D">A05  Jetson识别与训练</text>
+<rect x="24" y="188" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="211" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">MODEL-01</text>
+<text x="220.0" y="211" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">Jetson内存模型与训练可行性</text>
+<text x="220.0" y="232" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">Orin Nano资料已补 待资源验证  ·  有待补细项/资料</text>
+<rect x="820" y="201" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="201" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="924.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1000" y="201" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1014.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1090" y="201" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1104.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1180" y="201" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1194.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1270" y="201" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="248" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="271" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">INFER-01</text>
+<text x="220.0" y="271" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">真实文字图片语音识别回传</text>
+<text x="220.0" y="292" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">待方案  ·  下一步见任务明细</text>
+<rect x="820" y="261" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="261" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="924.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1000" y="261" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1014.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1090" y="261" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1104.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1180" y="261" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1194.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1270" y="261" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="308" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="331" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">TRAIN-01</text>
+<text x="220.0" y="331" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">已确认纠错自动样本与训练</text>
+<text x="220.0" y="352" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">非价格纠错样本已接 真实训练待做  ·  有待补细项/资料</text>
+<rect x="820" y="321" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="321" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="924.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1000" y="321" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="1014.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1090" y="321" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="1104.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1180" y="321" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1194.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1270" y="321" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="368" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="391" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">EVAL-01</text>
+<text x="220.0" y="391" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">候选模型固定评测与版本回退</text>
+<text x="220.0" y="412" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">待方案  ·  下一步见任务明细</text>
+<rect x="820" y="381" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="399" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="381" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="924.0" y="399" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1000" y="381" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1014.0" y="399" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1090" y="381" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1104.0" y="399" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1180" y="381" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1194.0" y="399" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1270" y="381" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="399" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="428" width="1352" height="33" rx="4" fill="#DFF1E8"/>
+<text x="36.0" y="451" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#17674D">A06  单据生成与打印</text>
+<rect x="24" y="468" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="491" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">DOC-01</text>
+<text x="220.0" y="491" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">冻结单据 中文PNG与变量PDF</text>
+<text x="220.0" y="512" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">PNG与PDF草案已测 实纸布局待校  ·  有待补细项/资料</text>
+<rect x="820" y="481" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="499" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="481" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="924.0" y="499" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="1000" y="481" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="1014.0" y="499" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1090" y="481" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="1104.0" y="499" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1180" y="481" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="1194.0" y="499" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1270" y="481" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="499" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="528" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="551" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">PRINT-01</text>
+<text x="220.0" y="551" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">佳能iP110驱动及真实套打</text>
+<text x="220.0" y="572" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">驱动预检已回交 待设备  ·  有待补细项/资料</text>
+<rect x="820" y="541" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="559" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="541" width="70" height="28" rx="5" fill="#FFF0CD"/>
+<text x="924.0" y="559" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#946215">待审阅</text>
+<rect x="1000" y="541" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1014.0" y="559" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1090" y="541" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1104.0" y="559" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1180" y="541" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1194.0" y="559" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1270" y="541" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="559" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="588" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="611" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">PRINT-02</text>
+<text x="220.0" y="611" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">打印持久日志 未知与重启对账</text>
+<text x="220.0" y="632" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">W2本地增量已测 继续完整联调  ·  下一步见任务明细</text>
+<rect x="820" y="601" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="619" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="601" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="924.0" y="619" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="1000" y="601" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="1014.0" y="619" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1090" y="601" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="1104.0" y="619" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1180" y="601" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="1194.0" y="619" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1270" y="601" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="619" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="648" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="671" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">REPRINT-01</text>
+<text x="220.0" y="671" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">打印人验纸及单次1份重打</text>
+<text x="220.0" y="692" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">人工看纸补打本地模块通过  ·  下一步见任务明细</text>
+<rect x="820" y="661" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="679" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="661" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="924.0" y="679" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="1000" y="661" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="1014.0" y="679" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="1090" y="661" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="1104.0" y="679" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="1180" y="661" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="1194.0" y="679" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1270" y="661" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="679" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="708" width="1352" height="33" rx="4" fill="#DFF1E8"/>
+<text x="36.0" y="731" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#17674D">A07  独立验收</text>
+<rect x="24" y="748" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="771" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">HW-01</text>
+<text x="220.0" y="771" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">准确设备及现有部署信息核对</text>
+<text x="220.0" y="792" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">设备资料部分已补 实测待做  ·  有待补细项/资料</text>
+<rect x="820" y="761" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="779" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="761" width="70" height="28" rx="5" fill="#F6F8F7"/>
+<text x="924.0" y="779" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">不适用</text>
+<rect x="1000" y="761" width="70" height="28" rx="5" fill="#F6F8F7"/>
+<text x="1014.0" y="779" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">不适用</text>
+<rect x="1090" y="761" width="70" height="28" rx="5" fill="#F6F8F7"/>
+<text x="1104.0" y="779" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">不适用</text>
+<rect x="1180" y="761" width="70" height="28" rx="5" fill="#F6F8F7"/>
+<text x="1194.0" y="779" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">不适用</text>
+<rect x="1270" y="761" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="779" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="808" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="831" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">QA-01</text>
+<text x="220.0" y="831" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">脱敏固定集与需求故障矩阵</text>
+<text x="220.0" y="852" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">W4.1相关32项独立检查通过  ·  下一步见任务明细</text>
+<rect x="820" y="821" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="839" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="821" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="924.0" y="839" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="1000" y="821" width="70" height="28" rx="5" fill="#F6F8F7"/>
+<text x="1014.0" y="839" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">不适用</text>
+<rect x="1090" y="821" width="70" height="28" rx="5" fill="#E7EFF7"/>
+<text x="1104.0" y="839" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#245D85">进行中</text>
+<rect x="1180" y="821" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1194.0" y="839" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1270" y="821" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="839" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="868" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="891" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">QA-02</text>
+<text x="220.0" y="891" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">同版本云边手机实纸独立验收</text>
+<text x="220.0" y="912" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">待前置  ·  下一步见任务明细</text>
+<rect x="820" y="881" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="899" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="881" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="924.0" y="899" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1000" y="881" width="70" height="28" rx="5" fill="#F6F8F7"/>
+<text x="1014.0" y="899" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">不适用</text>
+<rect x="1090" y="881" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1104.0" y="899" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1180" y="881" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1194.0" y="899" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1270" y="881" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="899" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<text x="30.0" y="1008" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#60756F">总控文档行验收指文档确认；首期执行目标环境验收 0/35 项，文档及后续任务不计入。</text>
+<text x="30.0" y="1035" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">数据日期 2026-11-03   台账摘要 fa53b72ab521   来源 项目任务台账.json</text>
+</svg>

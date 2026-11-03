@@ -1,0 +1,123 @@
+{
+  "version": "w1-local-v0.1",
+  "contentSha256": "f5a69441b221ba35e0823bc20861a3e6d5884de7e2b0d6559850dcecf3db5cda",
+  "sourceVersion": "w1-local-v0.1+f5a69441b221",
+  "meaning": "Content identity, not a Git commit or production acceptance.",
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "dce37082dee9e2c0c9792051768e51e3141c13abb1e9c21ee4276018f48a58e5",
+      "bytes": 212
+    },
+    {
+      "path": "src/business/index.mjs",
+      "sha256": "a3c752014481b5f2593f394adab51420569ef1c6af2795cee02afb9393568b5d",
+      "bytes": 55
+    },
+    {
+      "path": "src/business/service.mjs",
+      "sha256": "1e6c29fcd0a07b6024b1cacea2eed75a5db674ad79a66e4c891cf992ed32d569",
+      "bytes": 16718
+    },
+    {
+      "path": "src/documents/store.mjs",
+      "sha256": "2b566921b7fd7286c20810d1ce44c7332455409f8a484adccd9d040a70216c57",
+      "bytes": 2559
+    },
+    {
+      "path": "src/edge/print_journal.py",
+      "sha256": "d81ad40562b793fe3b14db2740e69463708eb6f1274b6f71563840376a91c34e",
+      "bytes": 7245
+    },
+    {
+      "path": "src/intake/index.mjs",
+      "sha256": "6c2bb385658e7982e9efed4c4a2b080e419444911815734dca89e902cc313c16",
+      "bytes": 6534
+    },
+    {
+      "path": "src/server.mjs",
+      "sha256": "08e27cc3f890751ba9d7dd2370bcd0531302d93184e1f2ed20564fa191e503b6",
+      "bytes": 12095
+    },
+    {
+      "path": "src/shared/errors.mjs",
+      "sha256": "1b1dd61fa903c7df6a342d87768e935f9d47f23dde0c7794a04ebc1cf6c451f0",
+      "bytes": 233
+    },
+    {
+      "path": "src/shared/seed.mjs",
+      "sha256": "1a0ea3bf924b3d4cd74d7757695b207466613d77c493d7cea2bd0018c9771170",
+      "bytes": 698
+    },
+    {
+      "path": "src/shared/store.mjs",
+      "sha256": "4189833dd0e1148c487911af5caaecc526d3bcaef2cb07e921bfd8f5477309bc",
+      "bytes": 2576
+    },
+    {
+      "path": "test/acceptance/business-negative.test.mjs",
+      "sha256": "a51628bf1f61a551adcb78d6a1f32c8304c441a287c5bd9a342ed36b5e7c77a4",
+      "bytes": 14896
+    },
+    {
+      "path": "test/acceptance/intake-http-negative.test.mjs",
+      "sha256": "dadc15819a925aa6cca65c30ec6975458918e9130a2fbc16f690ba7016489e73",
+      "bytes": 10885
+    },
+    {
+      "path": "test/business/business.test.mjs",
+      "sha256": "51bd08dc11f33da6500f6b44be7c797acfe259173fe2b7caa4b9836d47b1ac4d",
+      "bytes": 15622
+    },
+    {
+      "path": "test/edge/test_print_journal.py",
+      "sha256": "92a09d1160c8b9755f206fe77abf47396f151d6b421de56e6d71c3ba73e002fa",
+      "bytes": 5622
+    },
+    {
+      "path": "test/intake/intake.test.mjs",
+      "sha256": "beaf915156c5c02cd3b3735da54635222032c4a17d3e69c07ac081279680b185",
+      "bytes": 7301
+    },
+    {
+      "path": "test/integration/http.test.mjs",
+      "sha256": "db5dca65397c25a3bf3de45630cbc05955fcf8118456e6a727dd799c8692e316",
+      "bytes": 6154
+    },
+    {
+      "path": "test/shared/store.test.mjs",
+      "sha256": "b2680649a44904edda8424d92dfe17d434a6ef136553d28f2bc47d0ed45a3dd8",
+      "bytes": 1312
+    },
+    {
+      "path": "tools/check-local.ps1",
+      "sha256": "0fabb439fdb656a1f0c5b319679b65e959e847e79aafc4c6fbe9d701cd868759",
+      "bytes": 1589
+    },
+    {
+      "path": "tools/render_bill_image.py",
+      "sha256": "d7790902d815c9e48086bf4f80c4fa0c2646546bd816bbbf5d0dcf179e03ed3d",
+      "bytes": 3732
+    },
+    {
+      "path": "tools/start-local.ps1",
+      "sha256": "91680e2e85956a4e2f592ab5399b39b90f826c41e2e7cfeeddb8e379abcf8d9b",
+      "bytes": 421
+    },
+    {
+      "path": "web/app.mjs",
+      "sha256": "c1abd4f6d513472def68f7a0bf1e89428152b65b89fb6c4f5cf1507f65a00d8c",
+      "bytes": 51466
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "cb045f636b41e5efa079c513ae5c98613d3cb74892193db9d4f46be1c18ba980",
+      "bytes": 1863
+    },
+    {
+      "path": "web/style.css",
+      "sha256": "5fd35a88f2e2f4d709209fd294b60980ccd3c8f11d82aa25de702fa429a32f3d",
+      "bytes": 23289
+    }
+  ]
+}

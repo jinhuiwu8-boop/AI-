@@ -1,0 +1,202 @@
+TAP version 13
+# Subtest: A07 HTTP: history quotation uses confirmed sale; unapproved quantity policy denies new return atomically behind session and CSRF
+ok 1 - A07 HTTP: history quotation uses confirmed sale; unapproved quantity policy denies new return atomically behind session and CSRF
+  ---
+  duration_ms: 418.3098
+  type: 'test'
+  ...
+# Subtest: A07: maintained prices are not sales; bottle-only and zero sales do not invent a historical box price
+ok 2 - A07: maintained prices are not sales; bottle-only and zero sales do not invent a historical box price
+  ---
+  duration_ms: 8.3188
+  type: 'test'
+  ...
+# Subtest: A07: quantity-only corrections keep the newer transaction as return price; price corrections supersede it
+ok 3 - A07: quantity-only corrections keep the newer transaction as return price; price corrections supersede it
+  ---
+  duration_ms: 3.9551
+  type: 'test'
+  ...
+# Subtest: A07: corrected-away and zeroed sources cannot revive invalid snapshots or cross customer boundaries
+ok 4 - A07: corrected-away and zeroed sources cannot revive invalid snapshots or cross customer boundaries
+  ---
+  duration_ms: 2.8285
+  type: 'test'
+  ...
+# Subtest: A07: frozen packaging is stable; legacy fallback must be confirmed and its version changes with the master
+ok 5 - A07: frozen packaging is stable; legacy fallback must be confirmed and its version changes with the master
+  ---
+  duration_ms: 2.1298
+  type: 'test'
+  ...
+# Subtest: A07: latest confirmed legacy transaction with multiple prices or packaging blocks instead of falling back
+ok 6 - A07: latest confirmed legacy transaction with multiple prices or packaging blocks instead of falling back
+  ---
+  duration_ms: 3.4066
+  type: 'test'
+  ...
+# Subtest: A07: unresolved quantity policy rejects new saves atomically; old original-order returns remain compatible
+ok 7 - A07: unresolved quantity policy rejects new saves atomically; old original-order returns remain compatible
+  ---
+  duration_ms: 3.1149
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: 100/24 produces 4.2 per bottle and 100.8 for 24; immutable evidence and one return event
+ok 8 - A07 TEST-ONLY quantity bypass: 100/24 produces 4.2 per bottle and 100.8 for 24; immutable evidence and one return event
+  ---
+  duration_ms: 2.8064
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: server rejects modified price, stale price version and unchecked packaging without side effects
+ok 9 - A07 TEST-ONLY quantity bypass: server rejects modified price, stale price version and unchecked packaging without side effects
+  ---
+  duration_ms: 3.1632
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: valid history that rounds to zero is accepted without overwriting normal future price
+ok 10 - A07 TEST-ONLY quantity bypass: valid history that rounds to zero is accepted without overwriting normal future price
+  ---
+  duration_ms: 1.2784
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: failed document persistence rolls back the return and operation; same input can safely retry
+ok 11 - A07 TEST-ONLY quantity bypass: failed document persistence rolls back the return and operation; same input can safely retry
+  ---
+  duration_ms: 1.7991
+  type: 'test'
+  ...
+# Subtest: A07 actual UI controller: delayed old-customer response cannot overwrite current customer history or confirmation
+ok 12 - A07 actual UI controller: delayed old-customer response cannot overwrite current customer history or confirmation
+  ---
+  duration_ms: 2.2398
+  type: 'test'
+  ...
+# Subtest: A07 actual UI controller: refreshed same version preserves packaging confirmation; changed version clears it
+ok 13 - A07 actual UI controller: refreshed same version preserves packaging confirmation; changed version clears it
+  ---
+  duration_ms: 1.1205
+  type: 'test'
+  ...
+# Subtest: A07 actual UI controller: explicit server unavailability disables and blocks new return saving while sales stay available
+ok 14 - A07 actual UI controller: explicit server unavailability disables and blocks new return saving while sales stay available
+  ---
+  duration_ms: 1.4301
+  type: 'test'
+  ...
+# Subtest: customer return uses historical box price: 100/24 rounds to 4.2, so 24 bottles are 100.8
+ok 15 - customer return uses historical box price: 100/24 rounds to 4.2, so 24 bottles are 100.8
+  ---
+  duration_ms: 2.8316
+  type: 'test'
+  ...
+# Subtest: dime rounding is exact at the half boundary and safe-integer limit
+ok 16 - dime rounding is exact at the half boundary and safe-integer limit
+  ---
+  duration_ms: 0.7041
+  type: 'test'
+  ...
+# Subtest: latest confirmed sale wins; equal timestamps follow persisted event order
+ok 17 - latest confirmed sale wins; equal timestamps follow persisted event order
+  ---
+  duration_ms: 0.5767
+  type: 'test'
+  ...
+# Subtest: customer-maintained current price without confirmed box sale remains missing
+ok 18 - customer-maintained current price without confirmed box sale remains missing
+  ---
+  duration_ms: 0.2083
+  type: 'test'
+  ...
+# Subtest: bottle-only sale cannot substitute for absent historical box price
+ok 19 - bottle-only sale cannot substitute for absent historical box price
+  ---
+  duration_ms: 0.2384
+  type: 'test'
+  ...
+# Subtest: zero sales and returns cannot eclipse earlier nonzero box sale
+ok 20 - zero sales and returns cannot eclipse earlier nonzero box sale
+  ---
+  duration_ms: 0.3221
+  type: 'test'
+  ...
+# Subtest: prices are isolated by customer and SKU
+ok 21 - prices are isolated by customer and SKU
+  ---
+  duration_ms: 0.3276
+  type: 'test'
+  ...
+# Subtest: quantity-only correction does not lift an older price above intervening sale
+ok 22 - quantity-only correction does not lift an older price above intervening sale
+  ---
+  duration_ms: 0.3746
+  type: 'test'
+  ...
+# Subtest: actual nonzero price correction is a new effective historical source
+ok 23 - actual nonzero price correction is a new effective historical source
+  ---
+  duration_ms: 0.3125
+  type: 'test'
+  ...
+# Subtest: source moved to another customer is excluded for original customer and confirmed for new one
+ok 24 - source moved to another customer is excluded for original customer and confirmed for new one
+  ---
+  duration_ms: 0.3122
+  type: 'test'
+  ...
+# Subtest: source changed to zero or another SKU cannot revive invalid older snapshot
+ok 25 - source changed to zero or another SKU cannot revive invalid older snapshot
+  ---
+  duration_ms: 0.4292
+  type: 'test'
+  ...
+# Subtest: frozen sale packaging survives later product version and package changes
+ok 26 - frozen sale packaging survives later product version and package changes
+  ---
+  duration_ms: 0.2448
+  type: 'test'
+  ...
+# Subtest: legacy missing packaging explicitly uses current master and changes quote version when master changes
+ok 27 - legacy missing packaging explicitly uses current master and changes quote version when master changes
+  ---
+  duration_ms: 0.2937
+  type: 'test'
+  ...
+# Subtest: current effective revision participates in quote version even for quantity correction
+ok 28 - current effective revision participates in quote version even for quantity correction
+  ---
+  duration_ms: 0.2925
+  type: 'test'
+  ...
+# Subtest: latest event with multiple prices is ambiguous instead of falling back to an older sale
+ok 29 - latest event with multiple prices is ambiguous instead of falling back to an older sale
+  ---
+  duration_ms: 0.3832
+  type: 'test'
+  ...
+# Subtest: duplicate same-price same-packaging rows remain one unambiguous quotation
+ok 30 - duplicate same-price same-packaging rows remain one unambiguous quotation
+  ---
+  duration_ms: 0.1955
+  type: 'test'
+  ...
+# Subtest: query is pure and returns detached metadata from deeply frozen state
+ok 31 - query is pure and returns detached metadata from deeply frozen state
+  ---
+  duration_ms: 0.9709
+  type: 'test'
+  ...
+# Subtest: invalid inputs, masters and packaging reject instead of inventing values
+ok 32 - invalid inputs, masters and packaging reject instead of inventing values
+  ---
+  duration_ms: 0.64
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 532.4453

@@ -1,0 +1,12 @@
+{
+  "version": "w2-local-v0.2",
+  "recordedAtUtc": "2026-10-31T02:03:30.3590649+00:00",
+  "userTimezone": "Asia/Shanghai",
+  "nodeExitCode": 0,
+  "pythonExitCode": 0,
+  "pdfExitCode": 0,
+  "nodeCommand": "node --test",
+  "pythonCommand": "python -B -m unittest discover -s test/edge -p test_*.py -v",
+  "pdfCommand": "python -B -m unittest discover -s test/acceptance-w2 -p test_*.py -v (when present)",
+  "scope": "Local synthetic module and HTTP verification; no production, APK, Jetson model or physical printer acceptance."
+}

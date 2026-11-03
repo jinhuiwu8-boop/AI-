@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: A07 HTTP: history quotation uses confirmed sale; unapproved quantity policy denies new return atomically behind session and CSRF
+ok 1 - A07 HTTP: history quotation uses confirmed sale; unapproved quantity policy denies new return atomically behind session and CSRF
+  ---
+  duration_ms: 404.1262
+  type: 'test'
+  ...
+# Subtest: A07: maintained prices are not sales; bottle-only and zero sales do not invent a historical box price
+ok 2 - A07: maintained prices are not sales; bottle-only and zero sales do not invent a historical box price
+  ---
+  duration_ms: 8.1187
+  type: 'test'
+  ...
+# Subtest: A07: quantity-only corrections keep the newer transaction as return price; price corrections supersede it
+ok 3 - A07: quantity-only corrections keep the newer transaction as return price; price corrections supersede it
+  ---
+  duration_ms: 2.9758
+  type: 'test'
+  ...
+# Subtest: A07: corrected-away and zeroed sources cannot revive invalid snapshots or cross customer boundaries
+ok 4 - A07: corrected-away and zeroed sources cannot revive invalid snapshots or cross customer boundaries
+  ---
+  duration_ms: 2.8642
+  type: 'test'
+  ...
+# Subtest: A07: frozen packaging is stable; legacy fallback must be confirmed and its version changes with the master
+ok 5 - A07: frozen packaging is stable; legacy fallback must be confirmed and its version changes with the master
+  ---
+  duration_ms: 1.2358
+  type: 'test'
+  ...
+# Subtest: A07: latest confirmed legacy transaction with multiple prices or packaging blocks instead of falling back
+ok 6 - A07: latest confirmed legacy transaction with multiple prices or packaging blocks instead of falling back
+  ---
+  duration_ms: 2.3547
+  type: 'test'
+  ...
+# Subtest: A07: unresolved quantity policy rejects new saves atomically; old original-order returns remain compatible
+ok 7 - A07: unresolved quantity policy rejects new saves atomically; old original-order returns remain compatible
+  ---
+  duration_ms: 3.5245
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: 100/24 produces 4.2 per bottle and 100.8 for 24; immutable evidence and one return event
+ok 8 - A07 TEST-ONLY quantity bypass: 100/24 produces 4.2 per bottle and 100.8 for 24; immutable evidence and one return event
+  ---
+  duration_ms: 1.8413
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: server rejects modified price, stale price version and unchecked packaging without side effects
+ok 9 - A07 TEST-ONLY quantity bypass: server rejects modified price, stale price version and unchecked packaging without side effects
+  ---
+  duration_ms: 2.4407
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: valid history that rounds to zero is accepted without overwriting normal future price
+ok 10 - A07 TEST-ONLY quantity bypass: valid history that rounds to zero is accepted without overwriting normal future price
+  ---
+  duration_ms: 1.1094
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: failed document persistence rolls back the return and operation; same input can safely retry
+ok 11 - A07 TEST-ONLY quantity bypass: failed document persistence rolls back the return and operation; same input can safely retry
+  ---
+  duration_ms: 1.572
+  type: 'test'
+  ...
+# Subtest: A07 actual UI controller: delayed old-customer response cannot overwrite current customer history or confirmation
+ok 12 - A07 actual UI controller: delayed old-customer response cannot overwrite current customer history or confirmation
+  ---
+  duration_ms: 1.6715
+  type: 'test'
+  ...
+# Subtest: A07 actual UI controller: refreshed same version preserves packaging confirmation; changed version clears it
+ok 13 - A07 actual UI controller: refreshed same version preserves packaging confirmation; changed version clears it
+  ---
+  duration_ms: 1.1284
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 512.6443

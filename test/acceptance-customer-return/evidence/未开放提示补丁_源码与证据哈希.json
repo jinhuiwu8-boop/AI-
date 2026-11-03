@@ -1,0 +1,67 @@
+[
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\src\\business\\service.mjs",
+    "Hash": "A6DB214729237FAFE7AF0D375938703D5A902A8A3AA64262590E4830D47E084E",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\src\\business\\return-prices.mjs",
+    "Hash": "EC814F0BA43233485803155FE70FE3924AC157F443B8AFF45079EDE019A88711",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\src\\server.mjs",
+    "Hash": "17A8F2F16278BA60C92241AC87264893BA72E1B20E194416C625981864373903",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\tools\\render_bill_image.py",
+    "Hash": "53B4C856BEDB660D9B8EB570407AB27A09AA14116D30D8D8BFAF50E9CD2458A3",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\web\\app.mjs",
+    "Hash": "EE6BE43E51BE0E87ABBF712E36509D42A899A26390CBE7C97EEE544B7BE59B18",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\web\\mobile-app.mjs",
+    "Hash": "1A1DB050784DEB866F12105C4E21DA6121BE28F0762339B6B7AA53EC66AE834F",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\web\\mobile.css",
+    "Hash": "C073EB512E30B13829B42EFA7D9E86144BFADB060CF88EEA5379CF459FBC9155",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\package.json",
+    "Hash": "4B1C6F913F3667C76D4AFD62F29818433B1F3CE39662753403BF58C00C0773FB",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\test\\acceptance-customer-return\\customer-return-independent.test.mjs",
+    "Hash": "8DB8FC789DDDB2DA4BBC574EAC126EEA3F25251619CDD31632E1B521BA641F51",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\test\\acceptance-customer-return\\customer-return-http-independent.test.mjs",
+    "Hash": "6A5F5F821E96F9A236B6B6E68834D6F178BCDAA2E54A852EE9F801EE09941426",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\test\\acceptance-customer-return\\capture-return-png.mjs",
+    "Hash": "249DC989754414B0B699C49B7C646121F87A80E886C0744384B20EAF9CDC0416",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\test\\acceptance-customer-return\\evidence\\A07_14项_未开放提示补丁.tap",
+    "Hash": "E4874494412860A6E755AF2C0661ACCDE5414D1D540AA1B8FDB9E7027C39EBC6",
+    "Algorithm": "SHA256"
+  },
+  {
+    "Path": "D:\\Backup\\Documents\\ChatGPT\\新版店内打单\\test\\acceptance-customer-return\\evidence\\24瓶退货_100.80.png",
+    "Hash": "BFDE42E09E8465011FD2B56C07A4B14A14AF7DDDD5D43E4F786DDADA9DCEF425",
+    "Algorithm": "SHA256"
+  }
+]

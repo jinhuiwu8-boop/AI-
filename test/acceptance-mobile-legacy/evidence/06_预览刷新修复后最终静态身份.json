@@ -1,0 +1,113 @@
+{
+  "checkedAt": "2026-10-31T03:01:14.641Z",
+  "scope": "A07 final preview-refresh patch static/syntax and byte-identity review only; no new HTTP/browser execution claimed",
+  "comparedWith": "04_最终冻结运行证据与源码身份.json",
+  "changedSinceRuntime": [
+    "web/app.mjs",
+    "web/mobile-app.mjs"
+  ],
+  "syntax": [
+    {
+      "path": "src/server.mjs",
+      "exitCode": 0,
+      "sha256": "734433f25c46326fa12fc915339a127cd639f591dbe93b33e1def7d76b4ac424",
+      "diagnostic": ""
+    },
+    {
+      "path": "web/app.mjs",
+      "exitCode": 0,
+      "sha256": "809ecab1ba076f1d22dbbf6b6c31faf27768a605b19618cd44dfbb85349b93e2",
+      "diagnostic": ""
+    },
+    {
+      "path": "web/mobile-app.mjs",
+      "exitCode": 0,
+      "sha256": "5ae4edca309e078185f00c6e9972b6b2bf4459b7c71c1f7fbd341743279ad947",
+      "diagnostic": ""
+    },
+    {
+      "path": "web/mobile-test.mjs",
+      "exitCode": 0,
+      "sha256": "87ec52a54eaa51ea618f780dc451510f4c80dbed648eb0b4100e41fecec29853",
+      "diagnostic": ""
+    },
+    {
+      "path": "test/acceptance-mobile-legacy/mobile-boundaries.test.mjs",
+      "exitCode": 0,
+      "sha256": "0e0701520b4faee85f53a2bdaba6e5ad118f270eedd6dde2a9b6a1677a170f5d",
+      "diagnostic": ""
+    },
+    {
+      "path": "test/acceptance-mobile-legacy/capture-evidence.mjs",
+      "exitCode": 0,
+      "sha256": "8e4d7bf5860e8ca645800ba4056cffd8bd743d8acd2c2a75b1e80f62d361a4ca",
+      "diagnostic": ""
+    }
+  ],
+  "unchanged": {
+    "web/index.html": {
+      "expectedSha256": "cb045f636b41e5efa079c513ae5c98613d3cb74892193db9d4f46be1c18ba980",
+      "actualSha256": "cb045f636b41e5efa079c513ae5c98613d3cb74892193db9d4f46be1c18ba980",
+      "unchanged": true
+    },
+    "web/style.css": {
+      "expectedSha256": "af13435f05d4cdfb9235f3684896bccf5aaa9872cfa7ed4a3d22a6816d7d1367",
+      "actualSha256": "af13435f05d4cdfb9235f3684896bccf5aaa9872cfa7ed4a3d22a6816d7d1367",
+      "unchanged": true
+    },
+    "src/business/service.mjs": {
+      "expectedSha256": "0e80ce74726eb53bac4c3deb29c3fafcc1347a54e1032e39f87b33f787fd4aa7",
+      "actualSha256": "0e80ce74726eb53bac4c3deb29c3fafcc1347a54e1032e39f87b33f787fd4aa7",
+      "unchanged": true
+    },
+    "src/business/masters.mjs": {
+      "expectedSha256": "0d9b271bf4aa9cb82dc83bbca2309facf0ef6f72098d393474b062bbe4e87833",
+      "actualSha256": "0d9b271bf4aa9cb82dc83bbca2309facf0ef6f72098d393474b062bbe4e87833",
+      "unchanged": true
+    },
+    "src/shared/store.mjs": {
+      "expectedSha256": "f92624d3d80ed1b4b49c7ea4252481d4080efbd492adf7e8d40bf0f987f9d6fb",
+      "actualSha256": "f92624d3d80ed1b4b49c7ea4252481d4080efbd492adf7e8d40bf0f987f9d6fb",
+      "unchanged": true
+    },
+    "src/documents/store.mjs": {
+      "expectedSha256": "7232755ac988324aa3c1aa0cb6de444a6d7c1a4b252acf778e5e4f49c71cb873",
+      "actualSha256": "7232755ac988324aa3c1aa0cb6de444a6d7c1a4b252acf778e5e4f49c71cb873",
+      "unchanged": true
+    },
+    "src/printing/index.mjs": {
+      "expectedSha256": "7e1ef14ca64b57e631a2690aa26fdcc2744454d96ef2d382ea81aa525ee6b48d",
+      "actualSha256": "7e1ef14ca64b57e631a2690aa26fdcc2744454d96ef2d382ea81aa525ee6b48d",
+      "unchanged": true
+    },
+    "docs/功能逐页梳理_2026-10-30/02_22张页面逐项解析.md": {
+      "expectedSha256": "6d588f44411f95b82c17568cdd8210209af24cce74d08ae3965faea90fbc6495",
+      "actualSha256": "6d588f44411f95b82c17568cdd8210209af24cce74d08ae3965faea90fbc6495",
+      "unchanged": true
+    }
+  },
+  "sha256": {
+    "src/server.mjs": "734433f25c46326fa12fc915339a127cd639f591dbe93b33e1def7d76b4ac424",
+    "web/index.html": "cb045f636b41e5efa079c513ae5c98613d3cb74892193db9d4f46be1c18ba980",
+    "web/style.css": "af13435f05d4cdfb9235f3684896bccf5aaa9872cfa7ed4a3d22a6816d7d1367",
+    "web/app.mjs": "809ecab1ba076f1d22dbbf6b6c31faf27768a605b19618cd44dfbb85349b93e2",
+    "web/mobile.html": "fa3051d62ad8c4b7fca01b7cfd2e2be9886a8594c61d94c14f08e937cdba2c6a",
+    "web/mobile-app.mjs": "5ae4edca309e078185f00c6e9972b6b2bf4459b7c71c1f7fbd341743279ad947",
+    "web/mobile.css": "c5a255c122bd14e76134e35d885e424d2ebf828dcb61cec78533f16a224beefc",
+    "web/mobile-test.html": "7930c83fcb6c2ffc4f4ac1050e8c405fc673066ae115fbab22450d252e5c564f",
+    "web/mobile-test.mjs": "87ec52a54eaa51ea618f780dc451510f4c80dbed648eb0b4100e41fecec29853",
+    "web/mobile-test.css": "26b558a75b5a17435aa356282cbc26da5cf2fd19840315da0aa5515746cd07ab",
+    "src/business/service.mjs": "0e80ce74726eb53bac4c3deb29c3fafcc1347a54e1032e39f87b33f787fd4aa7",
+    "src/business/masters.mjs": "0d9b271bf4aa9cb82dc83bbca2309facf0ef6f72098d393474b062bbe4e87833",
+    "src/shared/store.mjs": "f92624d3d80ed1b4b49c7ea4252481d4080efbd492adf7e8d40bf0f987f9d6fb",
+    "src/documents/store.mjs": "7232755ac988324aa3c1aa0cb6de444a6d7c1a4b252acf778e5e4f49c71cb873",
+    "src/printing/index.mjs": "7e1ef14ca64b57e631a2690aa26fdcc2744454d96ef2d382ea81aa525ee6b48d",
+    "test/acceptance-mobile-test/entry-boundaries.test.mjs": "860e3fff82d92734b383212b9df7dc08b691bbdf6d74273232952a00c4ff0ee6",
+    "test/acceptance-mobile-legacy/mobile-boundaries.test.mjs": "0e0701520b4faee85f53a2bdaba6e5ad118f270eedd6dde2a9b6a1677a170f5d",
+    "test/integration/http.test.mjs": "db5dca65397c25a3bf3de45630cbc05955fcf8118456e6a727dd799c8692e316",
+    "test/acceptance/intake-http-negative.test.mjs": "dadc15819a925aa6cca65c30ec6975458918e9130a2fbc16f690ba7016489e73",
+    "test/acceptance-mobile-legacy/capture-evidence.mjs": "8e4d7bf5860e8ca645800ba4056cffd8bd743d8acd2c2a75b1e80f62d361a4ca",
+    "docs/功能逐页梳理_2026-10-30/02_22张页面逐项解析.md": "6d588f44411f95b82c17568cdd8210209af24cce74d08ae3965faea90fbc6495"
+  },
+  "passed": true
+}

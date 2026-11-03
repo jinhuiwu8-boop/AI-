@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: A07 W3 frame boundary: only the explicit phone view permits same-origin embedding
+ok 1 - A07 W3 frame boundary: only the explicit phone view permits same-origin embedding
+  ---
+  duration_ms: 180.1577
+  type: 'test'
+  ...
+# Subtest: A07 W3 presentation boundary: phone HTML and allowlisted assets stay separate from the desktop template
+ok 2 - A07 W3 presentation boundary: phone HTML and allowlisted assets stay separate from the desktop template
+  ---
+  duration_ms: 76.9642
+  type: 'test'
+  ...
+# Subtest: A07 W3 phone API: fresh price versions, explicit zero and one persistent PNG sale retain their meaning
+ok 3 - A07 W3 phone API: fresh price versions, explicit zero and one persistent PNG sale retain their meaning
+  ---
+  duration_ms: 528.944
+  type: 'test'
+  ...
+# Subtest: A07 W3 phone API: corrected sale keeps revisions and partial return uses its original transaction price
+ok 4 - A07 W3 phone API: corrected sale keeps revisions and partial return uses its original transaction price
+  ---
+  duration_ms: 641.6037
+  type: 'test'
+  ...
+# Subtest: A07 mobile entry: only opted-in phone app permits same-origin embedding; shell permits only same-origin frames
+ok 5 - A07 mobile entry: only opted-in phone app permits same-origin embedding; shell permits only same-origin frames
+  ---
+  duration_ms: 139.5306
+  type: 'test'
+  ...
+# Subtest: A07 mobile entry: three static assets are allowlisted with proper MIME; unknown files and source paths remain private
+ok 6 - A07 mobile entry: three static assets are allowlisted with proper MIME; unknown files and source paths remain private
+  ---
+  duration_ms: 131.7497
+  type: 'test'
+  ...
+# Subtest: A07 mobile entry: iframe-context requests use unchanged session, CSRF and real persistent sale API
+ok 7 - A07 mobile entry: iframe-context requests use unchanged session, CSRF and real persistent sale API
+  ---
+  duration_ms: 284.5381
+  type: 'test'
+  ...
+# Subtest: A07 mobile entry: query flag confers no device authority or fake hardware results
+ok 8 - A07 mobile entry: query flag confers no device authority or fake hardware results
+  ---
+  duration_ms: 19.34
+  type: 'test'
+  ...
+# Subtest: A07 mobile entry: workspace-scoped cookies coexist across ports and cannot authorize another workspace or a restarted session
+ok 9 - A07 mobile entry: workspace-scoped cookies coexist across ports and cannot authorize another workspace or a restarted session
+  ---
+  duration_ms: 101.4609
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1543.4142

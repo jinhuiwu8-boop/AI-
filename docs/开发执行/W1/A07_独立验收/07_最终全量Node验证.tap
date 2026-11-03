@@ -1,0 +1,280 @@
+TAP version 13
+# Subtest: A07 domain: unknown customer/SKU/unit cannot borrow another master or price
+ok 1 - A07 domain: unknown customer/SKU/unit cannot borrow another master or price
+  ---
+  duration_ms: 7.3877
+  type: 'test'
+  ...
+# Subtest: A07 domain: illegal integer quantity and money leave no partial order/price/event
+ok 2 - A07 domain: illegal integer quantity and money leave no partial order/price/event
+  ---
+  duration_ms: 3.1372
+  type: 'test'
+  ...
+# Subtest: A07 domain: role, active flag and actor-scoped replay are enforced in cloud service
+ok 3 - A07 domain: role, active flag and actor-scoped replay are enforced in cloud service
+  ---
+  duration_ms: 4.1073
+  type: 'test'
+  ...
+# Subtest: A07 domain: manual edit still rejects stale price version, without reverting latest price
+ok 4 - A07 domain: manual edit still rejects stale price version, without reverting latest price
+  ---
+  duration_ms: 1.6571
+  type: 'test'
+  ...
+# Subtest: A07 domain: explicit zero sale and zero correction preserve the ordinary future price
+ok 5 - A07 domain: explicit zero sale and zero correction preserve the ordinary future price
+  ---
+  duration_ms: 3.2445
+  type: 'test'
+  ...
+# Subtest: A07 domain: positive correction changes future price, freezes history and reverses exactly once
+ok 6 - A07 domain: positive correction changes future price, freezes history and reverses exactly once
+  ---
+  duration_ms: 3.6002
+  type: 'test'
+  ...
+# Subtest: A07 domain: original return ownership, units and price are enforced; partial cumulative over-return rejected
+ok 7 - A07 domain: original return ownership, units and price are enforced; partial cumulative over-return rejected
+  ---
+  duration_ms: 3.3852
+  type: 'test'
+  ...
+# Subtest: A07 domain: existing return plus quantity correction has exact net zero; below returned rejected
+ok 8 - A07 domain: existing return plus quantity correction has exact net zero; below returned rejected
+  ---
+  duration_ms: 5.592
+  type: 'test'
+  ...
+# Subtest: A07 domain: document failure rolls back sale, correction and return including prices and operation IDs
+ok 9 - A07 domain: document failure rolls back sale, correction and return including prices and operation IDs
+  ---
+  duration_ms: 2.595
+  type: 'test'
+  ...
+# Subtest: A07 domain: duplicate SKU manual price lines produce one price event and one recoverable before-price
+ok 10 - A07 domain: duplicate SKU manual price lines produce one price event and one recoverable before-price
+  ---
+  duration_ms: 1.5954
+  type: 'test'
+  ...
+# Subtest: A07 domain: duplicate SKU corrected price lines update only once and recover true old price
+ok 11 - A07 domain: duplicate SKU corrected price lines update only once and recover true old price
+  ---
+  duration_ms: 1.6475
+  type: 'test'
+  ...
+# Subtest: A07 persistence: restart retains operation result, frozen revisions, return quota and future price
+ok 12 - A07 persistence: restart retains operation result, frozen revisions, return quota and future price
+  ---
+  duration_ms: 29.2702
+  type: 'test'
+  ...
+# Subtest: A07 intake: disabled sources and unsafe metadata fail atomically without phantom batches
+ok 13 - A07 intake: disabled sources and unsafe metadata fail atomically without phantom batches
+  ---
+  duration_ms: 8.0946
+  type: 'test'
+  ...
+# Subtest: A07 intake: conversation isolation, same-id changed input and 60-second exact boundary
+ok 14 - A07 intake: conversation isolation, same-id changed input and 60-second exact boundary
+  ---
+  duration_ms: 2.5165
+  type: 'test'
+  ...
+# Subtest: A07 intake: a new voice product extends deadline but retry cannot create another job
+ok 15 - A07 intake: a new voice product extends deadline but retry cannot create another job
+  ---
+  duration_ms: 1.3897
+  type: 'test'
+  ...
+# Subtest: A07 intake persistence: restart expires persisted batch without a phone request or duplicate task
+ok 16 - A07 intake persistence: restart expires persisted batch without a phone request or duplicate task
+  ---
+  duration_ms: 37.0859
+  type: 'test'
+  ...
+# Subtest: A07 HTTP: session, CSRF, origin and cross-site defenses reject without changing state
+ok 17 - A07 HTTP: session, CSRF, origin and cross-site defenses reject without changing state
+  ---
+  duration_ms: 136.1505
+  type: 'test'
+  ...
+# Subtest: A07 HTTP: Host check and route allowlist cannot expose source or filesystem paths
+ok 18 - A07 HTTP: Host check and route allowlist cannot expose source or filesystem paths
+  ---
+  duration_ms: 60.7058
+  type: 'test'
+  ...
+# Subtest: A07 HTTP: malformed URL-encoded business identifier is a client error with no mutation
+ok 19 - A07 HTTP: malformed URL-encoded business identifier is a client error with no mutation
+  ---
+  duration_ms: 22.6386
+  type: 'test'
+  ...
+# Subtest: A07 HTTP+PNG: committed document is real PNG, private, digest-matched and historical
+ok 20 - A07 HTTP+PNG: committed document is real PNG, private, digest-matched and historical
+  ---
+  duration_ms: 453.6634
+  type: 'test'
+  ...
+# Subtest: A07 HTTP+PNG: unrenderable financial fields fail instead of clipping and roll back business
+ok 21 - A07 HTTP+PNG: unrenderable financial fields fail instead of clipping and roll back business
+  ---
+  duration_ms: 174.5933
+  type: 'test'
+  ...
+# Subtest: save110 then restore100 appends history; replay cannot toggle; stale price rejected
+ok 22 - save110 then restore100 appends history; replay cannot toggle; stale price rejected
+  ---
+  duration_ms: 7.8535
+  type: 'test'
+  ...
+# Subtest: bottle uses exact dime rounding and goods stays separate from receivable
+ok 23 - bottle uses exact dime rounding and goods stays separate from receivable
+  ---
+  duration_ms: 2.7487
+  type: 'test'
+  ...
+# Subtest: document failure rolls back order, manual price, sale and idempotency record
+ok 24 - document failure rolls back order, manual price, sale and idempotency record
+  ---
+  duration_ms: 1.7281
+  type: 'test'
+  ...
+# Subtest: zero confirmed does not propagate; missing and stale sources cannot bypass validation
+ok 25 - zero confirmed does not propagate; missing and stale sources cannot bypass validation
+  ---
+  duration_ms: 2.3626
+  type: 'test'
+  ...
+# Subtest: same operation replays once; altered input409; paper only pending no device claim
+ok 26 - same operation replays once; altered input409; paper only pending no device claim
+  ---
+  duration_ms: 1.35
+  type: 'test'
+  ...
+# Subtest: price, customer and quantity corrections reverse old economics; actual price correction updates future price
+ok 27 - price, customer and quantity corrections reverse old economics; actual price correction updates future price
+  ---
+  duration_ms: 5.688
+  type: 'test'
+  ...
+# Subtest: return original price partial; cumulative and changed-input reject without mutation
+ok 28 - return original price partial; cumulative and changed-input reject without mutation
+  ---
+  duration_ms: 4.0009
+  type: 'test'
+  ...
+# Subtest: returned sale quantity correction preserves prior return; less-than-returned and reprice rollback
+ok 29 - returned sale quantity correction preserves prior return; less-than-returned and reprice rollback
+  ---
+  duration_ms: 2.5879
+  type: 'test'
+  ...
+# Subtest: zero-price return stays0; adjusted sale return unsupported; boss cloud authority and deep copies
+ok 30 - zero-price return stays0; adjusted sale return unsupported; boss cloud authority and deep copies
+  ---
+  duration_ms: 2.3712
+  type: 'test'
+  ...
+# Subtest: two independent SQLite connections cannot both consume last return allowance; restart retains net
+ok 31 - two independent SQLite connections cannot both consume last return allowance; restart retains net
+  ---
+  duration_ms: 24.4116
+  type: 'test'
+  ...
+# Subtest: correction and return document failures preserve full ledger and return allowance
+ok 32 - correction and return document failures preserve full ledger and return allowance
+  ---
+  duration_ms: 2.6885
+  type: 'test'
+  ...
+# Subtest: corrected nonzero price becomes future price; zero correction and quantity-only never overwrite current price
+ok 33 - corrected nonzero price becomes future price; zero correction and quantity-only never overwrite current price
+  ---
+  duration_ms: 5.4603
+  type: 'test'
+  ...
+# Subtest: stale correction price and failed document preserve ledger and regular price; bounded input
+ok 34 - stale correction price and failed document preserve ledger and regular price; bounded input
+  ---
+  duration_ms: 7.262
+  type: 'test'
+  ...
+# Subtest: duplicate SKU manual sale writes one price event and restores actual preceding100
+ok 35 - duplicate SKU manual sale writes one price event and restores actual preceding100
+  ---
+  duration_ms: 1.5825
+  type: 'test'
+  ...
+# Subtest: duplicate SKU correction writes one price event; restoration100 and conflicting corrections roll back
+ok 36 - duplicate SKU correction writes one price event; restoration100 and conflicting corrections roll back
+  ---
+  duration_ms: 3.1042
+  type: 'test'
+  ...
+# Subtest: 首产品启动60秒、新产品续时、重复不续时，边界封批只创建一次任务
+ok 37 - 首产品启动60秒、新产品续时、重复不续时，边界封批只创建一次任务
+  ---
+  duration_ms: 6.8672
+  type: 'test'
+  ...
+# Subtest: 新客户切批、纯客户无空任务、无归属与截止时迟到不猜归属
+ok 38 - 新客户切批、纯客户无空任务、无归属与截止时迟到不猜归属
+  ---
+  duration_ms: 1.8817
+  type: 'test'
+  ...
+# Subtest: 来源会话隔离、同ID内容冲突回滚及停用拒绝
+ok 39 - 来源会话隔离、同ID内容冲突回滚及停用拒绝
+  ---
+  duration_ms: 2.8382
+  type: 'test'
+  ...
+# Subtest: 文字图语音统一归批，媒体引用和路径校验不虚构下载
+ok 40 - 文字图语音统一归批，媒体引用和路径校验不虚构下载
+  ---
+  duration_ms: 1.5077
+  type: 'test'
+  ...
+# Subtest: 真实SQLite关闭重开后按持久截止时间封批，重复回调不多建任务
+ok 41 - 真实SQLite关闭重开后按持久截止时间封批，重复回调不多建任务
+  ---
+  duration_ms: 40.9556
+  type: 'test'
+  ...
+# Subtest: 两个SQLite连接交错领取封批与重复消息保持单任务
+ok 42 - 两个SQLite连接交错领取封批与重复消息保持单任务
+  ---
+  duration_ms: 25.8309
+  type: 'test'
+  ...
+# Subtest: HTTP real PNG, correction price, partial return, print idempotency and restart preserve economic results
+ok 43 - HTTP real PNG, correction price, partial return, print idempotency and restart preserve economic results
+  ---
+  duration_ms: 1090.7828
+  type: 'test'
+  ...
+# Subtest: HTTP rejects missing session, CSRF, foreign origin, unknown paths and malformed commands without writes
+ok 44 - HTTP rejects missing session, CSRF, foreign origin, unknown paths and malformed commands without writes
+  ---
+  duration_ms: 66.5271
+  type: 'test'
+  ...
+# Subtest: failed command rolls back; restart and another connection see committed state
+ok 45 - failed command rolls back; restart and another connection see committed state
+  ---
+  duration_ms: 29.8996
+  type: 'test'
+  ...
+1..45
+# tests 45
+# suites 0
+# pass 45
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1351.4775

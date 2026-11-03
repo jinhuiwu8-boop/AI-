@@ -1,0 +1,10 @@
+{
+  "version": "v0.2-user-confirmed",
+  "confirmation_date": "2026-10-30",
+  "source": "02_22张页面逐项解析.md",
+  "sha256": "6D588F44411F95B82C17568CDD8210209AF24CCE74D08AE3965FAEA90FBC6495",
+  "snapshot": "history/v0.2_用户确认原稿/02_22张页面逐项解析_6D588F44411F.md",
+  "confirmation": "用户本轮聊天明确确认22张逐页解析及人工修改",
+  "supplement": "费用只记录搭赠商品数量，不记录金额",
+  "scope_limit": "不猜测未填写参数，不自动开始融合、迁移、部署或Git上传"
+}

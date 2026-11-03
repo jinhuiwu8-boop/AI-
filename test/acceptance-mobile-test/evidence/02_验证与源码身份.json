@@ -1,0 +1,124 @@
+{
+  "audit": "A07-mobile-test-entry",
+  "generated_at": "2026-10-31T10:28:11+08:00",
+  "command": "node --test --test-reporter=tap test/acceptance-mobile-test/entry-boundaries.test.mjs",
+  "exit_code": 0,
+  "counts": {
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "skipped": 0
+  },
+  "syntax_checks": [
+    {
+      "command": "node --check web/mobile-test.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node --check src/server.mjs",
+      "exit_code": 0
+    }
+  ],
+  "identities": [
+    {
+      "path": "src/server.mjs",
+      "sha256": "453C1C32D17C6F76190D5A23D936F84C999B3F6CAF950E51F7894CF3D77EBF37",
+      "bytes": 17662
+    },
+    {
+      "path": "web/mobile-test.html",
+      "sha256": "8680CBD17F9757E008B829E7EAADC951525885234C49F52D861F373EC8579D48",
+      "bytes": 4188
+    },
+    {
+      "path": "web/mobile-test.mjs",
+      "sha256": "B8FAB87440DE82876FE7D1A760CA7059013B409B2DDB5EB3F451ED2FFA42809B",
+      "bytes": 6450
+    },
+    {
+      "path": "web/mobile-test.css",
+      "sha256": "9769CE94F73D020B05CA3300FEAAD4D6D8AA0FEB5A1F1E851465D2C1968C2B25",
+      "bytes": 8268
+    },
+    {
+      "path": "web/app.mjs",
+      "sha256": "78233F32EB23D3141D1962CB78E6CFF1A72A4280AB4FF9EBCE1B5A20E8100E7C",
+      "bytes": 77031
+    },
+    {
+      "path": "tools/start-mobile-test.ps1",
+      "sha256": "54B3C27EB93AD1D68044696459C2D17775E041793B3E01A647006315C64204B3",
+      "bytes": 433
+    },
+    {
+      "path": "test/acceptance-mobile-test/entry-boundaries.test.mjs",
+      "sha256": "738A2F3C882A027EC4F5025A80B0480B8138FEFBB687811756D98582A30B80D5",
+      "bytes": 8281
+    }
+  ],
+  "evidence": {
+    "path": "test/acceptance-mobile-test/evidence/01_入口HTTP独立验证.tap",
+    "sha256": "9E29B96515495B14167DFD7664ABA38055D86E35578FC08A4D43CA6B23077B18",
+    "bytes": 1570
+  },
+  "changed_w2_tested_core_files": [
+    "src/server.mjs"
+  ],
+  "static_review": {
+    "iframe_runs_existing_app": "/?mobile-test=1#home",
+    "default_viewport": [
+      430,
+      860
+    ],
+    "module_count": 8,
+    "route_changes_only_child_hash": true,
+    "module_switch_does_not_replace_iframe_src": true,
+    "shell_calls_business_api": false,
+    "automated_demo": false,
+    "checks_child_origin_path_and_query": true,
+    "unavailable_hardware_is_not_faked": true
+  },
+  "http_checks": [
+    "CSP opt-in and same-origin frames only",
+    "static allowlist and proper MIME",
+    "same-origin iframe-context real sale, CSRF, PNG and restart persistence",
+    "query flag confers no edge authority",
+    "workspace cookie coexistence, cross-workspace denial and restarted-session denial"
+  ],
+  "independent_browser_interaction_performed": false,
+  "root_browser_evidence_is_separate": true,
+  "live_demo_data_modified_by_a07": false,
+  "production_or_device_actions": false,
+  "full_w2_rerun_performed": false,
+  "final_static_review": {
+    "reviewed_at": "2026-10-31T10:31:34+08:00",
+    "identities": [
+      {
+        "path": "web/mobile-test.html",
+        "sha256": "3DD6A52FB01EB2FCF27A5E1F485690A10B605D731BF11AC12E0701B1A81B46AC",
+        "bytes": 4531
+      },
+      {
+        "path": "web/mobile-test.mjs",
+        "sha256": "80640870743866F5F47CB0D94179992ABFCFD0788539281140152A87F4036633",
+        "bytes": 6269
+      },
+      {
+        "path": "web/mobile-test.css",
+        "sha256": "26B558A75B5A17435AA356282CBC26DA5CF2FD19840315DA0AA5515746CD07AB",
+        "bytes": 8356
+      }
+    ],
+    "syntax_command": "node --check web/mobile-test.mjs",
+    "syntax_exit_code": 0,
+    "fit_and_actual_size_preserve_iframe": true,
+    "actual_size_scroll_container_is_block_and_overflow_auto": true,
+    "server_matches_http_run_identity": true,
+    "http_run_not_repeated_for_static_display_only_change": true
+  },
+  "report": {
+    "path": "docs/开发执行/W2_手机测试入口/A07_验收.md",
+    "sha256": "69D667939A4EF4C86C80B804D1F06BB99024AF8D63BFBAD513C69D0A2FB5D6DD",
+    "bytes": 3464
+  }
+}

@@ -1,0 +1,862 @@
+TAP version 13
+# Subtest: A07 HTTP: history quotation uses confirmed sale; unapproved quantity policy denies new return atomically behind session and CSRF
+ok 1 - A07 HTTP: history quotation uses confirmed sale; unapproved quantity policy denies new return atomically behind session and CSRF
+  ---
+  duration_ms: 782.405
+  type: 'test'
+  ...
+# Subtest: A07: maintained prices are not sales; bottle-only and zero sales do not invent a historical box price
+ok 2 - A07: maintained prices are not sales; bottle-only and zero sales do not invent a historical box price
+  ---
+  duration_ms: 14.3988
+  type: 'test'
+  ...
+# Subtest: A07: quantity-only corrections keep the newer transaction as return price; price corrections supersede it
+ok 3 - A07: quantity-only corrections keep the newer transaction as return price; price corrections supersede it
+  ---
+  duration_ms: 6.7507
+  type: 'test'
+  ...
+# Subtest: A07: corrected-away and zeroed sources cannot revive invalid snapshots or cross customer boundaries
+ok 4 - A07: corrected-away and zeroed sources cannot revive invalid snapshots or cross customer boundaries
+  ---
+  duration_ms: 6.9656
+  type: 'test'
+  ...
+# Subtest: A07: frozen packaging is stable; legacy fallback must be confirmed and its version changes with the master
+ok 5 - A07: frozen packaging is stable; legacy fallback must be confirmed and its version changes with the master
+  ---
+  duration_ms: 2.9254
+  type: 'test'
+  ...
+# Subtest: A07: latest confirmed legacy transaction with multiple prices or packaging blocks instead of falling back
+ok 6 - A07: latest confirmed legacy transaction with multiple prices or packaging blocks instead of falling back
+  ---
+  duration_ms: 4.7629
+  type: 'test'
+  ...
+# Subtest: A07: unresolved quantity policy rejects new saves atomically; old original-order returns remain compatible
+ok 7 - A07: unresolved quantity policy rejects new saves atomically; old original-order returns remain compatible
+  ---
+  duration_ms: 4.5791
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: 100/24 produces 4.2 per bottle and 100.8 for 24; immutable evidence and one return event
+ok 8 - A07 TEST-ONLY quantity bypass: 100/24 produces 4.2 per bottle and 100.8 for 24; immutable evidence and one return event
+  ---
+  duration_ms: 3.2472
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: server rejects modified price, stale price version and unchecked packaging without side effects
+ok 9 - A07 TEST-ONLY quantity bypass: server rejects modified price, stale price version and unchecked packaging without side effects
+  ---
+  duration_ms: 4.8538
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: valid history that rounds to zero is accepted without overwriting normal future price
+ok 10 - A07 TEST-ONLY quantity bypass: valid history that rounds to zero is accepted without overwriting normal future price
+  ---
+  duration_ms: 1.5569
+  type: 'test'
+  ...
+# Subtest: A07 TEST-ONLY quantity bypass: failed document persistence rolls back the return and operation; same input can safely retry
+ok 11 - A07 TEST-ONLY quantity bypass: failed document persistence rolls back the return and operation; same input can safely retry
+  ---
+  duration_ms: 3.2653
+  type: 'test'
+  ...
+# Subtest: A07 actual UI controller: delayed old-customer response cannot overwrite current customer history or confirmation
+ok 12 - A07 actual UI controller: delayed old-customer response cannot overwrite current customer history or confirmation
+  ---
+  duration_ms: 3.6004
+  type: 'test'
+  ...
+# Subtest: A07 actual UI controller: refreshed same version preserves packaging confirmation; changed version clears it
+ok 13 - A07 actual UI controller: refreshed same version preserves packaging confirmation; changed version clears it
+  ---
+  duration_ms: 1.657
+  type: 'test'
+  ...
+# Subtest: A07 actual UI controller: explicit server unavailability disables and blocks new return saving while sales stay available
+ok 14 - A07 actual UI controller: explicit server unavailability disables and blocks new return saving while sales stay available
+  ---
+  duration_ms: 2.4044
+  type: 'test'
+  ...
+# Subtest: A07 W3 frame boundary: only the explicit phone view permits same-origin embedding
+ok 15 - A07 W3 frame boundary: only the explicit phone view permits same-origin embedding
+  ---
+  duration_ms: 153.4625
+  type: 'test'
+  ...
+# Subtest: A07 W3 presentation boundary: phone HTML and allowlisted assets stay separate from the desktop template
+ok 16 - A07 W3 presentation boundary: phone HTML and allowlisted assets stay separate from the desktop template
+  ---
+  duration_ms: 56.2683
+  type: 'test'
+  ...
+# Subtest: A07 W3 phone API: fresh price versions, explicit zero and one persistent PNG sale retain their meaning
+ok 17 - A07 W3 phone API: fresh price versions, explicit zero and one persistent PNG sale retain their meaning
+  ---
+  duration_ms: 645.9988
+  type: 'test'
+  ...
+# Subtest: A07 W3 phone API: corrected sale keeps revisions and partial return uses its original transaction price
+ok 18 - A07 W3 phone API: corrected sale keeps revisions and partial return uses its original transaction price
+  ---
+  duration_ms: 907.5021
+  type: 'test'
+  ...
+# Subtest: A07 mobile entry: only opted-in phone app permits same-origin embedding; shell permits only same-origin frames
+ok 19 - A07 mobile entry: only opted-in phone app permits same-origin embedding; shell permits only same-origin frames
+  ---
+  duration_ms: 145.6855
+  type: 'test'
+  ...
+# Subtest: A07 mobile entry: three static assets are allowlisted with proper MIME; unknown files and source paths remain private
+ok 20 - A07 mobile entry: three static assets are allowlisted with proper MIME; unknown files and source paths remain private
+  ---
+  duration_ms: 59.3299
+  type: 'test'
+  ...
+# Subtest: A07 mobile entry: iframe-context requests use unchanged session, CSRF and real persistent sale API
+ok 21 - A07 mobile entry: iframe-context requests use unchanged session, CSRF and real persistent sale API
+  ---
+  duration_ms: 347.5453
+  type: 'test'
+  ...
+# Subtest: A07 mobile entry: query flag confers no device authority or fake hardware results
+ok 22 - A07 mobile entry: query flag confers no device authority or fake hardware results
+  ---
+  duration_ms: 27.3405
+  type: 'test'
+  ...
+# Subtest: A07 mobile entry: workspace-scoped cookies coexist across ports and cannot authorize another workspace or a restarted session
+ok 23 - A07 mobile entry: workspace-scoped cookies coexist across ports and cannot authorize another workspace or a restarted session
+  ---
+  duration_ms: 61.5889
+  type: 'test'
+  ...
+# Subtest: A07 W2 SQLite: W1 collections survive additive W2 loading and a second real connection
+ok 24 - A07 W2 SQLite: W1 collections survive additive W2 loading and a second real connection
+  ---
+  duration_ms: 24.4653
+  type: 'test'
+  ...
+# Subtest: A07 W2 candidate: unconfirmed, stale and failed-document commands cannot consume or label; retry consumes once
+ok 25 - A07 W2 candidate: unconfirmed, stale and failed-document commands cannot consume or label; retry consumes once
+  ---
+  duration_ms: 32.1101
+  type: 'test'
+  ...
+# Subtest: A07 W2 candidate: price-only and explicit-zero confirmations produce no OCR correction label
+ok 26 - A07 W2 candidate: price-only and explicit-zero confirmations produce no OCR correction label
+  ---
+  duration_ms: 55.7042
+  type: 'test'
+  ...
+# Subtest: A07 W2 masters: shared aliases stay ambiguous, trimmed duplicates collapse, stale saves and role spoofing leave no grants
+ok 27 - A07 W2 masters: shared aliases stay ambiguous, trimmed duplicates collapse, stale saves and role spoofing leave no grants
+  ---
+  duration_ms: 27.281
+  type: 'test'
+  ...
+# Subtest: A07 W2 master packaging: old bottle quotes reject and frozen names, address and price do not follow edits
+ok 28 - A07 W2 master packaging: old bottle quotes reject and frozen names, address and price do not follow edits
+  ---
+  duration_ms: 31.5262
+  type: 'test'
+  ...
+# Subtest: A07 W2 statistics: UTC+8 boundary assigns sale and later reversal/return to their actual event days
+ok 29 - A07 W2 statistics: UTC+8 boundary assigns sale and later reversal/return to their actual event days
+  ---
+  duration_ms: 21.7027
+  type: 'test'
+  ...
+# Subtest: A07 W2 device: raw credentials never persist; wrong capability and immediate revocation block all methods
+ok 30 - A07 W2 device: raw credentials never persist; wrong capability and immediate revocation block all methods
+  ---
+  duration_ms: 22.4627
+  type: 'test'
+  ...
+# Subtest: A07 W2 lease: exact expiry and replacement invalidate old capability even with correct raw device token
+ok 31 - A07 W2 lease: exact expiry and replacement invalidate old capability even with correct raw device token
+  ---
+  duration_ms: 28.4449
+  type: 'test'
+  ...
+# Subtest: A07 W2 candidate authority: device cannot submit price/confirmation/master creation or another device lease
+ok 32 - A07 W2 candidate authority: device cannot submit price/confirmation/master creation or another device lease
+  ---
+  duration_ms: 23.6414
+  type: 'test'
+  ...
+# Subtest: A07 W2 completed-result replay: later master edits do not invalidate a frozen success acknowledgement
+ok 33 - A07 W2 completed-result replay: later master edits do not invalidate a frozen success acknowledgement
+  ---
+  duration_ms: 26.6802
+  type: 'test'
+  ...
+# Subtest: A07 W2 source isolation: duplicated message IDs from another source cannot leak into a claimed job
+ok 34 - A07 W2 source isolation: duplicated message IDs from another source cannot leak into a claimed job
+  ---
+  duration_ms: 21.2143
+  type: 'test'
+  ...
+# Subtest: A07 W2 real concurrent SQLite: separate workers can only consume one candidate once
+ok 35 - A07 W2 real concurrent SQLite: separate workers can only consume one candidate once
+  ---
+  duration_ms: 120.6707
+  type: 'test'
+  ...
+# Subtest: A07 W2 HTTP handoff: device cookie/body impersonation fails and only one checked candidate sale can persist
+ok 36 - A07 W2 HTTP handoff: device cookie/body impersonation fails and only one checked candidate sale can persist
+  ---
+  duration_ms: 475.1754
+  type: 'test'
+  ...
+# Subtest: A07 W2 HTTP PDF: persisted draft PDF is private and digest-bound; uncalibrated paper cannot be claimed or confirmed
+ok 37 - A07 W2 HTTP PDF: persisted draft PDF is private and digest-bound; uncalibrated paper cannot be claimed or confirmed
+  ---
+  duration_ms: 802.2129
+  type: 'test'
+  ...
+# Subtest: A07 W2 HTTP transport-only simulation: expired print lease stays uncertain; manual not-printed yields one identical-version reprint without sale
+ok 38 - A07 W2 HTTP transport-only simulation: expired print lease stays uncertain; manual not-printed yields one identical-version reprint without sale
+  ---
+  duration_ms: 633.2104
+  type: 'test'
+  ...
+# Subtest: A07 W2 PDF failure: confirmed PNG sale survives, while over-cell-limit PDF queue creates no partial attempt
+ok 39 - A07 W2 PDF failure: confirmed PNG sale survives, while over-cell-limit PDF queue creates no partial attempt
+  ---
+  duration_ms: 473.2365
+  type: 'test'
+  ...
+# Subtest: A07 domain: unknown customer/SKU/unit cannot borrow another master or price
+ok 40 - A07 domain: unknown customer/SKU/unit cannot borrow another master or price
+  ---
+  duration_ms: 6.7671
+  type: 'test'
+  ...
+# Subtest: A07 domain: illegal integer quantity and money leave no partial order/price/event
+ok 41 - A07 domain: illegal integer quantity and money leave no partial order/price/event
+  ---
+  duration_ms: 4.0791
+  type: 'test'
+  ...
+# Subtest: A07 domain: role, active flag and actor-scoped replay are enforced in cloud service
+ok 42 - A07 domain: role, active flag and actor-scoped replay are enforced in cloud service
+  ---
+  duration_ms: 7.8019
+  type: 'test'
+  ...
+# Subtest: A07 domain: manual edit still rejects stale price version, without reverting latest price
+ok 43 - A07 domain: manual edit still rejects stale price version, without reverting latest price
+  ---
+  duration_ms: 2.2209
+  type: 'test'
+  ...
+# Subtest: A07 domain: explicit zero sale and zero correction preserve the ordinary future price
+ok 44 - A07 domain: explicit zero sale and zero correction preserve the ordinary future price
+  ---
+  duration_ms: 3.8232
+  type: 'test'
+  ...
+# Subtest: A07 domain: positive correction changes future price, freezes history and reverses exactly once
+ok 45 - A07 domain: positive correction changes future price, freezes history and reverses exactly once
+  ---
+  duration_ms: 3.6514
+  type: 'test'
+  ...
+# Subtest: A07 domain: original return ownership, units and price are enforced; partial cumulative over-return rejected
+ok 46 - A07 domain: original return ownership, units and price are enforced; partial cumulative over-return rejected
+  ---
+  duration_ms: 4.4151
+  type: 'test'
+  ...
+# Subtest: A07 domain: existing return plus quantity correction has exact net zero; below returned rejected
+ok 47 - A07 domain: existing return plus quantity correction has exact net zero; below returned rejected
+  ---
+  duration_ms: 10.0619
+  type: 'test'
+  ...
+# Subtest: A07 domain: document failure rolls back sale, correction and return including prices and operation IDs
+ok 48 - A07 domain: document failure rolls back sale, correction and return including prices and operation IDs
+  ---
+  duration_ms: 7.7622
+  type: 'test'
+  ...
+# Subtest: A07 domain: duplicate SKU manual price lines produce one price event and one recoverable before-price
+ok 49 - A07 domain: duplicate SKU manual price lines produce one price event and one recoverable before-price
+  ---
+  duration_ms: 1.796
+  type: 'test'
+  ...
+# Subtest: A07 domain: duplicate SKU corrected price lines update only once and recover true old price
+ok 50 - A07 domain: duplicate SKU corrected price lines update only once and recover true old price
+  ---
+  duration_ms: 1.7551
+  type: 'test'
+  ...
+# Subtest: A07 persistence: restart retains operation result, frozen revisions, return quota and future price
+ok 51 - A07 persistence: restart retains operation result, frozen revisions, return quota and future price
+  ---
+  duration_ms: 33.5338
+  type: 'test'
+  ...
+# Subtest: A07 intake: disabled sources and unsafe metadata fail atomically without phantom batches
+ok 52 - A07 intake: disabled sources and unsafe metadata fail atomically without phantom batches
+  ---
+  duration_ms: 7.4212
+  type: 'test'
+  ...
+# Subtest: A07 intake: conversation isolation, same-id changed input and 60-second exact boundary
+ok 53 - A07 intake: conversation isolation, same-id changed input and 60-second exact boundary
+  ---
+  duration_ms: 2.8593
+  type: 'test'
+  ...
+# Subtest: A07 intake: a new voice product extends deadline but retry cannot create another job
+ok 54 - A07 intake: a new voice product extends deadline but retry cannot create another job
+  ---
+  duration_ms: 2.3607
+  type: 'test'
+  ...
+# Subtest: A07 intake persistence: restart expires persisted batch without a phone request or duplicate task
+ok 55 - A07 intake persistence: restart expires persisted batch without a phone request or duplicate task
+  ---
+  duration_ms: 26.2037
+  type: 'test'
+  ...
+# Subtest: A07 HTTP: session, CSRF, origin and cross-site defenses reject without changing state
+ok 56 - A07 HTTP: session, CSRF, origin and cross-site defenses reject without changing state
+  ---
+  duration_ms: 108.621
+  type: 'test'
+  ...
+# Subtest: A07 HTTP: Host check and route allowlist cannot expose source or filesystem paths
+ok 57 - A07 HTTP: Host check and route allowlist cannot expose source or filesystem paths
+  ---
+  duration_ms: 48.5321
+  type: 'test'
+  ...
+# Subtest: A07 HTTP: malformed URL-encoded business identifier is a client error with no mutation
+ok 58 - A07 HTTP: malformed URL-encoded business identifier is a client error with no mutation
+  ---
+  duration_ms: 31.5077
+  type: 'test'
+  ...
+# Subtest: A07 HTTP+PNG: committed document is real PNG, private, digest-matched and historical
+ok 59 - A07 HTTP+PNG: committed document is real PNG, private, digest-matched and historical
+  ---
+  duration_ms: 634.5156
+  type: 'test'
+  ...
+# Subtest: A07 HTTP+PNG: unrenderable financial fields fail instead of clipping and roll back business
+ok 60 - A07 HTTP+PNG: unrenderable financial fields fail instead of clipping and roll back business
+  ---
+  duration_ms: 300.5317
+  type: 'test'
+  ...
+# Subtest: save110 then restore100 appends history; replay cannot toggle; stale price rejected
+ok 61 - save110 then restore100 appends history; replay cannot toggle; stale price rejected
+  ---
+  duration_ms: 7.3338
+  type: 'test'
+  ...
+# Subtest: bottle uses exact dime rounding and goods stays separate from receivable
+ok 62 - bottle uses exact dime rounding and goods stays separate from receivable
+  ---
+  duration_ms: 3.1362
+  type: 'test'
+  ...
+# Subtest: document failure rolls back order, manual price, sale and idempotency record
+ok 63 - document failure rolls back order, manual price, sale and idempotency record
+  ---
+  duration_ms: 1.7017
+  type: 'test'
+  ...
+# Subtest: zero confirmed does not propagate; missing and stale sources cannot bypass validation
+ok 64 - zero confirmed does not propagate; missing and stale sources cannot bypass validation
+  ---
+  duration_ms: 2.101
+  type: 'test'
+  ...
+# Subtest: same operation replays once; altered input409; paper only pending no device claim
+ok 65 - same operation replays once; altered input409; paper only pending no device claim
+  ---
+  duration_ms: 1.7877
+  type: 'test'
+  ...
+# Subtest: price, customer and quantity corrections reverse old economics; actual price correction updates future price
+ok 66 - price, customer and quantity corrections reverse old economics; actual price correction updates future price
+  ---
+  duration_ms: 6.8876
+  type: 'test'
+  ...
+# Subtest: return original price partial; cumulative and changed-input reject without mutation
+ok 67 - return original price partial; cumulative and changed-input reject without mutation
+  ---
+  duration_ms: 3.2661
+  type: 'test'
+  ...
+# Subtest: returned sale quantity correction preserves prior return; less-than-returned and reprice rollback
+ok 68 - returned sale quantity correction preserves prior return; less-than-returned and reprice rollback
+  ---
+  duration_ms: 4.3989
+  type: 'test'
+  ...
+# Subtest: zero-price return stays0; adjusted sale return unsupported; boss cloud authority and deep copies
+ok 69 - zero-price return stays0; adjusted sale return unsupported; boss cloud authority and deep copies
+  ---
+  duration_ms: 4.0328
+  type: 'test'
+  ...
+# Subtest: two independent SQLite connections cannot both consume last return allowance; restart retains net
+ok 70 - two independent SQLite connections cannot both consume last return allowance; restart retains net
+  ---
+  duration_ms: 25.6395
+  type: 'test'
+  ...
+# Subtest: correction and return document failures preserve full ledger and return allowance
+ok 71 - correction and return document failures preserve full ledger and return allowance
+  ---
+  duration_ms: 2.4155
+  type: 'test'
+  ...
+# Subtest: corrected nonzero price becomes future price; zero correction and quantity-only never overwrite current price
+ok 72 - corrected nonzero price becomes future price; zero correction and quantity-only never overwrite current price
+  ---
+  duration_ms: 5.9328
+  type: 'test'
+  ...
+# Subtest: stale correction price and failed document preserve ledger and regular price; bounded input
+ok 73 - stale correction price and failed document preserve ledger and regular price; bounded input
+  ---
+  duration_ms: 6.9715
+  type: 'test'
+  ...
+# Subtest: duplicate SKU manual sale writes one price event and restores actual preceding100
+ok 74 - duplicate SKU manual sale writes one price event and restores actual preceding100
+  ---
+  duration_ms: 1.1755
+  type: 'test'
+  ...
+# Subtest: duplicate SKU correction writes one price event; restoration100 and conflicting corrections roll back
+ok 75 - duplicate SKU correction writes one price event; restoration100 and conflicting corrections roll back
+  ---
+  duration_ms: 2.6507
+  type: 'test'
+  ...
+# Subtest: customer IDs stay stable, same-name addresses and shared aliases retain ambiguity without confidence
+ok 76 - customer IDs stay stable, same-name addresses and shared aliases retain ambiguity without confidence
+  ---
+  duration_ms: 5.7732
+  type: 'test'
+  ...
+# Subtest: customer write replay and stale versions are atomic; metadata does not grant source authority
+ok 77 - customer write replay and stale versions are atomic; metadata does not grant source authority
+  ---
+  duration_ms: 2.4424
+  type: 'test'
+  ...
+# Subtest: exact names and aliases from different customers remain ambiguous and list limits do not hide ambiguity
+ok 78 - exact names and aliases from different customers remain ambiguous and list limits do not hide ambiguity
+  ---
+  duration_ms: 3.4475
+  type: 'test'
+  ...
+# Subtest: master validation rejects invalid packaging and missing address without partial writes
+ok 79 - master validation rejects invalid packaging and missing address without partial writes
+  ---
+  duration_ms: 2.7185
+  type: 'test'
+  ...
+# Subtest: packaging and customer master updates affect future quotes but not frozen order snapshots
+ok 80 - packaging and customer master updates affect future quotes but not frozen order snapshots
+  ---
+  duration_ms: 3.8997
+  type: 'test'
+  ...
+# Subtest: inference candidate remains zero-sale before explicit check; corrected nulls produce one recorded sample
+ok 81 - inference candidate remains zero-sale before explicit check; corrected nulls produce one recorded sample
+  ---
+  duration_ms: 2.2665
+  type: 'test'
+  ...
+# Subtest: document failure preserves candidate, sample, sales and price; stale candidate rejects before save
+ok 82 - document failure preserves candidate, sample, sales and price; stale candidate rejects before save
+  ---
+  duration_ms: 1.9641
+  type: 'test'
+  ...
+# Subtest: matching recognition and price-only edits never become recognition correction samples
+ok 83 - matching recognition and price-only edits never become recognition correction samples
+  ---
+  duration_ms: 5.8532
+  type: 'test'
+  ...
+# Subtest: reordering valid candidate lines is not a recognition error; malformed source pairs cannot bypass review
+ok 84 - reordering valid candidate lines is not a recognition error; malformed source pairs cannot bypass review
+  ---
+  duration_ms: 2.281
+  type: 'test'
+  ...
+# Subtest: different SQLite connections cannot consume a candidate twice
+ok 85 - different SQLite connections cannot consume a candidate twice
+  ---
+  duration_ms: 22.2226
+  type: 'test'
+  ...
+# Subtest: Beijing day/month statistics use actual event timestamps across correction and return boundaries
+ok 86 - Beijing day/month statistics use actual event timestamps across correction and return boundaries
+  ---
+  duration_ms: 4.407
+  type: 'test'
+  ...
+# Subtest: order filters use inclusive from/exclusive to in Beijing, while history is not recomputed from current order
+ok 87 - order filters use inclusive from/exclusive to in Beijing, while history is not recomputed from current order
+  ---
+  duration_ms: 2.7152
+  type: 'test'
+  ...
+# Subtest: period and query validation reject impossible dates, unspecific times, invalid types and reverse ranges
+ok 88 - period and query validation reject impossible dates, unspecific times, invalid types and reverse ranges
+  ---
+  duration_ms: 1.6834
+  type: 'test'
+  ...
+# Subtest: customer return uses historical box price: 100/24 rounds to 4.2, so 24 bottles are 100.8
+ok 89 - customer return uses historical box price: 100/24 rounds to 4.2, so 24 bottles are 100.8
+  ---
+  duration_ms: 3.1356
+  type: 'test'
+  ...
+# Subtest: dime rounding is exact at the half boundary and safe-integer limit
+ok 90 - dime rounding is exact at the half boundary and safe-integer limit
+  ---
+  duration_ms: 0.7633
+  type: 'test'
+  ...
+# Subtest: latest confirmed sale wins; equal timestamps follow persisted event order
+ok 91 - latest confirmed sale wins; equal timestamps follow persisted event order
+  ---
+  duration_ms: 0.64
+  type: 'test'
+  ...
+# Subtest: customer-maintained current price without confirmed box sale remains missing
+ok 92 - customer-maintained current price without confirmed box sale remains missing
+  ---
+  duration_ms: 0.2862
+  type: 'test'
+  ...
+# Subtest: bottle-only sale cannot substitute for absent historical box price
+ok 93 - bottle-only sale cannot substitute for absent historical box price
+  ---
+  duration_ms: 0.359
+  type: 'test'
+  ...
+# Subtest: zero sales and returns cannot eclipse earlier nonzero box sale
+ok 94 - zero sales and returns cannot eclipse earlier nonzero box sale
+  ---
+  duration_ms: 0.3693
+  type: 'test'
+  ...
+# Subtest: prices are isolated by customer and SKU
+ok 95 - prices are isolated by customer and SKU
+  ---
+  duration_ms: 0.3699
+  type: 'test'
+  ...
+# Subtest: quantity-only correction does not lift an older price above intervening sale
+ok 96 - quantity-only correction does not lift an older price above intervening sale
+  ---
+  duration_ms: 0.4177
+  type: 'test'
+  ...
+# Subtest: actual nonzero price correction is a new effective historical source
+ok 97 - actual nonzero price correction is a new effective historical source
+  ---
+  duration_ms: 0.3121
+  type: 'test'
+  ...
+# Subtest: source moved to another customer is excluded for original customer and confirmed for new one
+ok 98 - source moved to another customer is excluded for original customer and confirmed for new one
+  ---
+  duration_ms: 0.3595
+  type: 'test'
+  ...
+# Subtest: source changed to zero or another SKU cannot revive invalid older snapshot
+ok 99 - source changed to zero or another SKU cannot revive invalid older snapshot
+  ---
+  duration_ms: 0.4063
+  type: 'test'
+  ...
+# Subtest: frozen sale packaging survives later product version and package changes
+ok 100 - frozen sale packaging survives later product version and package changes
+  ---
+  duration_ms: 0.2091
+  type: 'test'
+  ...
+# Subtest: legacy missing packaging explicitly uses current master and changes quote version when master changes
+ok 101 - legacy missing packaging explicitly uses current master and changes quote version when master changes
+  ---
+  duration_ms: 0.2423
+  type: 'test'
+  ...
+# Subtest: current effective revision participates in quote version even for quantity correction
+ok 102 - current effective revision participates in quote version even for quantity correction
+  ---
+  duration_ms: 0.2445
+  type: 'test'
+  ...
+# Subtest: latest event with multiple prices is ambiguous instead of falling back to an older sale
+ok 103 - latest event with multiple prices is ambiguous instead of falling back to an older sale
+  ---
+  duration_ms: 0.4259
+  type: 'test'
+  ...
+# Subtest: duplicate same-price same-packaging rows remain one unambiguous quotation
+ok 104 - duplicate same-price same-packaging rows remain one unambiguous quotation
+  ---
+  duration_ms: 0.2725
+  type: 'test'
+  ...
+# Subtest: query is pure and returns detached metadata from deeply frozen state
+ok 105 - query is pure and returns detached metadata from deeply frozen state
+  ---
+  duration_ms: 2.0829
+  type: 'test'
+  ...
+# Subtest: invalid inputs, masters and packaging reject instead of inventing values
+ok 106 - invalid inputs, masters and packaging reject instead of inventing values
+  ---
+  duration_ms: 1.1465
+  type: 'test'
+  ...
+# Subtest: paper PDF is persisted, hash verified, Chinese embedded and physical size 130x190mm
+ok 107 - paper PDF is persisted, hash verified, Chinese embedded and physical size 130x190mm
+  ---
+  duration_ms: 871.676
+  type: 'test'
+  ...
+# Subtest: paper rejects amounts that cannot fit rather than truncating or saving a false success
+ok 108 - paper rejects amounts that cannot fit rather than truncating or saving a false success
+  ---
+  duration_ms: 825.3381
+  type: 'test'
+  ...
+# Subtest: 仅老板登记和撤权；原token仅首次返回、只存摘要，幂等不额外登记或泄露token
+ok 109 - 仅老板登记和撤权；原token仅首次返回、只存摘要，幂等不额外登记或泄露token
+  ---
+  duration_ms: 9.1788
+  type: 'test'
+  ...
+# Subtest: 错token、未知设备及能力不符不能认证或领取；各阶段撤权立即阻止设备
+ok 110 - 错token、未知设备及能力不符不能认证或领取；各阶段撤权立即阻止设备
+  ---
+  duration_ms: 6.3369
+  type: 'test'
+  ...
+# Subtest: 领取返回自身封单原文及受控媒体，不串相同消息号的其他来源、会话和批次
+ok 111 - 领取返回自身封单原文及受控媒体，不串相同消息号的其他来源、会话和批次
+  ---
+  duration_ms: 2.4043
+  type: 'test'
+  ...
+# Subtest: 非法批次归属领取失败整笔回滚，不能借messageIds读取其他批次附件
+ok 112 - 非法批次归属领取失败整笔回滚，不能借messageIds读取其他批次附件
+  ---
+  duration_ms: 1.6359
+  type: 'test'
+  ...
+# Subtest: 默认120秒租约、有效续租与边界过期再领取；旧设备租约不能回传或续租
+ok 113 - 默认120秒租约、有效续租与边界过期再领取；旧设备租约不能回传或续租
+  ---
+  duration_ms: 3.2852
+  type: 'test'
+  ...
+# Subtest: 租约秒数可配置；错误设备/错误lease token不能越权续租或回传
+ok 114 - 租约秒数可配置；错误设备/错误lease token不能越权续租或回传
+  ---
+  duration_ms: 3.0625
+  type: 'test'
+  ...
+# Subtest: 识别完成只存候选；同规范结果重放不追加，异结果409，人工核对后迟到回传不覆盖
+ok 115 - 识别完成只存候选；同规范结果重放不追加，异结果409，人工核对后迟到回传不覆盖
+  ---
+  duration_ms: 3.8849
+  type: 'test'
+  ...
+# Subtest: 候选支持null待人工补项；未知主档、非法单位/数量、长文本和价格字段均拒绝
+ok 116 - 候选支持null待人工补项；未知主档、非法单位/数量、长文本和价格字段均拒绝
+  ---
+  duration_ms: 6.304
+  type: 'test'
+  ...
+# Subtest: 已完成结果重放使用冻结规范摘要，之后商品单位和客户主档变化不否定原成功回执
+ok 117 - 已完成结果重放使用冻结规范摘要，之后商品单位和客户主档变化不否定原成功回执
+  ---
+  duration_ms: 4.0742
+  type: 'test'
+  ...
+# Subtest: SQLite重启保留设备摘要、租约及完成回执；数据库文件不含完整设备或租约token
+ok 118 - SQLite重启保留设备摘要、租约及完成回执；数据库文件不含完整设备或租约token
+  ---
+  duration_ms: 27.6087
+  type: 'test'
+  ...
+# Subtest: 两个真实SQLite连接由Worker同时抢同任务，只有一个获得租约且无销售差量
+ok 119 - 两个真实SQLite连接由Worker同时抢同任务，只有一个获得租约且无销售差量
+  ---
+  duration_ms: 96.905
+  type: 'test'
+  ...
+# Subtest: 配置、输入和时间错误返回DomainError且不部分写入
+ok 120 - 配置、输入和时间错误返回DomainError且不部分写入
+  ---
+  duration_ms: 1.6335
+  type: 'test'
+  ...
+# Subtest: 首产品启动60秒、新产品续时、重复不续时，边界封批只创建一次任务
+ok 121 - 首产品启动60秒、新产品续时、重复不续时，边界封批只创建一次任务
+  ---
+  duration_ms: 8.2513
+  type: 'test'
+  ...
+# Subtest: 新客户切批、纯客户无空任务、无归属与截止时迟到不猜归属
+ok 122 - 新客户切批、纯客户无空任务、无归属与截止时迟到不猜归属
+  ---
+  duration_ms: 1.9018
+  type: 'test'
+  ...
+# Subtest: 来源会话隔离、同ID内容冲突回滚及停用拒绝
+ok 123 - 来源会话隔离、同ID内容冲突回滚及停用拒绝
+  ---
+  duration_ms: 2.6429
+  type: 'test'
+  ...
+# Subtest: 文字图语音统一归批，媒体引用和路径校验不虚构下载
+ok 124 - 文字图语音统一归批，媒体引用和路径校验不虚构下载
+  ---
+  duration_ms: 1.8471
+  type: 'test'
+  ...
+# Subtest: 真实SQLite关闭重开后按持久截止时间封批，重复回调不多建任务
+ok 125 - 真实SQLite关闭重开后按持久截止时间封批，重复回调不多建任务
+  ---
+  duration_ms: 29.5331
+  type: 'test'
+  ...
+# Subtest: 两个SQLite连接交错领取封批与重复消息保持单任务
+ok 126 - 两个SQLite连接交错领取封批与重复消息保持单任务
+  ---
+  duration_ms: 24.2995
+  type: 'test'
+  ...
+# Subtest: HTTP real PNG, correction price, partial return, print idempotency and restart preserve economic results
+ok 127 - HTTP real PNG, correction price, partial return, print idempotency and restart preserve economic results
+  ---
+  duration_ms: 1414.5167
+  type: 'test'
+  ...
+# Subtest: HTTP rejects missing session, CSRF, foreign origin, unknown paths and malformed commands without writes
+ok 128 - HTTP rejects missing session, CSRF, foreign origin, unknown paths and malformed commands without writes
+  ---
+  duration_ms: 22.2173
+  type: 'test'
+  ...
+# Subtest: W2 HTTP normalized intake to device candidate, human sale, PDF preview and protected credential projection
+ok 129 - W2 HTTP normalized intake to device candidate, human sale, PDF preview and protected credential projection
+  ---
+  duration_ms: 632.5327
+  type: 'test'
+  ...
+# Subtest: W2 HTTP master edits require versions, aliases retain ambiguity and device revoke is immediate
+ok 130 - W2 HTTP master edits require versions, aliases retain ambiguity and device revoke is immediate
+  ---
+  duration_ms: 47.5101
+  type: 'test'
+  ...
+# Subtest: queue补齐W1纸质同attempt，电子单只添打印尝试，重复queue不重复建PDF或计销售
+ok 131 - queue补齐W1纸质同attempt，电子单只添打印尝试，重复queue不重复建PDF或计销售
+  ---
+  duration_ms: 14.3896
+  type: 'test'
+  ...
+# Subtest: PDF生成/保存/非法回执失败时queue原子回滚，原单和旧attempt不部分改变
+ok 132 - PDF生成/保存/非法回执失败时queue原子回滚，原单和旧attempt不部分改变
+  ---
+  duration_ms: 3.0335
+  type: 'test'
+  ...
+# Subtest: 旧QUEUE_PRINT操作明确409且不重排；新operation只补齐同W1任务
+ok 133 - 旧QUEUE_PRINT操作明确409且不重排；新operation只补齐同W1任务
+  ---
+  duration_ms: 2.2437
+  type: 'test'
+  ...
+# Subtest: 仅老板排队/人工确认/补打；PENDING_DEVICE未提交不能假确认已出纸
+ok 134 - 仅老板排队/人工确认/补打；PENDING_DEVICE未提交不能假确认已出纸
+  ---
+  duration_ms: 4.5936
+  type: 'test'
+  ...
+# Subtest: 实际PDF元数据为UNVALIDATED，仅可预览且不可由设备领取或提交
+ok 135 - 实际PDF元数据为UNVALIDATED，仅可预览且不可由设备领取或提交
+  ---
+  duration_ms: 499.5919
+  type: 'test'
+  ...
+# Subtest: PRINT设备有效租约领取/下载/提交，撤权、错token、INFER能力和跨设备回执拒绝
+ok 136 - PRINT设备有效租约领取/下载/提交，撤权、错token、INFER能力和跨设备回执拒绝
+  ---
+  duration_ms: 5.5266
+  type: 'test'
+  ...
+# Subtest: 设备回执幂等与冲突；只能老板人工验纸，补打一份复用冻结PDF且不增加销售
+ok 137 - 设备回执幂等与冲突；只能老板人工验纸，补打一份复用冻结PDF且不增加销售
+  ---
+  duration_ms: 7.9306
+  type: 'test'
+  ...
+# Subtest: 明确提交前失败可补打；结果未知不能自动补打，失效租约迟到不能覆盖人工
+ok 138 - 明确提交前失败可补打；结果未知不能自动补打，失效租约迟到不能覆盖人工
+  ---
+  duration_ms: 6.559
+  type: 'test'
+  ...
+# Subtest: 更正前未提交旧版可SUPERSEDED；已提交风险旧版阻止自动换版，旧PDF身份不覆盖
+ok 139 - 更正前未提交旧版可SUPERSEDED；已提交风险旧版阻止自动换版，旧PDF身份不覆盖
+  ---
+  duration_ms: 8.9181
+  type: 'test'
+  ...
+# Subtest: SQLite重启后未知打印不重排，过期租约仅保守UNCERTAIN且不新增销售或任务
+ok 140 - SQLite重启后未知打印不重排，过期租约仅保守UNCERTAIN且不新增销售或任务
+  ---
+  duration_ms: 22.4007
+  type: 'test'
+  ...
+# Subtest: 两个真实SQLite连接竞争同打印任务仅一个SUBMIT_INTENT，失联任务无自动再领
+ok 141 - 两个真实SQLite连接竞争同打印任务仅一个SUBMIT_INTENT，失联任务无自动再领
+  ---
+  duration_ms: 93.3708
+  type: 'test'
+  ...
+# Subtest: failed command rolls back; restart and another connection see committed state
+ok 142 - failed command rolls back; restart and another connection see committed state
+  ---
+  duration_ms: 19.4691
+  type: 'test'
+  ...
+1..142
+# tests 142
+# suites 0
+# pass 142
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2573.8486

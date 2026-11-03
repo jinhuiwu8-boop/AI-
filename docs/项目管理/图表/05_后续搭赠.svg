@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="500" viewBox="0 0 1400 500">
+<rect width="1400" height="500" fill="#F6F8F7"/>
+<text x="30.0" y="55" font-family="Microsoft YaHei, sans-serif" font-size="30" fill="#183C35">后续搭赠任务阶段</text>
+<text x="30.0" y="87" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#60756F">需求确认单列；其余阶段凭对应版本及证据推进。空灰格不代表已做。</text>
+<text x="30.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">任务ID</text>
+<text x="220.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">任务与当前状态</text>
+<text x="839.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">需求</text>
+<text x="929.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">合同</text>
+<text x="1019.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">实现</text>
+<text x="1093.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">模块验证</text>
+<text x="1199.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">联调</text>
+<text x="1289.0" y="125" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#60756F">验收</text>
+<rect x="24" y="148" width="1352" height="33" rx="4" fill="#DFF1E8"/>
+<text x="36.0" y="171" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#17674D">后续搭赠  暂不进入首期执行</text>
+<rect x="24" y="188" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="211" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">EXTRA-01</text>
+<text x="220.0" y="211" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">搭赠数量自动账及品牌门店映射</text>
+<text x="220.0" y="232" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">后续待启用  ·  下一步见任务明细</text>
+<rect x="820" y="201" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="201" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="924.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1000" y="201" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1014.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1090" y="201" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1104.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1180" y="201" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1194.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1270" y="201" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="219" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="248" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="271" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">EXTRA-02</text>
+<text x="220.0" y="271" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">跨客户多选补回及逐条核销</text>
+<text x="220.0" y="292" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">后续待启用  ·  下一步见任务明细</text>
+<rect x="820" y="261" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="261" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="924.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1000" y="261" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1014.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1090" y="261" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1104.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1180" y="261" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1194.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1270" y="261" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="24" y="308" width="1352" height="55" rx="4" fill="#FFFFFF"/>
+<text x="36.0" y="331" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#183C35">EXTRA-03</text>
+<text x="220.0" y="331" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#183C35">费用详情及多选补回手机页面</text>
+<text x="220.0" y="352" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#60756F">后续待启用  ·  下一步见任务明细</text>
+<rect x="820" y="321" width="70" height="28" rx="5" fill="#DFF1E8"/>
+<text x="834.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#17674D">已通过</text>
+<rect x="910" y="321" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="924.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1000" y="321" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1014.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1090" y="321" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1104.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1180" y="321" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1194.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<rect x="1270" y="321" width="70" height="28" rx="5" fill="#E7ECE9"/>
+<text x="1284.0" y="339" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">未进入</text>
+<text x="30.0" y="448" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#60756F">总控文档行验收指文档确认；首期执行目标环境验收 0/35 项，文档及后续任务不计入。</text>
+<text x="30.0" y="475" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#60756F">数据日期 2026-11-03   台账摘要 fa53b72ab521   来源 项目任务台账.json</text>
+</svg>

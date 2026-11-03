@@ -1,0 +1,11 @@
+test_abrupt_process_exit_after_intent_is_conservative (test_print_journal.JournalTests.test_abrupt_process_exit_after_intent_is_conservative) ... ok
+test_binding_immutable_and_copies_one (test_print_journal.JournalTests.test_binding_immutable_and_copies_one) ... ok
+test_intent_survives_restart_and_cannot_reprint (test_print_journal.JournalTests.test_intent_survives_restart_and_cannot_reprint) ... ok
+test_invalid_result_does_not_partially_write (test_print_journal.JournalTests.test_invalid_result_does_not_partially_write) ... ok
+test_outbox_failure_retry_ack_and_reopen (test_print_journal.JournalTests.test_outbox_failure_retry_ack_and_reopen) ... ok
+test_pre_spool_failure_is_durable_not_retryable_same_attempt (test_print_journal.JournalTests.test_pre_spool_failure_is_durable_not_retryable_same_attempt) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.126s
+
+OK

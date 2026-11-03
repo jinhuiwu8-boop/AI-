@@ -1,0 +1,209 @@
+{
+  "version": "w2-local-v0.2",
+  "contentSha256": "6e4e51c5eca26acc082225cb08d8707d44fbfe36d4e9249f2dc70df4ecf542b7",
+  "sourceVersion": "w2-local-v0.2+6e4e51c5eca2",
+  "recordedAtUtc": "2026-10-31T02:04:45.554989+00:00",
+  "meaning": "Local file content identity; not a Git commit or target-device acceptance.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "566c4f6cb5cb3b7cbd671820a53224831812ffadd30cf09ea93a336a809f8d21",
+      "bytes": 173
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "a7b6f78f62894cf8fb8dd3e149048dc62fd8c2d379dbfd3231d59fe357f859f6",
+      "bytes": 5099
+    },
+    {
+      "path": "package.json",
+      "sha256": "6a6ddcae9625b2d4c769526ca3d96942253c6a8621bafa85160accbf25ae982f",
+      "bytes": 212
+    },
+    {
+      "path": "src/business/index.mjs",
+      "sha256": "0af40f9474aa0a9f70cdde64dc0e9bf47e97361507f9b136c20513ceddaa94b4",
+      "bytes": 112
+    },
+    {
+      "path": "src/business/masters.mjs",
+      "sha256": "0d9b271bf4aa9cb82dc83bbca2309facf0ef6f72098d393474b062bbe4e87833",
+      "bytes": 9384
+    },
+    {
+      "path": "src/business/service.mjs",
+      "sha256": "0e80ce74726eb53bac4c3deb29c3fafcc1347a54e1032e39f87b33f787fd4aa7",
+      "bytes": 19124
+    },
+    {
+      "path": "src/documents/store.mjs",
+      "sha256": "7232755ac988324aa3c1aa0cb6de444a6d7c1a4b252acf778e5e4f49c71cb873",
+      "bytes": 3651
+    },
+    {
+      "path": "src/edge-cloud/index.mjs",
+      "sha256": "3dd987fc4a1e7130fbb3afb1d9b6e5cd659ba706acbe2c7bef4be84315c8c146",
+      "bytes": 14587
+    },
+    {
+      "path": "src/edge/print_journal.py",
+      "sha256": "d81ad40562b793fe3b14db2740e69463708eb6f1274b6f71563840376a91c34e",
+      "bytes": 7245
+    },
+    {
+      "path": "src/intake/index.mjs",
+      "sha256": "6c2bb385658e7982e9efed4c4a2b080e419444911815734dca89e902cc313c16",
+      "bytes": 6534
+    },
+    {
+      "path": "src/printing/index.mjs",
+      "sha256": "7e1ef14ca64b57e631a2690aa26fdcc2744454d96ef2d382ea81aa525ee6b48d",
+      "bytes": 16546
+    },
+    {
+      "path": "src/server.mjs",
+      "sha256": "966e3e39cf6b958083e5e4ce935a7ac07f49df0089714d9d3f071153f2841cf9",
+      "bytes": 16508
+    },
+    {
+      "path": "src/shared/errors.mjs",
+      "sha256": "1b1dd61fa903c7df6a342d87768e935f9d47f23dde0c7794a04ebc1cf6c451f0",
+      "bytes": 233
+    },
+    {
+      "path": "src/shared/seed.mjs",
+      "sha256": "1a0ea3bf924b3d4cd74d7757695b207466613d77c493d7cea2bd0018c9771170",
+      "bytes": 698
+    },
+    {
+      "path": "src/shared/store.mjs",
+      "sha256": "f92624d3d80ed1b4b49c7ea4252481d4080efbd492adf7e8d40bf0f987f9d6fb",
+      "bytes": 2768
+    },
+    {
+      "path": "test/acceptance-w2/core-boundaries.test.mjs",
+      "sha256": "446d952dfb12d6fec2ab30ef6eea5cb33c09ead706250953ae99b0cb5c3777a9",
+      "bytes": 19562
+    },
+    {
+      "path": "test/acceptance-w2/http-print-boundaries.test.mjs",
+      "sha256": "2f76c5492306f1ab8a18ee6f35ecd24891eed2840e0f7a3cd4ef311d71fbb219",
+      "bytes": 11315
+    },
+    {
+      "path": "test/acceptance-w2/test_pdf_boundaries.py",
+      "sha256": "0bb79022aa85924b536a32870cc51718e9b2f642138a5d6246d608d72859c6a1",
+      "bytes": 4986
+    },
+    {
+      "path": "test/acceptance/business-negative.test.mjs",
+      "sha256": "a51628bf1f61a551adcb78d6a1f32c8304c441a287c5bd9a342ed36b5e7c77a4",
+      "bytes": 14896
+    },
+    {
+      "path": "test/acceptance/intake-http-negative.test.mjs",
+      "sha256": "dadc15819a925aa6cca65c30ec6975458918e9130a2fbc16f690ba7016489e73",
+      "bytes": 10885
+    },
+    {
+      "path": "test/business/business.test.mjs",
+      "sha256": "51bd08dc11f33da6500f6b44be7c797acfe259173fe2b7caa4b9836d47b1ac4d",
+      "bytes": 15622
+    },
+    {
+      "path": "test/business/masters-review.test.mjs",
+      "sha256": "e007388c7b75787238e15ad2a83f71c83628bc045f32cf18618e0a56248c8b99",
+      "bytes": 15958
+    },
+    {
+      "path": "test/documents/paper.test.mjs",
+      "sha256": "72f20c1aca775c45faa3e4fcc2a5f1e5043106d12c78bc3032f513b85926e7b5",
+      "bytes": 3244
+    },
+    {
+      "path": "test/edge-cloud/edge-cloud.test.mjs",
+      "sha256": "df387af8f57a0a57e0cca7f7fb52f83ac0f7b95c63a4f7013a5cd55c6424dfcc",
+      "bytes": 22051
+    },
+    {
+      "path": "test/edge/test_print_journal.py",
+      "sha256": "92a09d1160c8b9755f206fe77abf47396f151d6b421de56e6d71c3ba73e002fa",
+      "bytes": 5622
+    },
+    {
+      "path": "test/intake/intake.test.mjs",
+      "sha256": "beaf915156c5c02cd3b3735da54635222032c4a17d3e69c07ac081279680b185",
+      "bytes": 7301
+    },
+    {
+      "path": "test/integration/http.test.mjs",
+      "sha256": "db5dca65397c25a3bf3de45630cbc05955fcf8118456e6a727dd799c8692e316",
+      "bytes": 6154
+    },
+    {
+      "path": "test/integration/w2-http.test.mjs",
+      "sha256": "64432489e8dfc24f382695b14db482f6b561d8dd7d46fe57f37d410620160249",
+      "bytes": 7385
+    },
+    {
+      "path": "test/printing/printing.test.mjs",
+      "sha256": "7852bed92ae7d42ea1fc00150aee96f958113d52130ddcd3a1056ecf554cae92",
+      "bytes": 21967
+    },
+    {
+      "path": "test/shared/store.test.mjs",
+      "sha256": "b2680649a44904edda8424d92dfe17d434a6ef136553d28f2bc47d0ed45a3dd8",
+      "bytes": 1312
+    },
+    {
+      "path": "tools/check-local.ps1",
+      "sha256": "d2f48e8a43859a88a0fed333206f343706b6ce4b894a8345032695bd2a5392c8",
+      "bytes": 2365
+    },
+    {
+      "path": "tools/init_project_task_register.py",
+      "sha256": "e56c83e2980c513c9448862b98046c305ab36d8f4127312132b26d070d2359bd",
+      "bytes": 19856
+    },
+    {
+      "path": "tools/render_bill_image.py",
+      "sha256": "d7790902d815c9e48086bf4f80c4fa0c2646546bd816bbbf5d0dcf179e03ed3d",
+      "bytes": 3732
+    },
+    {
+      "path": "tools/render_bill_pdf.py",
+      "sha256": "a3e468d94f135b72168657ac2291836d603072937d23e84f75208665b98d0d2b",
+      "bytes": 4277
+    },
+    {
+      "path": "tools/render_project_progress.py",
+      "sha256": "fb219067ce6bf3f58b2b824e72cd2d1e64ce7b3d6c86e6e60bb7c44ca3aa9ae6",
+      "bytes": 15012
+    },
+    {
+      "path": "tools/start-local.ps1",
+      "sha256": "91680e2e85956a4e2f592ab5399b39b90f826c41e2e7cfeeddb8e379abcf8d9b",
+      "bytes": 421
+    },
+    {
+      "path": "tools/write_source_manifest.py",
+      "sha256": "979429a742b35b0dbcbd6e8f70266e3027803ad95f9737630cb3c4c506c6ae6d",
+      "bytes": 2067
+    },
+    {
+      "path": "web/app.mjs",
+      "sha256": "78233f32eb23d3141d1962cb78e6cff1a72a4280ab4ff9ebce1b5a20e8100e7c",
+      "bytes": 77031
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "cb045f636b41e5efa079c513ae5c98613d3cb74892193db9d4f46be1c18ba980",
+      "bytes": 1863
+    },
+    {
+      "path": "web/style.css",
+      "sha256": "af13435f05d4cdfb9235f3684896bccf5aaa9872cfa7ed4a3d22a6816d7d1367",
+      "bytes": 24450
+    }
+  ]
+}

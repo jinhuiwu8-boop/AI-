@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#174f3b">
+    <title>云酒账 · 店内开单</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/app.mjs"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="云酒账工作台"><span class="brand-mark">云</span><span>云酒账<small>店内开单工作台</small></span></a>
+      <div class="nav-caption">日常营业</div>
+      <nav id="desktop-nav" aria-label="主要导航"></nav>
+      <div class="sidebar-bottom"><span class="avatar">老</span><div><strong>老板工作台</strong><small>本地开发会话</small></div><span class="online-dot"></span></div>
+    </aside>
+    <div class="app-body">
+      <header class="topbar"><div class="mobile-brand">云酒账<span>店内开单</span></div><div id="breadcrumb">工作台</div><div class="topbar-actions"><span id="date-label"></span><button type="button" id="refresh-button" class="icon-button" aria-label="刷新数据" title="刷新数据">↻</button></div></header>
+      <div class="environment-note" id="environment-note">本地开发版 · 合成样例数据，设备尚未接入</div>
+      <div id="pending-banner" class="pending-banner" hidden></div>
+      <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+      <main id="main" tabindex="-1"><div class="loading-state">正在连接开单工作台…</div></main>
+      <footer class="page-footer">云酒账 · 让每一笔生意清清楚楚</footer>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="手机导航"></nav>
+  </body>
+</html>

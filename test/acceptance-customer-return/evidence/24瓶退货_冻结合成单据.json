@@ -1,0 +1,119 @@
+{
+  "scope": "SYNTHETIC_TEST_ONLY_QUANTITY_BYPASS",
+  "order": {
+    "id": "d80c2d92-3760-4821-8cff-074318135e46",
+    "type": "RETURN",
+    "returnBasis": "CUSTOMER_HISTORY",
+    "customerId": "A07-C",
+    "customerName": "A07合成测试客户",
+    "customerAddress": "",
+    "mode": "ELECTRONIC",
+    "revision": 1,
+    "createdAt": "2026-11-03T00:00:00Z",
+    "items": [
+      {
+        "lineId": "ec038559-6859-4d15-997b-d13e4aefe2b6",
+        "skuId": "A07-S",
+        "productName": "合成商品（每箱24瓶）",
+        "unit": "瓶",
+        "quantity": 24,
+        "priceCents": 420,
+        "lineAmountCents": 10080,
+        "bottlesPerCase": 24,
+        "productVersion": "1",
+        "priceSource": {
+          "customerId": "A07-C",
+          "skuId": "A07-S",
+          "unit": "瓶",
+          "priceCents": 420,
+          "version": "return:987813b60b455dc9425a300f00dbc8ca7f9eedc776c355a175d7449794f13fb8",
+          "source": "HISTORY_CASE_DERIVED",
+          "sourceOrderId": "332e860f-673d-4e5e-90ef-7f1fb48682a2",
+          "sourceRevision": 1,
+          "sourceLineId": "7af6fedc-8466-475c-a5fd-e879c02cf35a",
+          "priceConfirmedAt": "2026-11-03T00:00:00Z",
+          "casePriceCents": 10000,
+          "bottlesPerCase": 24,
+          "packagingSource": "SALE_SNAPSHOT",
+          "productVersion": "1",
+          "requiresPackagingConfirmation": false
+        },
+        "packagingConfirmed": false
+      }
+    ],
+    "totals": {
+      "goodsCents": 10080,
+      "creditCents": 0,
+      "waiverCents": 0,
+      "receivableCents": 10080,
+      "roundingCents": 0
+    },
+    "note": "",
+    "document": {
+      "id": "6333d7de-6dec-420e-a11c-119b383dc367",
+      "mimeType": "image/png",
+      "sha256": "bfde42e09e8465011fd2b56c07a4b14a14af7dddd5d43e4f786ddada9dcef425",
+      "relativePath": "6333d7de-6dec-420e-a11c-119b383dc367.png",
+      "createdAt": "2026-11-03T00:00:00Z"
+    },
+    "revisions": [
+      {
+        "id": "d80c2d92-3760-4821-8cff-074318135e46",
+        "type": "RETURN",
+        "returnBasis": "CUSTOMER_HISTORY",
+        "customerId": "A07-C",
+        "customerName": "A07合成测试客户",
+        "customerAddress": "",
+        "mode": "ELECTRONIC",
+        "revision": 1,
+        "createdAt": "2026-11-03T00:00:00Z",
+        "items": [
+          {
+            "lineId": "ec038559-6859-4d15-997b-d13e4aefe2b6",
+            "skuId": "A07-S",
+            "productName": "合成商品（每箱24瓶）",
+            "unit": "瓶",
+            "quantity": 24,
+            "priceCents": 420,
+            "lineAmountCents": 10080,
+            "bottlesPerCase": 24,
+            "productVersion": "1",
+            "priceSource": {
+              "customerId": "A07-C",
+              "skuId": "A07-S",
+              "unit": "瓶",
+              "priceCents": 420,
+              "version": "return:987813b60b455dc9425a300f00dbc8ca7f9eedc776c355a175d7449794f13fb8",
+              "source": "HISTORY_CASE_DERIVED",
+              "sourceOrderId": "332e860f-673d-4e5e-90ef-7f1fb48682a2",
+              "sourceRevision": 1,
+              "sourceLineId": "7af6fedc-8466-475c-a5fd-e879c02cf35a",
+              "priceConfirmedAt": "2026-11-03T00:00:00Z",
+              "casePriceCents": 10000,
+              "bottlesPerCase": 24,
+              "packagingSource": "SALE_SNAPSHOT",
+              "productVersion": "1",
+              "requiresPackagingConfirmation": false
+            },
+            "packagingConfirmed": false
+          }
+        ],
+        "totals": {
+          "goodsCents": 10080,
+          "creditCents": 0,
+          "waiverCents": 0,
+          "receivableCents": 10080,
+          "roundingCents": 0
+        },
+        "note": "",
+        "document": {
+          "id": "6333d7de-6dec-420e-a11c-119b383dc367",
+          "mimeType": "image/png",
+          "sha256": "bfde42e09e8465011fd2b56c07a4b14a14af7dddd5d43e4f786ddada9dcef425",
+          "relativePath": "6333d7de-6dec-420e-a11c-119b383dc367.png",
+          "createdAt": "2026-11-03T00:00:00Z"
+        }
+      }
+    ]
+  }
+}

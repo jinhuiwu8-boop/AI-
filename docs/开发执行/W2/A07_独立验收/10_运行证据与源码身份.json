@@ -1,0 +1,289 @@
+{
+  "audit_id": "W2-A07",
+  "version": "audit-w2.1",
+  "contract": "contract-w2.1",
+  "generated_at": "2026-10-31T10:01:38+08:00",
+  "runtime": {
+    "node": "v24.19.0",
+    "python": "3.12.14"
+  },
+  "node_run": {
+    "command": "node --test --test-reporter=tap",
+    "exit_code": 0,
+    "counts": {
+      "tests": 101,
+      "pass": 101,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "independent_new_w2_tests": 16,
+    "count_is_not_101_plus_16": true
+  },
+  "python_run": {
+    "command": "unittest combined suite: test/edge/test_print_journal.py + test/acceptance-w2/test_pdf_boundaries.py",
+    "exit_code": 0,
+    "tests": 11,
+    "passed": 11,
+    "new_independent_pdf_tests": 5,
+    "existing_print_journal_tests": 6
+  },
+  "tested_source_identities": [
+    {
+      "path": "src/shared/store.mjs",
+      "sha256": "F92624D3D80ED1B4B49C7EA4252481D4080EFBD492ADF7E8D40BF0F987F9D6FB",
+      "bytes": 2768
+    },
+    {
+      "path": "src/shared/errors.mjs",
+      "sha256": "1B1DD61FA903C7DF6A342D87768E935F9D47F23DDE0C7794A04EBC1CF6C451F0",
+      "bytes": 233
+    },
+    {
+      "path": "src/shared/seed.mjs",
+      "sha256": "1A0EA3BF924B3D4CD74D7757695B207466613D77C493D7CEA2BD0018C9771170",
+      "bytes": 698
+    },
+    {
+      "path": "src/business/index.mjs",
+      "sha256": "0AF40F9474AA0A9F70CDDE64DC0E9BF47E97361507F9B136C20513CEDDAA94B4",
+      "bytes": 112
+    },
+    {
+      "path": "src/business/service.mjs",
+      "sha256": "0E80CE74726EB53BAC4C3DEB29C3FAFCC1347A54E1032E39F87B33F787FD4AA7",
+      "bytes": 19124
+    },
+    {
+      "path": "src/business/masters.mjs",
+      "sha256": "0D9B271BF4AA9CB82DC83BBCA2309FACF0EF6F72098D393474B062BBE4E87833",
+      "bytes": 9384
+    },
+    {
+      "path": "src/intake/index.mjs",
+      "sha256": "6C2BB385658E7982E9EFED4C4A2B080E419444911815734DCA89E902CC313C16",
+      "bytes": 6534
+    },
+    {
+      "path": "src/edge-cloud/index.mjs",
+      "sha256": "3DD987FC4A1E7130FBB3AFB1D9B6E5CD659BA706ACBE2C7BEF4BE84315C8C146",
+      "bytes": 14587
+    },
+    {
+      "path": "src/printing/index.mjs",
+      "sha256": "7E1EF14CA64B57E631A2690AA26FDCC2744454D96EF2D382EA81AA525EE6B48D",
+      "bytes": 16546
+    },
+    {
+      "path": "src/documents/store.mjs",
+      "sha256": "7232755AC988324AA3C1AA0CB6DE444A6D7C1A4B252ACF778E5E4F49C71CB873",
+      "bytes": 3651
+    },
+    {
+      "path": "src/server.mjs",
+      "sha256": "966E3E39CF6B958083E5E4CE935A7AC07F49DF0089714D9D3F071153F2841CF9",
+      "bytes": 16508
+    },
+    {
+      "path": "src/edge/print_journal.py",
+      "sha256": "D81AD40562B793FE3B14DB2740E69463708EB6F1274B6F71563840376A91C34E",
+      "bytes": 7245
+    },
+    {
+      "path": "tools/render_bill_image.py",
+      "sha256": "D7790902D815C9E48086BF4F80C4FA0C2646546BD816BBBF5D0DCF179E03ED3D",
+      "bytes": 3732
+    },
+    {
+      "path": "tools/render_bill_pdf.py",
+      "sha256": "A3E468D94F135B72168657AC2291836D603072937D23E84F75208665B98D0D2B",
+      "bytes": 4277
+    }
+  ],
+  "test_identities": [
+    {
+      "path": "test/acceptance/business-negative.test.mjs",
+      "sha256": "A51628BF1F61A551ADCB78D6A1F32C8304C441A287C5BD9A342ED36B5E7C77A4",
+      "bytes": 14896
+    },
+    {
+      "path": "test/acceptance/intake-http-negative.test.mjs",
+      "sha256": "DADC15819A925AA6CCA65C30EC6975458918E9130A2FBC16F690BA7016489E73",
+      "bytes": 10885
+    },
+    {
+      "path": "test/acceptance-w2/core-boundaries.test.mjs",
+      "sha256": "446D952DFB12D6FEC2AB30EF6EEA5CB33C09EAD706250953AE99B0CB5C3777A9",
+      "bytes": 19562
+    },
+    {
+      "path": "test/acceptance-w2/http-print-boundaries.test.mjs",
+      "sha256": "2F76C5492306F1AB8A18EE6F35ECD24891EED2840E0F7A3CD4EF311D71FBB219",
+      "bytes": 11315
+    },
+    {
+      "path": "test/business/business.test.mjs",
+      "sha256": "51BD08DC11F33DA6500F6B44BE7C797ACFE259173FE2B7CAA4B9836D47B1AC4D",
+      "bytes": 15622
+    },
+    {
+      "path": "test/business/masters-review.test.mjs",
+      "sha256": "E007388C7B75787238E15AD2A83F71C83628BC045F32CF18618E0A56248C8B99",
+      "bytes": 15958
+    },
+    {
+      "path": "test/documents/paper.test.mjs",
+      "sha256": "72F20C1ACA775C45FAA3E4FCC2A5F1E5043106D12C78BC3032F513B85926E7B5",
+      "bytes": 3244
+    },
+    {
+      "path": "test/edge-cloud/edge-cloud.test.mjs",
+      "sha256": "DF387AF8F57A0A57E0CCA7F7FB52F83AC0F7B95C63A4F7013A5CD55C6424DFCC",
+      "bytes": 22051
+    },
+    {
+      "path": "test/intake/intake.test.mjs",
+      "sha256": "BEAF915156C5C02CD3B3735DA54635222032C4A17D3E69C07AC081279680B185",
+      "bytes": 7301
+    },
+    {
+      "path": "test/integration/http.test.mjs",
+      "sha256": "DB5DCA65397C25A3BF3DE45630CBC05955FCF8118456E6A727DD799C8692E316",
+      "bytes": 6154
+    },
+    {
+      "path": "test/integration/w2-http.test.mjs",
+      "sha256": "64432489E8DFC24F382695B14DB482F6B561D8DD7D46FE57F37D410620160249",
+      "bytes": 7385
+    },
+    {
+      "path": "test/printing/printing.test.mjs",
+      "sha256": "7852BED92AE7D42EA1FC00150AEE96F958113D52130DDCD3A1056ECF554CAE92",
+      "bytes": 21967
+    },
+    {
+      "path": "test/shared/store.test.mjs",
+      "sha256": "B2680649A44904EDDA8424D92DFE17D434A6EF136553D28F2BC47D0ED45A3DD8",
+      "bytes": 1312
+    },
+    {
+      "path": "test/acceptance-w2/test_pdf_boundaries.py",
+      "sha256": "0BB79022AA85924B536A32870CC51718E9B2F642138A5D6246D608D72859C6A1",
+      "bytes": 4986
+    },
+    {
+      "path": "test/edge/test_print_journal.py",
+      "sha256": "92A09D1160C8B9755F206FE77ABF47396F151D6B421DE56E6D71C3BA73E002FA",
+      "bytes": 5622
+    }
+  ],
+  "log_identities": [
+    {
+      "path": "docs/开发执行/W2/A07_独立验收/02_首轮业务云边边界.tap",
+      "sha256": "442B7CCCC3B94D7761EB80762DB005DEEFE0CD0000DE8667DA208353A9E6DD52",
+      "bytes": 5699
+    },
+    {
+      "path": "docs/开发执行/W2/A07_独立验收/03_双Worker真实候选竞争.tap",
+      "sha256": "E50431429643FA4F41843C9F3CB488FA60341B9E40DF19344A7C3654BD6B5BC5",
+      "bytes": 369
+    },
+    {
+      "path": "docs/开发执行/W2/A07_独立验收/06_业务云边修复后回归.tap",
+      "sha256": "0B64CF7E138F99608ECFB8DC61355D18F6546F37B979408BC145D1B9F03EF0F7",
+      "bytes": 3465
+    },
+    {
+      "path": "docs/开发执行/W2/A07_独立验收/07_HTTP与打印独立集成.tap",
+      "sha256": "2BACD14571372B3DFE6F978E642464AF4C55A3494A813BC56651C7D5F9244E68",
+      "bytes": 1382
+    },
+    {
+      "path": "docs/开发执行/W2/A07_独立验收/08_最终全量Node验证.tap",
+      "sha256": "947E5AAE59033CE63FC89CC9575B9667D2464D9298CF4822A4567CC6BEE301B4",
+      "bytes": 26722
+    },
+    {
+      "path": "docs/开发执行/W2/A07_独立验收/04_PDF独立字节与分页验证.log",
+      "sha256": "175593545BA84B2EFE803E65C4B2C190733D7E2BB92A93F20B83C45653D0721E",
+      "bytes": 2355
+    },
+    {
+      "path": "docs/开发执行/W2/A07_独立验收/05_PDF最终独立验证.log",
+      "sha256": "D276561C1277186095B4EB07F90D32B14BAECE850D7A73D469957AD9DDB75AA5",
+      "bytes": 1048
+    },
+    {
+      "path": "docs/开发执行/W2/A07_独立验收/09_最终Python日志与PDF验证.log",
+      "sha256": "6EFC3C1A8C70BF17830222F27817218C448D9B7E336B7DD96BFAD4963F07393B",
+      "bytes": 1875
+    }
+  ],
+  "supplementary_read_only_visual": {
+    "source_png": {
+      "path": "docs/开发执行/W2/验证/套打变量层_坐标草案.png",
+      "sha256": "6F0C9C5EB18B5C8FAE99D9E77C57FB9C283A0EC860577DBC642337FC529768BD",
+      "bytes": 23470
+    },
+    "source_pdf": {
+      "path": "docs/开发执行/W2/验证/套打变量层_坐标草案.pdf",
+      "sha256": "295B7ED1060F752BADF08E3F33533C80498ED14FC252B0C425357D19CDF8D08A",
+      "bytes": 25397
+    },
+    "observed": "Existing variable-layer PNG visually inspected; readable Chinese and numbers; no physical paper alignment claim.",
+    "physical_calibration_verified": false
+  },
+  "finding": {
+    "id": "W2-A07-01",
+    "kind": "Completed result retry invalidated by later valid master unit edit",
+    "first_failure_log": "02_首轮业务云边边界.tap",
+    "owner_fix": "Completed branch validates device and original lease, controlled shape and frozen digest without consulting mutable current masters; new completion still validates current masters.",
+    "independent_final_regression": "passed"
+  },
+  "test_harness_corrections": [
+    "Renamed ready promise to avoid shadowing candidate variable.",
+    "Restricted PDF amount extraction to money-column X coordinates, excluding quantity on the same baseline.",
+    "Replaced discoverable helper file by a data-URL Worker; no skipped fake test count."
+  ],
+  "real_sqlite_files_used": true,
+  "simultaneous_review_consumption_workers": 2,
+  "raw_device_or_lease_tokens_saved_to_evidence": false,
+  "fixture_notes": [
+    "Core document failures use a synchronous document storage substitute.",
+    "HTTP tests render and persist actual PNG and PDF.",
+    "One isolated transport test sets synthetic VALIDATED metadata to reach lease state branches; it is not physical calibration.",
+    "No CUPS, printer, real inference or training operation is called."
+  ],
+  "limitations": [
+    "Normalized input is not a verified production WeCom callback/media chain.",
+    "Loopback local owner session is not production single-phone authentication.",
+    "No independent browser interaction, Mate60 APK, lockscreen, native gallery, physical iP110 calibration or cloud deployment acceptance.",
+    "No remote upload or production operation."
+  ],
+  "static_web_review": {
+    "identities": [
+      {
+        "path": "web/app.mjs",
+        "sha256": "78233F32EB23D3141D1962CB78E6CFF1A72A4280AB4FF9EBCE1B5A20E8100E7C",
+        "bytes": 77031
+      },
+      {
+        "path": "web/style.css",
+        "sha256": "AF13435F05D4CDFB9235F3684896BCCF5AAA9872CFA7ED4A3D22A6816D7D1367",
+        "bytes": 24450
+      },
+      {
+        "path": "web/index.html",
+        "sha256": "CB045F636B41E5EFA079C513AE5C98613D3CB74892193DB9D4F46BE1C18BA980",
+        "bytes": 1863
+      }
+    ],
+    "syntax_command": "node --check web/app.mjs",
+    "syntax_exit_code": 0,
+    "navigation_source_reviewed": true,
+    "return_footer_uses_sales_reduction": true,
+    "browser_replayed_by_a07": false,
+    "root_browser_evidence_is_separate": true
+  },
+  "report_local_links_missing": []
+}

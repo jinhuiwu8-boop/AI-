@@ -1,0 +1,16 @@
+{
+  "checked_on": "2026-10-31",
+  "method": "GitHub插件GET仓库信息；只读",
+  "source_url": "https://api.github.com/repos/jinhuiwu8-boop/AI-",
+  "user_provided_commit_url": "https://github.com/jinhuiwu8-boop/AI-/commits?author=jinhuiwu8-boop",
+  "repository": "jinhuiwu8-boop/AI-",
+  "owner": "jinhuiwu8-boop",
+  "html_url": "https://github.com/jinhuiwu8-boop/AI-",
+  "clone_url": "https://github.com/jinhuiwu8-boop/AI-.git",
+  "default_branch": "main",
+  "visibility": "public",
+  "archived": false,
+  "local_remote_configured": false,
+  "pushed_this_turn": false,
+  "meaning": "用户提供的提交页对应仓库已核实存在；本记录不代表已提交、已上传、已部署或业务验收通过。"
+}
